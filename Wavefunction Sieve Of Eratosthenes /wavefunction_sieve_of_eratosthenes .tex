@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{tikz}
+\geometry{margin=1in}
+
+\title{A Wavefunction Approach to the Sieve of Eratosthenes:\\
+Prime Periodicity, Superposition, and Complex Infinity}
+\author{Sefunmi Ashiru}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We present a sinusoidal wavefunction formulation of the Sieve of Eratosthenes, representing each prime number $p$ as a periodic wave of period $p$. By multiplying these prime-based waves together, we construct a composite function whose zeros correspond to composite integers, while nonzero points correspond to primes. This wave-based sieve admits interpretation in quantum mechanics as a superposition of periodic states, and when extended into the complex plane, provides a framework for analyzing prime distributions at infinity. We explore the implications of this formulation for number theory and quantum wave mechanics, suggesting that primes emerge as sequential void-filling structures in the fabric of number space.
+\end{abstract}
+
+\section{Introduction}
+The Sieve of Eratosthenes is one of the oldest algorithms for finding prime numbers. In its traditional form, it operates on the set of natural numbers, eliminating multiples of each discovered prime. This paper reformulates the sieve as a system of sinusoidal wavefunctions, where each prime number generates a periodic signal that cancels its multiples.
+
+By interpreting the sieve as a wave interference problem, we can:
+\begin{enumerate}
+    \item Represent the elimination of composite numbers via multiplicative superposition of sinusoidal functions.
+    \item Interpret prime detection as the persistence of signal amplitude at certain discrete points.
+    \item Extend the model into the complex domain for asymptotic and infinity-limit analysis.
+\end{enumerate}
+
+\section{Prime Periodicity as Sinusoidal Functions}
+Let $p$ be a prime number. We associate to $p$ a sinusoidal function:
+\begin{equation}
+\psi_p(n) = \sin\left( \frac{2\pi n}{p} \right).
+\end{equation}
+The period of $\psi_p$ is exactly $p$, so $\psi_p(kp) = 0$ for all integers $k$.
+
+\subsection{Superposition via Multiplication}
+The sieve wavefunction for all primes less than or equal to $P$ is:
+\begin{equation}
+\Psi_P(n) = \prod_{\substack{p \ \text{prime}\\p \le P}} \sin\left( \frac{2\pi n}{p} \right).
+\end{equation}
+\textbf{Observation:} If $n$ is composite, at least one prime $p$ divides $n$, hence $\sin(2\pi n / p) = 0$, and $\Psi_P(n) = 0$. If $n$ is prime and $n \le P$, none of the sine factors vanish, so $\Psi_P(n) \neq 0$.
+
+\section{Zero Structure and Prime Detection}
+\subsection{Maximal Amplitude}
+The maximal absolute value of $\Psi_P(n)$ is $|\Psi_P(n)| \le 1$, achieved only when all $\sin(2\pi n / p) = \pm 1$ for included primes $p$.
+
+\subsection{Prime Identification}
+A natural prime indicator function can be defined:
+\begin{equation}
+I_P(n) = \begin{cases}
+1 & \text{if } \Psi_P(n) \neq 0, \\
+0 & \text{if } \Psi_P(n) = 0.
+\end{cases}
+\end{equation}
+
+\section{Complex Extension and Infinity Limits}
+We extend $n \in \mathbb{N}$ to $z \in \mathbb{C}$:
+\begin{equation}
+\psi_p(z) = \sin\left( \frac{2\pi z}{p} \right), \quad z \in \mathbb{C}.
+\end{equation}
+This function is entire (holomorphic everywhere) and periodic in the real direction with period $p$.
+
+Under stereographic projection to the Riemann sphere, the infinite limit $z \to \infty$ becomes a finite point. The complex limit structure reveals:
+\begin{enumerate}
+    \item Prime wavefunctions are evenly spaced zeros along the real axis at multiples of $p$.
+    \item Multiplication of all prime wavefunctions produces a lattice of zeros marking all composites.
+    \item The density of nonzero points (primes) decreases logarithmically, consistent with the Prime Number Theorem, but under a wave formulation.
+\end{enumerate}
+
+\section{Primes as Void-Filling Structures}
+In this formulation, primes are not “peaks” but rather the surviving amplitudes after destructive interference of all composite-producing wave factors. Over increasing ranges, primes appear less frequently, creating larger “voids” between surviving points. In the limit toward complex infinity, these voids grow unbounded, with primes acting as rare sequential events.
+
+\section{Applications to Quantum Mechanics}
+The multiplicative superposition $\Psi_P(n)$ can be interpreted as the wavefunction of a composite quantum system with mutually commensurate energy levels corresponding to prime periods. Detection of a prime corresponds to finding a state with nonzero total amplitude.
+
+Potential applications include:
+\begin{itemize}
+    \item Quantum algorithms for prime detection.
+    \item Analogs of number sieving in spectral analysis.
+    \item Use of complex-infinity limits to study long-range correlations between primes.
+\end{itemize}
+
+\section{Conclusion}
+We have reformulated the Sieve of Eratosthenes as a wave interference phenomenon using sinusoidal functions with prime-number periods. By multiplying these waves, composites are annihilated via zeros, leaving primes as surviving amplitude points. Extending this model to the complex plane offers a pathway for new prime analysis methods and links number theory with quantum wave mechanics.
+
+\end{document}

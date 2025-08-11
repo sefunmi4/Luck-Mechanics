@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{tikz}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Limits to Complex Infinities:\\ Mapping Infinite Numbers to Circles and Spheres}
+\author{Sefunmi Ashiru}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper develops a framework for mapping infinite numbers onto circles and spheres, extending naturally into the complex plane. The method uses $\pi$ as a scaling constant to ensure unique mappings at infinity, avoiding degeneracy. By introducing complex numbers as a mapping tool, we leverage their intrinsic curvature to compactify infinity on the Riemann sphere. The implications for limits, continuity, and convergence at $\pm\infty$ are analyzed in both the real and complex cases, with a focus on whether infinity behaves as a single point or distinct endpoints.
+\end{abstract}
+
+\section{Introduction}
+Infinity is traditionally approached linearly along the extended real line $\overline{\mathbb{R}} = \mathbb{R} \cup \{\pm \infty\}$. However, compactification techniques allow us to represent infinity as a single point or as part of a closed manifold. This paper explores the geometric mapping of infinite values to circles and spheres, and then extends this concept to the complex plane.
+
+We investigate:
+\begin{enumerate}
+    \item Mapping $\mathbb{R}$ onto $S^1$ (a circle).
+    \item Mapping $\mathbb{R}^2$ onto $S^2$ (a sphere).
+    \item Mapping $\mathbb{C}$ onto the Riemann sphere.
+    \item How $\pi$ ensures uniqueness of mapping to infinity.
+    \item How limits behave when $-\infty$ and $+\infty$ are either continuous or discontinuous in the mapping.
+\end{enumerate}
+
+\section{Real Line Mapping to a Circle}
+Let $S^1$ be the unit circle in $\mathbb{R}^2$. Define:
+\begin{equation}
+f: \mathbb{R} \to S^1, \quad f(x) = (\cos(\alpha x), \sin(\alpha x)), \quad \alpha = \frac{1}{R}.
+\end{equation}
+For $R = 1$, $\alpha = 1$, and the mapping is periodic with period $2\pi$.  
+The irrationality of $\pi$ prevents rational-step repetition when combined with other irrational scales, ensuring a dense mapping.
+
+\subsection{Uniqueness at Infinity}
+A \emph{unit mapping} is defined such that no two distinct $x,y \in \mathbb{R}$ map to the same point unless they differ by a multiple of $2\pi R$. Spiraling constructions can preserve uniqueness even as $x \to \pm\infty$.
+
+\section{Extension to the Sphere}
+Mapping $\mathbb{R}^2$ to $S^2$ can be expressed as:
+\begin{equation}
+g(r, \theta) = (\sin\theta \cos\phi, \sin\theta \sin\phi, \cos\theta),
+\end{equation}
+where $\phi$ is determined by $f(x)$ and $\theta$ adds an orthogonal degree of variation.
+
+\section{Complex Numbers and Curvature}
+Complex numbers introduce a natural curvature via the \emph{complex plane}. Using stereographic projection, we map $\mathbb{C} \cup \{\infty\}$ onto the Riemann sphere:
+\begin{equation}
+\Phi(z) = \left( \frac{2 \operatorname{Re}(z)}{|z|^2 + 1}, \frac{2 \operatorname{Im}(z)}{|z|^2 + 1}, \frac{|z|^2 - 1}{|z|^2 + 1} \right).
+\end{equation}
+Here, the point at infinity corresponds to the north pole of the sphere.  
+This mapping is conformal—preserving angles—and transforms straight lines and circles in $\mathbb{C}$ into circles on the sphere.
+
+\subsection{Implications for Limits}
+When infinity is represented as a single point in the complex case, limits of functions $f: \mathbb{C} \to \mathbb{C}$ at infinity can be studied via:
+\[
+\lim_{z \to \infty} f(z) \quad \Leftrightarrow \quad \lim_{\Phi(z) \to N} f(\Phi^{-1}(p)),
+\]
+where $N$ is the north pole of the Riemann sphere.
+
+\section{Continuity at Infinity}
+We distinguish two cases:
+\begin{enumerate}
+    \item \textbf{Continuous Infinity:} $-\infty$ and $+\infty$ map to the same point (as in the Riemann sphere or circle compactification).
+    \item \textbf{Discontinuous Infinity:} $-\infty$ and $+\infty$ map to distinct points (as in the extended real line).
+\end{enumerate}
+In the continuous case, the limit at infinity requires:
+\[
+\lim_{x \to -\infty} f(x) = \lim_{x \to +\infty} f(x).
+\]
+In the discontinuous case, these limits may differ.
+
+\section{Role of $\pi$ as a Mapping Constant}
+Choosing $\pi$ as the angular scaling constant ensures that mapping from $\mathbb{R}$ to $S^1$ or $\mathbb{C}$ avoids degenerate periodicities with rational multiples, producing a more uniform angular distribution. This mirrors properties in ergodic theory and Diophantine approximation.
+
+\section{Applications}
+\begin{itemize}
+    \item Complex analysis compactification.
+    \item Number theory in modular arithmetic with irrational moduli.
+    \item Quantum mechanics with periodic boundary conditions.
+    \item Topology of infinity in dynamical systems.
+\end{itemize}
+
+\section{Conclusion}
+Mapping infinity to curved spaces like circles, spheres, and the Riemann sphere transforms the study of limits. Using $\pi$ ensures unique point mapping, while complex numbers naturally provide curvature for compactification. This approach unifies continuous and discontinuous views of infinity, offering new insights into real and complex analysis.
+
+\end{document}
