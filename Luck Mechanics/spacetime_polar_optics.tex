@@ -1,5 +1,5 @@
 % A 4D Radial–Angular Geometry for Unifying Gravity and Quantum (with assessment & citations + added refs)
-\documentclass[reprint,amsmath,amssymb,aps]{revtex4-2}
+\documentclass[reprint,amsmath,amssymb,aps,pra]{revtex4-2}
 
 % ---------- Packages ----------
 \usepackage{graphicx}
@@ -10,6 +10,9 @@
 \usepackage{physics}
 \usepackage{xcolor}
 \usepackage{amsthm}
+
+% Resolve siunitx/physics package command overlap
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
 
 % ---------- Macros ----------
 \newcommand{\Primes}{\mathbb{P}}              % Set of primes
@@ -123,7 +126,7 @@ diagnoses missing primes: adding a missing $p$ reduces composite-phase error at 
   \Eavg[\taufield]=\frac{\eta}{4}\sum_{n\ge1} n^2 a_n^2,
   \label{eq:avg-tension}
 \end{equation}
-so rarity ($begin:math:text$\\sim 1/\\ln p$end:math:text$) vs.\ energy ($begin:math:text$\\propto p^2 a_p^2$end:math:text$) trade off (Prime Number Theorem background; spectral analogies with prime statistics are suggestive \cite{Montgomery1973,BerryKeating1999}).
+so rarity ($\sim 1/\ln p$) versus energy ($\propto p^2 a_p^2$) trade off (Prime Number Theorem background; spectral analogies with prime statistics are suggestive \cite{Montgomery1973,BerryKeating1999}).
 
 \Assessment{Aligned: Fourier analysis and nonlinear wave-mixing (sum/difference frequency generation) are standard in nonlinear optics/fluids \cite{BoydNLO}. Novel: using prime seeding as a \emph{design ansatz} for compounded tension and ``prime events''.}
 
@@ -185,127 +188,17 @@ so angular detection weights are properly normalized on each radial slice.
 \section{Prime Mixing \& Average Tension}\label{app:primeproof}
 Let $f(\theta)=\sum_{n\ge1} a_n \cos(n\theta+\varphi_n)$. Then
 $\partial_\theta f=\sum_n (-n a_n)\sin(n\theta+\varphi_n)$ and
-$begin:math:display$
-\\taufield(\\theta)=\\tfrac{\\eta}{2}(\\partial_\\theta f)^2
-= \\tfrac{\\eta}{2}\\sum_{m,n} mn\\,a_m a_n \\sin(m\\theta+\\phi_m)\\sin(n\\theta+\\phi_n).
-$end:math:display$
+\[
+  \taufield(\theta)=\tfrac{\eta}{2}(\partial_\theta f)^2
+  = \tfrac{\eta}{2}\sum_{m,n} mn\,a_m a_n \sin(m\theta+\phi_m)\sin(n\theta+\phi_n).
+\]
 Using $\sin u\,\sin v=\tfrac{1}{2}[\cos(u{-}v)-\cos(u{+}v)]$, quadratic mixing generates indices $|m\pm n|$. If $f$ is seeded only at primes, composites appear in $\taufield$ automatically. Averaging over $\theta$ kills cross terms, yielding Eq.~\eqref{eq:avg-tension}.
 
 \section{Bell Constraints on ``Polar Luck''}
 Any claim that probabilities arise from inaccessible but \emph{local} angular phases is equivalent to a local hidden-variable model and violates loophole-free Bell inequalities \cite{Hensen2015,Giustina2015,Shalm2015}. Any deterministic completion must be nonlocal/contextual (or accept retrocausality), which we leave outside scope.
 
 % ============================================================
-\begin{thebibliography}{99}
-
-\bibitem{Will2014}
-C.\,M. Will, ``The Confrontation between General Relativity and Experiment,'' \emph{Living Reviews in Relativity} \textbf{17}, 4 (2014).
-
-\bibitem{LIGO2016}
-B.\,P. Abbott \emph{et al.} (LIGO and Virgo), ``Observation of Gravitational Waves from a Binary Black Hole Merger,'' \emph{Phys. Rev. Lett.} \textbf{116}, 061102 (2016).
-
-\bibitem{GPB2011}
-C.\,W.\,F. Everitt \emph{et al.}, ``Gravity Probe B: Final Results of a Space Experiment to Test General Relativity,'' \emph{Phys. Rev. Lett.} \textbf{106}, 221101 (2011).
-
-\bibitem{BirrellDavies}
-N.\,D. Birrell and P.\,C.\,W. Davies, \emph{Quantum Fields in Curved Space} (Cambridge, 1982).
-
-\bibitem{ParkerToms}
-L. Parker and D.\,J. Toms, \emph{Quantum Field Theory in Curved Spacetime} (Cambridge, 2009).
-
-\bibitem{Bondi1962}
-H. Bondi, M.\,G.\,J. van der Burg, and A.\,W.\,K. Metzner, ``Gravitational Waves in GR. VII. Waves from Axi-Symmetric Isolated Systems,'' \emph{Proc. R. Soc. A} \textbf{269}, 21 (1962).
-
-\bibitem{Sachs1962}
-R.\,K. Sachs, ``Gravitational waves in asymptotically flat space-times,'' \emph{Proc. R. Soc. A} \textbf{270}, 103 (1962).
-
-\bibitem{PDG2024}
-Particle Data Group (2024), ``Review of Particle Physics,'' \emph{Phys. Rev. D} \textbf{110}, 030001 (2024).
-
-\bibitem{Hanneke2008}
-D. Hanneke, S. Fogwell, and G. Gabrielse, ``New Measurement of the Electron Magnetic Moment and the Fine Structure Constant,'' \emph{Phys. Rev. Lett.} \textbf{100}, 120801 (2008).
-
-\bibitem{Aoyama2012}
-T. Aoyama \emph{et al.}, ``Tenth-Order QED Contribution to the Electron $begin:math:text$g-2$end:math:text$,'' \emph{Phys. Rev. Lett.} \textbf{109}, 111807 (2012).
-
-\bibitem{Parker2018}
-R.\,H. Parker \emph{et al.}, ``Measurement of the fine-structure constant as a test of the Standard Model,'' \emph{Science} \textbf{360}, 191 (2018).
-
-\bibitem{MandelWolf1995}
-L. Mandel and E. Wolf, \emph{Optical Coherence and Quantum Optics} (Cambridge, 1995).
-
-\bibitem{BoydNLO}
-R.\,W. Boyd, \emph{Nonlinear Optics}, 3rd ed. (Academic Press, 2008).
-
-\bibitem{Montgomery1973}
-H.\,L. Montgomery, ``The Pair Correlation of Zeros of the Zeta Function,'' \emph{Proc. London Math. Soc.} \textbf{27}, 1 (1973).
-
-\bibitem{BerryKeating1999}
-M.\,V. Berry and J.\,P. Keating, ``The Riemann Zeros and Eigenvalue Asymptotics,'' \emph{SIAM Review} \textbf{41}, 236 (1999).
-
-\bibitem{Feynman1948}
-R.\,P. Feynman, ``Space–time approach to non-relativistic quantum mechanics,'' \emph{Rev. Mod. Phys.} \textbf{20}, 367 (1948).
-
-\bibitem{Dyson1949}
-F.\,J. Dyson, ``The S-Matrix in Quantum Electrodynamics,'' \emph{Phys. Rev.} \textbf{75}, 1736 (1949).
-
-\bibitem{Kerr1963}
-R.\,P. Kerr, ``Gravitational Field of a Spinning Mass,'' \emph{Phys. Rev. Lett.} \textbf{11}, 237 (1963).
-
-\bibitem{Kruskal1960}
-M.\,D. Kruskal, ``Maximal extension of Schwarzschild metric,'' \emph{Phys. Rev.} \textbf{119}, 1743 (1960).
-
-\bibitem{Hensen2015}
-B. Hensen \emph{et al.}, ``Loophole-free Bell inequality violation,'' \emph{Nature} \textbf{526}, 682 (2015).
-
-\bibitem{Giustina2015}
-M. Giustina \emph{et al.}, ``Significant-Loophole-Free Test of Bell’s Theorem,'' \emph{Phys. Rev. Lett.} \textbf{115}, 250401 (2015).
-
-\bibitem{Shalm2015}
-L.\,K. Shalm \emph{et al.}, ``Strong Loophole-Free Test of Local Realism,'' \emph{Phys. Rev. Lett.} \textbf{115}, 250402 (2015).
-
-\bibitem{Unruh1981}
-W.\,G. Unruh, ``Experimental black-hole evaporation?,'' \emph{Phys. Rev. Lett.} \textbf{46}, 1351 (1981).
-
-\bibitem{Barcelo2011}
-C. Barceló, S. Liberati, and M. Visser, ``Analogue Gravity,'' \emph{Living Rev. Rel.} \textbf{14}, 3 (2011).
-
-\bibitem{CouderFort2006}
-Y. Couder and E. Fort, ``Single-particle diffraction and interference at a macroscopic scale,'' \emph{Phys. Rev. Lett.} \textbf{97}, 154101 (2006).
-
-\bibitem{Bush2015}
-J.\,W.\,M. Bush, ``Pilot-wave hydrodynamics,'' \emph{Ann. Rev. Fluid Mech.} \textbf{47}, 269 (2015).
-
-\bibitem{AshtekarLewandowski2004}
-A. Ashtekar and J. Lewandowski, ``Background independent quantum gravity: A status report,'' \emph{Living Rev. Rel.} \textbf{7}, 5 (2004).
-
-\bibitem{Maldacena1998}
-J.\,M. Maldacena, ``The Large $begin:math:text$N$end:math:text$ limit of SCFT and supergravity,'' \emph{Adv. Theor. Math. Phys.} \textbf{2}, 231 (1998).
-
-% ---- Added references requested by the author ----
-\bibitem{SmeenkWuthrich2021}
-C. Smeenk and C. W\"uthrich, ``Determinism and General Relativity,'' \emph{Philosophy of Science} \textbf{88}, 638–664 (2021).
-
-\bibitem{Perkins1965}
-W. Perkins, ``Neutrino theory of photons,'' \emph{Phys. Rev.} \textbf{137}, B1291 (1965).
-
-\bibitem{PittsSchieve2004}
-J.\,B. Pitts and W.\,C. Schieve, ``Null cones and Einstein’s equations in Minkowski spacetime,'' \emph{Found. Phys.} \textbf{34}, 211–238 (2004).
-
-\bibitem{LiskaUnge2022}
-V. Li\v{s}ka and R. von Unge, ``Resonant string behavior in a gravitational wave burst,'' \emph{Phys. Rev. D} \textbf{106}, 044066 (2022).
-
-\bibitem{Bohm1952}
-D. Bohm, ``A suggested interpretation of the quantum theory in terms of ‘hidden’ variables. I,'' \emph{Phys. Rev.} \textbf{85}, 166 (1952).
-
-\bibitem{WahlstromChao1988}
-G. Wahlstr\"om and K. Chao, ``Electron localization in a quasiperiodic array of potential wells,'' \emph{Phys. Rev. B} \textbf{38}, 11793 (1988).
-
-\bibitem{FrolovGoswami2007}
-V.\,P. Frolov and R. Goswami, ``Surface geometry of 5D black holes and black rings,'' \emph{Phys. Rev. D} \textbf{75}, 124001 (2007).
-
-\bibitem{Kraniotis2005}
-G.\,V. Kraniotis, ``Frame dragging and bending of light in Kerr and Kerr–(A)dS spacetimes,'' \emph{Class. Quantum Grav.} \textbf{22}, 4391 (2005).
-
-\end{thebibliography}
+% ============================================================
+\bibliography{spacetime_polar_opticsNotes}
 
 \end{document}
