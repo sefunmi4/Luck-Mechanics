@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  16 AUG 2025 02:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  16 AUG 2025 02:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -413,62 +413,34 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headsep=\skip66
 \dth@everypar=\toks32
 )
-
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:24: LaTeX Error: Command \ang already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 \newcommand{\ang}{\vartheta}
-                                                    % Angular coordinate
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:26: LaTeX Error: Command \grad already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.26 \newcommand{\grad}{\nabla}
-                                                    % Covariant derivative
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-Package hyperref Info: Option `colorlinks' set `true' on input line 31.
-Class revtex4-2 Info: Unrecognized array package. Please update this document class! (Proceeding with fingers crossed.) on input line 34.
-Class revtex4-2 Info: cite was not loaded (OK!) on input line 34.
-Class revtex4-2 Info: mcite was not loaded (OK!) on input line 34.
-Class revtex4-2 Info: multicol was not loaded (OK!) on input line 34.
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 34.
-No file spacetime_polar_optics.aux.
+Package hyperref Info: Option `colorlinks' set `true' on input line 30.
+Class revtex4-2 Info: Unrecognized array package. Please update this document class! (Proceeding with fingers crossed.) on input line 33.
+Class revtex4-2 Info: cite was not loaded (OK!) on input line 33.
+Class revtex4-2 Info: mcite was not loaded (OK!) on input line 33.
+Class revtex4-2 Info: multicol was not loaded (OK!) on input line 33.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 33.
+ (./spacetime_polar_optics.aux)
 \openout1 = `spacetime_polar_optics.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+ (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count321
 \scratchdimen=\dimen173
@@ -487,7 +459,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 34.
+Package hyperref Info: Link coloring ON on input line 33.
+ (./spacetime_polar_optics.out) (./spacetime_polar_optics.out)
 \@outlinefile=\write4
 \openout4 = `spacetime_polar_optics.out'.
 
@@ -506,379 +479,245 @@ Package siunitx Warning: Detected the "physics" package:
 (/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 34.
-Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 34.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 33.
+Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 33.
 \openout3 = `spacetime_polar_opticsNotes.bib'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-Package natbib Warning: Citation `FeynmanHibbs1965' on page 1 undefined on input line 42.
+Package natbib Warning: Citation `FeynmanHibbs1965' on page 1 undefined on input line 41.
 
 
-Package natbib Warning: Citation `BirrellDavies' on page 1 undefined on input line 52.
+Package natbib Warning: Citation `BirrellDavies' on page 1 undefined on input line 51.
 
 
-Package natbib Warning: Citation `ParkerToms' on page 1 undefined on input line 52.
+Package natbib Warning: Citation `ParkerToms' on page 1 undefined on input line 51.
 
 
-Package natbib Warning: Citation `Bondi1962' on page 1 undefined on input line 52.
+Package natbib Warning: Citation `Bondi1962' on page 1 undefined on input line 51.
 
 
-Package natbib Warning: Citation `Sachs1962' on page 1 undefined on input line 52.
+Package natbib Warning: Citation `Sachs1962' on page 1 undefined on input line 51.
 
 
-Package natbib Warning: Citation `SmeenkWuthrich2021' on page 1 undefined on input line 52.
+Package natbib Warning: Citation `SmeenkWuthrich2021' on page 1 undefined on input line 51.
 
 
-Package natbib Warning: Citation `Hensen2015' on page 1 undefined on input line 52.
+Package natbib Warning: Citation `Hensen2015' on page 1 undefined on input line 51.
 
 
-Package natbib Warning: Citation `Giustina2015' on page 1 undefined on input line 52.
+Package natbib Warning: Citation `Giustina2015' on page 1 undefined on input line 51.
 
 
-Package natbib Warning: Citation `Shalm2015' on page 1 undefined on input line 52.
+Package natbib Warning: Citation `Shalm2015' on page 1 undefined on input line 51.
 
 
-Package natbib Warning: Citation `Bohm1952' on page 1 undefined on input line 52.
+Package natbib Warning: Citation `Bohm1952' on page 1 undefined on input line 51.
 
 
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:59: Package siunitx Error: Invalid number '^'.
+Package natbib Warning: Citation `Bondi1962' on page 1 undefined on input line 61.
 
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.59 ...uad d\Omega^2 = \gamma_{AB}(\angb)\,d\ang^
-                                                  A d\ang^B,
 
-The input '^' could not be parsed as a number following the format defined in
-module documentation.
+Package natbib Warning: Citation `Sachs1962' on page 1 undefined on input line 61.
 
 
+Package natbib Warning: Citation `PittsSchieve2004' on page 1 undefined on input line 61.
 
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:59: Package siunitx Error: Invalid number '^'.
 
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.59 ...ega^2 = \gamma_{AB}(\angb)\,d\ang^A d\ang^
-                                                  B,
+Package natbib Warning: Citation `Will2014' on page 1 undefined on input line 63.
 
-The input '^' could not be parsed as a number following the format defined in
-module documentation.
 
+Package natbib Warning: Citation `LiskaUnge2022' on page 1 undefined on input line 79.
 
 
-Package natbib Warning: Citation `Bondi1962' on page 1 undefined on input line 62.
+Package natbib Warning: Citation `BirrellDavies' on page 1 undefined on input line 81.
 
 
-Package natbib Warning: Citation `Sachs1962' on page 1 undefined on input line 62.
+Package natbib Warning: Citation `ParkerToms' on page 1 undefined on input line 81.
 
 
-Package natbib Warning: Citation `PittsSchieve2004' on page 1 undefined on input line 62.
-
-
-LaTeX Warning: Reference `eq:polar-metric' on page 1 undefined on input line 64.
-
-
-Package natbib Warning: Citation `Will2014' on page 1 undefined on input line 64.
-
-
-Package natbib Warning: Citation `LiskaUnge2022' on page 1 undefined on input line 80.
-
-
-Package natbib Warning: Citation `BirrellDavies' on page 1 undefined on input line 82.
-
-
-Package natbib Warning: Citation `ParkerToms' on page 1 undefined on input line 82.
-
-
-Package natbib Warning: Citation `PDG2024' on page 1 undefined on input line 82.
-
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:86: Missing { inserted.
-<to be read again> 
-                   \tex_let:D 
-l.86 ...ular loop at fixed $r$ with length $L_\ang
-                                                  (r)=\int\sqrt{a^2\,d\Omega...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:86: Package siunitx Error: Invalid number '('.
-
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.86 ...lar loop at fixed $r$ with length $L_\ang(
-                                                  r)=\int\sqrt{a^2\,d\Omega^...
-
-The input '(' could not be parsed as a number following the format defined in
-module documentation.
-
-
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:86: Missing } inserted.
-<inserted text> 
-                }
-l.86 ...ngth $L_\ang(r)=\int\sqrt{a^2\,d\Omega^2}$
-                                                  , standing modes satisfy
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Underfull \hbox (badness 6220) in paragraph at lines 86--87
-[]\OT1/cmr/m/n/10 On an an-gu-lar loop at fixed $\OML/cmm/m/it/10 r$ \OT1/cmr/m/n/10 with length
- []
-
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:88: Missing { inserted.
-<to be read again> 
-                   \tex_let:D 
-l.88   n\,\lambda = L_\ang
-                          (r),\qquad k_n=\frac{2\pi n}{L_\ang(r)},\ n\in\mat...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:88: Package siunitx Error: Invalid number '('.
-
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.88   n\,\lambda = L_\ang(
-                           r),\qquad k_n=\frac{2\pi n}{L_\ang(r)},\ n\in\mat...
-
-The input '(' could not be parsed as a number following the format defined in
-module documentation.
-
-
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:88: Missing { inserted.
-<to be read again> 
-                   \tex_let:D 
-l.88 ...ang(r),\qquad k_n=\frac{2\pi n}{L_\ang(r)}
-                                                  ,\ n\in\mathbb{N}.
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:88: Package siunitx Error: Invalid number '('.
-
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.88 ...ang(r),\qquad k_n=\frac{2\pi n}{L_\ang(r)}
-                                                  ,\ n\in\mathbb{N}.
-
-The input '(' could not be parsed as a number following the format defined in
-module documentation.
-
-
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:90: You can't use `\eqno' in math mode.
-\veqno ->\@kernel@eqno 
-                       \aftergroup \ignorespaces 
-l.90 \end{equation}
-                   
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:90: Missing } inserted.
-<inserted text> 
-                }
-l.90 \end{equation}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:90: Missing } inserted.
-<inserted text> 
-                }
-l.90 \end{equation}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+Package natbib Warning: Citation `PDG2024' on page 1 undefined on input line 81.
 
 [1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-Package natbib Warning: Citation `WahlstromChao1988' on page 2 undefined on input line 91.
+Package natbib Warning: Citation `WahlstromChao1988' on page 2 undefined on input line 90.
 
 
-Package natbib Warning: Citation `PDG2024' on page 2 undefined on input line 93.
+Package natbib Warning: Citation `PDG2024' on page 2 undefined on input line 92.
 
 
-Underfull \hbox (badness 2469) in paragraph at lines 93--93
+Underfull \hbox (badness 2469) in paragraph at lines 92--92
 []\OT1/cmr/m/it/10 [Assessment: Aligned as a cav-ity/potential anal-ogy.
  []
 
 
-Package natbib Warning: Citation `MandelWolf1995' on page 2 undefined on input line 109.
+Package natbib Warning: Citation `MandelWolf1995' on page 2 undefined on input line 108.
 
 
-Package natbib Warning: Citation `Hensen2015' on page 2 undefined on input line 109.
+Package natbib Warning: Citation `Hensen2015' on page 2 undefined on input line 108.
 
 
-Package natbib Warning: Citation `Giustina2015' on page 2 undefined on input line 109.
+Package natbib Warning: Citation `Giustina2015' on page 2 undefined on input line 108.
 
 
-Package natbib Warning: Citation `Shalm2015' on page 2 undefined on input line 109.
+Package natbib Warning: Citation `Shalm2015' on page 2 undefined on input line 108.
 
 
-Package natbib Warning: Citation `Bohm1952' on page 2 undefined on input line 109.
+Package natbib Warning: Citation `Bohm1952' on page 2 undefined on input line 108.
 
 
-LaTeX Warning: Reference `app:primeproof' on page 2 undefined on input line 119.
+Package natbib Warning: Citation `Montgomery1973' on page 2 undefined on input line 128.
 
 
-Package natbib Warning: Citation `Montgomery1973' on page 2 undefined on input line 129.
+Package natbib Warning: Citation `BerryKeating1999' on page 2 undefined on input line 128.
 
 
-Package natbib Warning: Citation `BerryKeating1999' on page 2 undefined on input line 129.
+Package natbib Warning: Citation `BoydNLO' on page 2 undefined on input line 130.
 
 
-Package natbib Warning: Citation `BoydNLO' on page 2 undefined on input line 131.
+Package natbib Warning: Citation `Feynman1948' on page 2 undefined on input line 136.
 
 
-Package natbib Warning: Citation `Feynman1948' on page 2 undefined on input line 137.
+Package natbib Warning: Citation `Dyson1949' on page 2 undefined on input line 136.
 
 
-Package natbib Warning: Citation `Dyson1949' on page 2 undefined on input line 137.
+Package natbib Warning: Citation `Kerr1963' on page 2 undefined on input line 140.
 
 
-Package natbib Warning: Citation `Kerr1963' on page 2 undefined on input line 141.
+Package natbib Warning: Citation `Kraniotis2005' on page 2 undefined on input line 140.
 
 
-Package natbib Warning: Citation `Kraniotis2005' on page 2 undefined on input line 141.
+Package natbib Warning: Citation `Kruskal1960' on page 2 undefined on input line 140.
 
 
-Package natbib Warning: Citation `Kruskal1960' on page 2 undefined on input line 141.
+Package natbib Warning: Citation `FrolovGoswami2007' on page 2 undefined on input line 140.
 
 
-Package natbib Warning: Citation `FrolovGoswami2007' on page 2 undefined on input line 141.
-
-
-Underfull \hbox (badness 1590) in paragraph at lines 143--143
+Underfull \hbox (badness 1590) in paragraph at lines 142--142
 []\OT1/cmr/m/it/10 [Assessment: Aligned: black holes; white holes ex-
  []
 
 
-Underfull \hbox (badness 3333) in paragraph at lines 143--143
+Underfull \hbox (badness 3333) in paragraph at lines 142--142
 \OT1/cmr/m/it/10 ist as time-reversed re-gions in ex-tended so-lu-tions.
  []
 
 
-Underfull \hbox (badness 5316) in paragraph at lines 143--143
+Underfull \hbox (badness 5316) in paragraph at lines 142--142
 \OT1/cmr/m/it/10 Novel/speculative: ``mu-tual re-open-ing/repulsion'' of
  []
 
 
-Package natbib Warning: Citation `Will2014' on page 2 undefined on input line 147.
+Package natbib Warning: Citation `Will2014' on page 2 undefined on input line 146.
 
 
-Package natbib Warning: Citation `GPB2011' on page 2 undefined on input line 147.
+Package natbib Warning: Citation `GPB2011' on page 2 undefined on input line 146.
 
 
-Package natbib Warning: Citation `LIGO2016' on page 2 undefined on input line 147.
+Package natbib Warning: Citation `LIGO2016' on page 2 undefined on input line 146.
 
 
-Package natbib Warning: Citation `Kraniotis2005' on page 2 undefined on input line 147.
+Package natbib Warning: Citation `Kraniotis2005' on page 2 undefined on input line 146.
 
 
-Package natbib Warning: Citation `BirrellDavies' on page 2 undefined on input line 149.
+Package natbib Warning: Citation `BirrellDavies' on page 2 undefined on input line 148.
 
 
-Package natbib Warning: Citation `ParkerToms' on page 2 undefined on input line 149.
+Package natbib Warning: Citation `ParkerToms' on page 2 undefined on input line 148.
 
 
-Package natbib Warning: Citation `Hanneke2008' on page 2 undefined on input line 151.
+Package natbib Warning: Citation `Hanneke2008' on page 2 undefined on input line 150.
 
 
-Package natbib Warning: Citation `Aoyama2012' on page 2 undefined on input line 151.
+Package natbib Warning: Citation `Aoyama2012' on page 2 undefined on input line 150.
 
 
-Package natbib Warning: Citation `Parker2018' on page 2 undefined on input line 151.
+Package natbib Warning: Citation `Parker2018' on page 2 undefined on input line 150.
 
 
-Package natbib Warning: Citation `Perkins1965' on page 2 undefined on input line 151.
+Package natbib Warning: Citation `Perkins1965' on page 2 undefined on input line 150.
 
 
-Package natbib Warning: Citation `PDG2024' on page 2 undefined on input line 151.
+Package natbib Warning: Citation `PDG2024' on page 2 undefined on input line 150.
 
 [2]
 
-Package natbib Warning: Citation `BoydNLO' on page 3 undefined on input line 157.
+Package natbib Warning: Citation `BoydNLO' on page 3 undefined on input line 156.
 
 
-Underfull \hbox (badness 1924) in paragraph at lines 159--160
+Underfull \hbox (badness 1924) in paragraph at lines 158--159
 \OT1/cmr/m/n/10 aperture in-ter-fer-om-e-ters re-solv-ing $\OML/cmm/b/it/10 #$ \OT1/cmr/m/n/10 should ex-hibit
  []
 
 
-Package natbib Warning: Citation `CouderFort2006' on page 3 undefined on input line 161.
+Package natbib Warning: Citation `CouderFort2006' on page 3 undefined on input line 160.
 
 
-Package natbib Warning: Citation `Bush2015' on page 3 undefined on input line 161.
+Package natbib Warning: Citation `Bush2015' on page 3 undefined on input line 160.
 
 
-Underfull \hbox (badness 2707) in paragraph at lines 161--162
+Underfull \hbox (badness 2707) in paragraph at lines 160--161
 []\OT1/cmr/bx/n/10 Hydrodynamic quan-tum analogs. \OT1/cmr/m/n/10 Ex-am-ine
  []
 
 
-Underfull \hbox (badness 1824) in paragraph at lines 163--163
+Underfull \hbox (badness 1824) in paragraph at lines 162--162
 []\OT1/cmr/m/it/10 [Assessment: Fal-si-fi-able lab sig-na-tures ex-ist for the
  []
 
 
-Package natbib Warning: Citation `Will2014' on page 3 undefined on input line 168.
+Package natbib Warning: Citation `Will2014' on page 3 undefined on input line 167.
 
 
-Package natbib Warning: Citation `LIGO2016' on page 3 undefined on input line 168.
+Package natbib Warning: Citation `LIGO2016' on page 3 undefined on input line 167.
 
 
-Package natbib Warning: Citation `GPB2011' on page 3 undefined on input line 168.
+Package natbib Warning: Citation `GPB2011' on page 3 undefined on input line 167.
 
 
-Package natbib Warning: Citation `BirrellDavies' on page 3 undefined on input line 168.
+Package natbib Warning: Citation `BirrellDavies' on page 3 undefined on input line 167.
 
 
-Package natbib Warning: Citation `ParkerToms' on page 3 undefined on input line 168.
+Package natbib Warning: Citation `ParkerToms' on page 3 undefined on input line 167.
 
 
-Package natbib Warning: Citation `Kerr1963' on page 3 undefined on input line 168.
+Package natbib Warning: Citation `Kerr1963' on page 3 undefined on input line 167.
 
 
-Package natbib Warning: Citation `Kraniotis2005' on page 3 undefined on input line 168.
+Package natbib Warning: Citation `Kraniotis2005' on page 3 undefined on input line 167.
 
 
-Package natbib Warning: Citation `Kruskal1960' on page 3 undefined on input line 168.
+Package natbib Warning: Citation `Kruskal1960' on page 3 undefined on input line 167.
 
 
-Package natbib Warning: Citation `PDG2024' on page 3 undefined on input line 168.
+Package natbib Warning: Citation `PDG2024' on page 3 undefined on input line 167.
 
 
-Underfull \hbox (badness 3148) in paragraph at lines 168--169
+Underfull \hbox (badness 3148) in paragraph at lines 167--168
  \OT1/cmr/m/n/10 4D Lorentzian man-i-fold; null/angle fo-li-a-tions
  []
+
+
+Package natbib Warning: Citation `Hensen2015' on page 3 undefined on input line 168.
+
+
+Package natbib Warning: Citation `Giustina2015' on page 3 undefined on input line 168.
+
+
+Package natbib Warning: Citation `Shalm2015' on page 3 undefined on input line 168.
+
+
+Package natbib Warning: Citation `Bohm1952' on page 3 undefined on input line 168.
+
+
+Package natbib Warning: Citation `PDG2024' on page 3 undefined on input line 169.
 
 
 Package natbib Warning: Citation `Hensen2015' on page 3 undefined on input line 169.
@@ -890,45 +729,24 @@ Package natbib Warning: Citation `Giustina2015' on page 3 undefined on input lin
 Package natbib Warning: Citation `Shalm2015' on page 3 undefined on input line 169.
 
 
-Package natbib Warning: Citation `Bohm1952' on page 3 undefined on input line 169.
+Package natbib Warning: Citation `Perkins1965' on page 3 undefined on input line 169.
 
 
-Package natbib Warning: Citation `PDG2024' on page 3 undefined on input line 170.
+Package natbib Warning: Citation `PDG2024' on page 3 undefined on input line 169.
 
 
-Package natbib Warning: Citation `Hensen2015' on page 3 undefined on input line 170.
-
-
-Package natbib Warning: Citation `Giustina2015' on page 3 undefined on input line 170.
-
-
-Package natbib Warning: Citation `Shalm2015' on page 3 undefined on input line 170.
-
-
-Package natbib Warning: Citation `Perkins1965' on page 3 undefined on input line 170.
-
-
-Package natbib Warning: Citation `PDG2024' on page 3 undefined on input line 170.
-
-
-LaTeX Warning: Reference `eq:polar-psi' on page 3 undefined on input line 181.
-
-
-Overfull \hbox (20.16066pt too wide) detected at line 194
+Overfull \hbox (20.16066pt too wide) detected at line 193
 \OT1/cmss/m/n/10 t[] \OT1/cmr/m/n/10 = [](\OML/cmm/m/it/10 @[]f\OT1/cmr/m/n/10 )[] = [] [] \OML/cmm/m/it/10 mn a[]a[] [] [] [] []:
  []
 
 
-LaTeX Warning: Reference `eq:avg-tension' on page 3 undefined on input line 195.
+Package natbib Warning: Citation `Hensen2015' on page 3 undefined on input line 197.
 
 
-Package natbib Warning: Citation `Hensen2015' on page 3 undefined on input line 198.
+Package natbib Warning: Citation `Giustina2015' on page 3 undefined on input line 197.
 
 
-Package natbib Warning: Citation `Giustina2015' on page 3 undefined on input line 198.
-
-
-Package natbib Warning: Citation `Shalm2015' on page 3 undefined on input line 198.
+Package natbib Warning: Citation `Shalm2015' on page 3 undefined on input line 197.
 
 (./spacetime_polar_optics.bbl [3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
@@ -950,31 +768,22 @@ L3 programming layer <2025-01-18>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `spacetime_polar_optics.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `spacetime_polar_optics.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  FE1C068039E4DEC9DD823D5422A15884;4761.
+Package rerunfilecheck Info: File `spacetime_polar_optics.out' has not changed.
+(rerunfilecheck)             Checksum: FE1C068039E4DEC9DD823D5422A15884;4761.
  ) 
 Here is how much of TeX's memory you used:
- 17385 strings out of 473190
- 322812 string characters out of 5715801
- 723693 words of memory out of 5000000
- 40421 multiletter control sequences out of 15000+600000
+ 17413 strings out of 473190
+ 323288 string characters out of 5715801
+ 724065 words of memory out of 5000000
+ 40443 multiletter control sequences out of 15000+600000
  570777 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,9n,93p,1557b,1102s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on spacetime_polar_optics.pdf (4 pages, 319973 bytes).
+ 79i,9n,93p,1560b,1102s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on spacetime_polar_optics.pdf (4 pages, 293035 bytes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
- 133 compressed objects within 2 object streams
+ 234 PDF objects out of 1000 (max. 8388607)
+ 180 compressed objects within 2 object streams
  32 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 145 words of extra memory for PDF output out of 10000 (max. 10000000)
 
