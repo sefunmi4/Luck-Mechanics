@@ -1,5 +1,5 @@
 % A 4D Radial–Angular Geometry for Unifying Gravity and Quantum (with assessment & citations + added refs)
-\documentclass[reprint,amsmath,amssymb,aps,pra]{revtex4-2}
+\documentclass[reprint,amsmath,amssymb,aps,pra]{revtex4-2} % chktex 8
 
 % ---------- Packages ----------
 \usepackage{graphicx}
@@ -33,13 +33,13 @@
 % ---------- Document ----------
 \begin{document}
 
-\title{Spacetime as Polar Optics: A 4D Radial--Angular Geometry for Unifying Gravity and Quantum}
+\title{Spacetime as Polar Optics: A 4D Radial-Angular Geometry for Unifying Gravity and Quantum}
 \author{Sefunmi Ashiru, Sophia Hart, Muhammad Zeeshan Hanif}
 \affiliation{Theoretical Systems and Quantum Geometry, Poughkeepsie, NY}
 \date{August 2025}
 
 \begin{abstract}
-This paper aims to formalize a unification ansatz in which both gravitational dynamics and quantum phenomena inhabit the \emph{same} four--dimensional geometry: time is represented as a radial coordinate $r=ct$ emanating from a start event, while distinct ``versions'' (appearances) of that event correspond to different angular perspectives $\angb$ of a single history. A universal complex field $\A=|\A|e^{i\phi}$ models compactified standing--frequency excitations (``light'' broadly speaking), whose phase gradients generate stress and whose stress sources curvature through Einstein's equations. Measurement is recast as selecting frequency/phase within an angular kernel, so Born weights appear as geometric \emph{angular} weights on 4D light--cone slices. We articulate \emph{luck as polar optic mechanics}: apparent luck is angular/phase selection of a deterministic 4D propagation under finite signal speed. We provide a common action, a polar metric adapted to causal flow, a prime--indexed standing--mode ansatz yielding compounded (composite) tension on each ``ring of time,'' and a mapping between Feynman graphs and 4D tension networks. For each major claim we add a rigorous status assessment vs.\ modern GR, QFT, LQG, and String Theory, cite peer--reviewed literature, and include short proofs and test proposals.
+This paper aims to formalize a unification ansatz in which both gravitational dynamics and quantum phenomena inhabit the \emph{same} four-dimensional geometry: time is represented as a radial coordinate $r=ct$ emanating from a start event, while distinct ``versions'' (appearances) of that event correspond to different angular perspectives $\angb$ of a single history. A universal complex field $\A=|\A|e^{i\phi}$ models compactified standing-frequency excitations---``light'' broadly speaking---whose phase gradients generate stress and whose stress sources curvature through Einstein's equations. Measurement is recast as selecting frequency/phase within an angular kernel, so Born weights appear as geometric \emph{angular} weights on 4D light-cone slices. We articulate \emph{luck as polar optic mechanics}: apparent luck is angular/phase selection of a deterministic 4D propagation under finite signal speed. We provide a common action, a polar metric adapted to causal flow, a prime-indexed standing-mode ansatz yielding compounded (composite) tension on each ``ring of time,'' and a mapping between Feynman graphs~(\cite{FeynmanHibbs1965}) and 4D tension networks. For each major claim we add a rigorous status assessment vs.~modern GR, QFT, LQG, and String Theory, cite peer-reviewed literature, and include short proofs and test proposals.
 \end{abstract}
 
 \maketitle
@@ -47,21 +47,21 @@ This paper aims to formalize a unification ansatz in which both gravitational dy
 % ============================================================
 \section{Principle: One Geometry, Two Theories}
 \textbf{Hypothesis.}
-(i) Spacetime $(\M,\g_{\mu\nu})$ is the \emph{same} stage for gravity and quantum kinematics; (ii) use a radial--angular chart $(r,\angb)$ adapted to causality with $r\equiv ct\ge 0$ and $\angb\in S^2$ labeling ``perspectives'' (Bondi--Sachs--type null/angular foliations justify this viewpoint near light cones); (iii) distinct observed ``versions'' of events are different $\angb$--slices of one 4D history; (iv) a universal complex field $\A$ underlies compactified standing modes.
+(i) Spacetime $(\M,\g_{\mu\nu})$ is the \emph{same} stage for gravity and quantum kinematics; (ii) use a radial-angular chart $(r,\angb)$ adapted to causality with $r\equiv ct\ge 0$ and $\angb\in S^2$ labeling ``perspectives'' (Bondi-Sachs-type null/angular foliations justify this viewpoint near light cones); (iii) distinct observed ``versions'' of events are different $\angb$-slices of one 4D history; (iv) a universal complex field $\A$ underlies compactified standing modes.
 
-\Assessment{Aligned: One 4D Lorentzian manifold for both GR dynamics and quantum kinematics is standard (quantum fields on curved backgrounds) \cite{BirrellDavies,ParkerToms}. Using light--cone--adapted angular coordinates is orthodox (Bondi--Sachs framework) \cite{Bondi1962,Sachs1962}. Novel: interpreting Born weights as \emph{angular} weights and casting ``luck'' as polar optics. Determinism in GR is subtle (global hyperbolicity, Cauchy horizons) \cite{SmeenkWuthrich2021}. Constraint: any hidden-variable determinism must respect Bell tests \cite{Hensen2015,Giustina2015,Shalm2015}; Bohm’s nonlocal theory is a classic example \cite{Bohm1952}.}
+\Assessment{Aligned: One 4D Lorentzian manifold for both GR dynamics and quantum kinematics is standard (quantum fields on curved backgrounds)~\cite{BirrellDavies,ParkerToms}. Using light-cone-adapted angular coordinates is orthodox (Bondi-Sachs framework)~\cite{Bondi1962,Sachs1962}. Novel: interpreting Born weights as \emph{angular} weights and casting ``luck'' as polar optics. Determinism in GR is subtle (global hyperbolicity, Cauchy horizons)~\cite{SmeenkWuthrich2021}. Constraint: any hidden-variable determinism must respect Bell tests~\cite{Hensen2015,Giustina2015,Shalm2015}; Bohm’s nonlocal theory is a classic example~\cite{Bohm1952}.}
 
 % ============================================================
-\section{Radial--Angular Metric and Causality}
+\section{Radial-Angular Metric and Causality}
 Adopt a polar-like line element centered on a reference event:
 \begin{equation}
   ds^2 = c^2\,dr^2 - a^2(r,\angb)\,d\Omega^2, 
   \qquad d\Omega^2 = \gamma_{AB}(\angb)\,d\ang^A d\ang^B,
   \label{eq:polar-metric}
 \end{equation}
-with areal factor $a(r,\angb)$ encoding curvature/anisotropy; in flat space $a\to r$. This is consistent with light--cone/retarded-time (\`a la Bondi--Sachs) foliations used in gravitational radiation theory \cite{Bondi1962,Sachs1962}. Radial nulls ($ds^2=0$) trace ordinary light cones; see also analyses of null cones in Minkowski backgrounds for GR reconstructions \cite{PittsSchieve2004}.
+with areal factor $a(r,\angb)$ encoding curvature/anisotropy; in flat space $a\to r$. This is consistent with light-cone/retarded-time (\`a la Bondi-Sachs) foliations used in gravitational radiation theory~\cite{Bondi1962,Sachs1962}. Radial nulls ($ds^2=0$) trace ordinary light cones; see also analyses of null cones in Minkowski backgrounds for GR reconstructions~\cite{PittsSchieve2004}.
 
-\Assessment{Aligned (as a coordinate choice). Globally, Eq.~\eqref{eq:polar-metric} is not unique nor always regular, but null--foliation/angle charts are standard near null infinity and in wave zones \cite{Will2014}.}
+\Assessment{Aligned (as a coordinate choice). Globally, Eq.~\eqref{eq:polar-metric} is not unique nor always regular, but null-foliation/angle charts are standard near null infinity and in wave zones~\cite{Will2014}.}
 
 % ============================================================
 \section{Unified Action and Phase Tension}
@@ -72,14 +72,14 @@ Let $\A=|\A|e^{i\phi}$ with action
     \Big],
   \label{eq:unified-action}
 \end{equation}
-yielding Einstein $G_{\mu\nu}=\kappa\, \T_{\mu\nu}^{(\A)}$ and a curved-space Klein--Gordon equation. Writing $\A=|\A|e^{i\phi}$ separates \emph{phase tension}
+yielding Einstein $G_{\mu\nu}=\kappa\, \T_{\mu\nu}^{(\A)}$ and a curved-space Klein-Gordon equation. Writing $\A=|\A|e^{i\phi}$ separates \emph{phase tension}
 \begin{equation}
   \T_{\mu\nu}^{(\phi)} = \xi \Big(\grad_\mu \phi\,\grad_\nu \phi - \tfrac{1}{2} g_{\mu\nu} (\grad\phi)^2 \Big),
   \label{eq:phase-tension}
 \end{equation}
-so phase gradients source curvature (akin to scalar-field stress in GR). String excitations interacting with strong gravitational waves exhibit resonant behavior \cite{LiskaUnge2022}, supporting the broader wave/tension picture (though not this specific model).
+so phase gradients source curvature (akin to scalar-field stress in GR). String excitations interacting with strong gravitational waves exhibit resonant behavior~\cite{LiskaUnge2022}, supporting the broader wave/tension picture (though not this specific model).
 
-\Assessment{Aligned: minimally coupled scalar fields sourcing curvature are textbook GR/QFTCS \cite{BirrellDavies,ParkerToms}. Novel: treating \emph{all} matter as one complex ``light'' field departs from the Standard Model (SM); PDG reviews summarize the established multi-field SM \cite{PDG2024}.}
+\Assessment{Aligned: minimally coupled scalar fields sourcing curvature are textbook GR/QFTCS~\cite{BirrellDavies,ParkerToms}. Novel: treating \emph{all} matter as one complex ``light'' field departs from the Standard Model (SM); PDG reviews summarize the established multi-field SM~\cite{PDG2024}.}
 
 % ============================================================
 \section{Particles as Compactified Standing Modes}
@@ -88,9 +88,9 @@ On an angular loop at fixed $r$ with length $L_\ang(r)=\int\sqrt{a^2\,d\Omega^2}
   n\,\lambda = L_\ang(r),\qquad k_n=\frac{2\pi n}{L_\ang(r)},\ n\in\mathbb{N}.
   \label{eq:quantization}
 \end{equation}
-Mode energies $E_n=\hbar\omega_n$ follow local dispersion set by $V$ and curvature. As an analogy for spectral selection in structured media, quasiperiodic arrays exhibit localization bands and nontrivial selection rules \cite{WahlstromChao1988}.
+Mode energies $E_n=\hbar\omega_n$ follow local dispersion set by $V$ and curvature. As an analogy for spectral selection in structured media, quasiperiodic arrays exhibit localization bands and nontrivial selection rules~\cite{WahlstromChao1988}.
 
-\Assessment{Aligned as a cavity/potential analogy. Novel if claimed literally for the SM spectrum; empirically, SM particle content \emph{is not} explained as compactified photon modes \cite{PDG2024}.}
+\Assessment{Aligned as a cavity/potential analogy. Novel if claimed literally for the SM spectrum; empirically, SM particle content \emph{is not} explained as compactified photon modes~\cite{PDG2024}.}
 
 % ============================================================
 \section{Born Weights as Angular Weights; Luck as Polar Optic Mechanics}
@@ -106,68 +106,68 @@ Detection with instrument kernel $K_\omega$ yields
 \end{equation}
 \emph{Luck as polar optics:} apparent randomness reflects finite-$c$ access to phases from only part of $S^2$; probability is an angular under-sampling of an underlying interference field.
 
-\Assessment{Complementary interpretive layer; compatible with decoherence/Born usage in quantum optics \cite{MandelWolf1995}. Constraint: local hidden-variable completions are excluded by loophole-free Bell tests; any deterministic completion must be explicitly nonlocal/contextual \cite{Hensen2015,Giustina2015,Shalm2015,Bohm1952}.}
+\Assessment{Complementary interpretive layer; compatible with decoherence/Born usage in quantum optics~\cite{MandelWolf1995}. Constraint: local hidden-variable completions are excluded by loophole-free Bell tests; any deterministic completion must be explicitly nonlocal/contextual~\cite{Hensen2015,Giustina2015,Shalm2015,Bohm1952}.}
 
 % ============================================================
 \section{Prime-Indexed Standing Modes \& Compounded Tension on the Ring of Time}
 Let
-\begin{equation}
-  f(\theta)=\sum_{n\ge1} a_n \cos(n\theta+\varphi_n),\quad
-  \taufield(\theta)=\frac{\eta}{2}\big(\partial_\theta f\big)^2.
+  \begin{equation}
+    f(\theta)=\sum_{n\ge1} a_n \cos{(n\theta+\varphi_n)},\quad
+    \taufield{(\theta)}=\frac{\eta}{2}\big(\partial_\theta f\big)^2.
   \label{eq:fourier-tension}
 \end{equation}
 If we \emph{seed} only prime harmonics $p\in\Primes$, quadratic mixing and weak nonlinearities generate composite indices via sum/difference identities; see Appendix~\ref{app:primeproof}. A von~Mangoldt-weighted ``sieve'' operator,
 \begin{equation}
-  \mathcal{S}[f](\theta)=\sum_{n\ge1}\Lambda(n)\, a_n e^{i(n\theta+\varphi_n)},
+\mathcal{S}[f](\theta)=\sum_{n\ge1}\Lambda(n)\, a_n e^{i(n\theta+\varphi_n)},
   \label{eq:vonmangoldt}
 \end{equation}
 diagnoses missing primes: adding a missing $p$ reduces composite-phase error at multiples of $p$. Average tension obeys
 \begin{equation}
-  \Eavg[\taufield]=\frac{\eta}{4}\sum_{n\ge1} n^2 a_n^2,
+\Eavg[\taufield]=\frac{\eta}{4}\sum_{n\ge1} n^2 a_n^2,
   \label{eq:avg-tension}
 \end{equation}
-so rarity ($\sim 1/\ln p$) versus energy ($\propto p^2 a_p^2$) trade off (Prime Number Theorem background; spectral analogies with prime statistics are suggestive \cite{Montgomery1973,BerryKeating1999}).
+so rarity ($\sim 1/\ln p$) versus energy ($\propto p^2 a_p^2$) trade off (Prime Number Theorem background; spectral analogies with prime statistics are suggestive~\cite{Montgomery1973,BerryKeating1999}).
 
-\Assessment{Aligned: Fourier analysis and nonlinear wave-mixing (sum/difference frequency generation) are standard in nonlinear optics/fluids \cite{BoydNLO}. Novel: using prime seeding as a \emph{design ansatz} for compounded tension and ``prime events''.}
+\Assessment{Aligned: Fourier analysis and nonlinear wave-mixing (sum/difference frequency generation) are standard in nonlinear optics/fluids~\cite{BoydNLO}. Novel: using prime seeding as a \emph{design ansatz} for compounded tension and ``prime events''.}
 
 % ============================================================
 \section{Tension Networks and Feynman Graphs}
 Define the phase-tension scalar $\R = (\grad\phi)^2$. High-$\R$ filaments define a graph $\mathcal{G}\subset\M$: edges follow large phase gradients, vertices are compactification knots, sheets are interference membranes. Feynman graphs then serve as bookkeeping shadows of stress/propagation on $\mathcal{G}$.
 
-\Assessment{Heuristic mapping. Aligned in spirit with path-integral/diagrammatics \cite{Feynman1948,Dyson1949}. Novel as a literal identification of spacetime tension filaments with diagrammatic edges.}
+\Assessment{Heuristic mapping. Aligned in spirit with path-integral/diagrammatics~\cite{Feynman1948,Dyson1949}. Novel as a literal identification of spacetime tension filaments with diagrammatic edges.}
 
 % ============================================================
 \section{Black/White Holes as Condensates of the Same Jelly}
-When phase tension and energy focus, $a(r,\angb)$ shrinks and null congruences converge (black-hole trapping: Kerr etc.) \cite{Kerr1963,Kraniotis2005}. The Kruskal extension of Schwarzschild includes a white-hole region as the time-reverse of a black hole \cite{Kruskal1960}. Higher-dimensional analogs (5D black holes/rings) display rich surface geometry \cite{FrolovGoswami2007}.
+When phase tension and energy focus, $a(r,\angb)$ shrinks and null congruences converge (black-hole trapping: Kerr etc.)~\cite{Kerr1963,Kraniotis2005}. The Kruskal extension of Schwarzschild includes a white-hole region as the time-reverse of a black hole~\cite{Kruskal1960}. Higher-dimensional analogs (5D black holes/rings) display rich surface geometry~\cite{FrolovGoswami2007}.
 
 \Assessment{Aligned: black holes; white holes exist as time-reversed regions in extended solutions. Novel/speculative: ``mutual reopening/repulsion'' of nearby white-hole–like sources in nature. No observational support; GR allows white-hole regions mathematically but they are unstable/unobserved.}
 
 % ============================================================
 \section{Recovering Limits and Confrontation with Data}
-\textbf{GR limit.} With weak $\phi$ gradients, $\T^{(\phi)}_{\mu\nu}$ is a standard scalar source and Einstein’s equations reduce to GR with known tests (perihelion advance, Shapiro delay, frame dragging, gravitational waves) \cite{Will2014,GPB2011,LIGO2016,Kraniotis2005}.
+\textbf{GR limit.} With weak $\phi$ gradients, $\T^{(\phi)}_{\mu\nu}$ is a standard scalar source and Einstein’s equations reduce to GR with known tests (perihelion advance, Shapiro delay, frame dragging, gravitational waves)~\cite{Will2014,GPB2011,LIGO2016,Kraniotis2005}.
 
-\textbf{Quantum limit.} On fixed $(\M,\g)$, small-amplitude $\A$ obeys the curved-space KG equation \cite{BirrellDavies,ParkerToms}; standard interference/Born rule are recovered.
+\textbf{Quantum limit.} On fixed $(\M,\g)$, small-amplitude $\A$ obeys the curved-space KG equation~\cite{BirrellDavies,ParkerToms}; standard interference/Born rule are recovered.
 
-\textbf{SM precision.} Any unification must not spoil QED’s precision (electron $g-2$ and tenth-order calculations) \cite{Hanneke2008,Aoyama2012,Parker2018}. Our construction stays agnostic about SM gauge content (to be added atop $\A$ if needed). Historical alternatives like a ``neutrino theory of photons'' are noted but not compatible with the modern SM \cite{Perkins1965,PDG2024}.
+\textbf{SM precision.} Any unification must not spoil QED’s precision (electron $g-2$ and tenth-order calculations)~\cite{Hanneke2008,Aoyama2012,Parker2018}. Our construction stays agnostic about SM gauge content (to be added atop $\A$ if needed). Historical alternatives like a ``neutrino theory of photons'' are noted but not compatible with the modern SM~\cite{Perkins1965,PDG2024}.
 
 \Assessment{Aligned: these limits are standard. Constraint: extremely tight QED/GR tests bound any new couplings.}
 
 % ============================================================
 \section{Phenomenology and Tests}
-\textbf{Analog fluids/photonics.} Drive superfluids or optical cavities with prime-indexed phase masks; verify composite lines appear by mixing and that adding a ``missing prime'' reduces sieve error (nonlinear mixing calibrated by \cite{BoydNLO}). 
+\textbf{Analog fluids/photonics.} Drive superfluids or optical cavities with prime-indexed phase masks; verify composite lines appear by mixing and that adding a ``missing prime'' reduces sieve error (nonlinear mixing calibrated by~\cite{BoydNLO}).
 
 \textbf{Interferometry as angular tomography.} Multi-aperture interferometers resolving $\angb$ should exhibit curvature-dependent reweighting of fringe envelopes consistent with $a(r,\angb)$ (a geometric calibration of angular Born weights).
 
-\textbf{Hydrodynamic quantum analogs.} Examine whether droplet pilot-wave analogs show prime-seeded stability bands \cite{CouderFort2006,Bush2015}.
+\textbf{Hydrodynamic quantum analogs.} Examine whether droplet pilot-wave analogs show prime-seeded stability bands~\cite{CouderFort2006,Bush2015}.
 
 \Assessment{Falsifiable lab signatures exist for the prime-sieve/tension story and for angular tomography. Astrophysical deviations from GR lensing would tightly bound any new phase-tension couplings.}
 
 % ============================================================
 \section{Status Map: What Aligns, What’s New, What’s Skeptical}
 \begin{itemize}
-\item \textbf{Fully aligned with modern science:} One 4D Lorentzian manifold; null/angle foliations (Bondi–Sachs); GR tests including frame-dragging and gravitational waves; QFT on curved spacetime; QED precision; Kerr/Schwarzschild/Kruskal basics \cite{Will2014,LIGO2016,GPB2011,BirrellDavies,ParkerToms,Kerr1963,Kraniotis2005,Kruskal1960,PDG2024}.
-\item \textbf{New but complementary (conceptual):} Born weights as angular weights; “luck as polar optics”; tension-network interpretation of diagrams; prime-seed design ansatz for compounded tension (intended for analog systems). Must be checked against Bell tests and precision constraints \cite{Hensen2015,Giustina2015,Shalm2015,Bohm1952}.
-\item \textbf{Far-fetched/ruled-out as stated:} ``Everything is compactified light’’ (conflicts with SM content \cite{PDG2024}); white-hole repulsion in nature (no evidence; white holes are non-astrophysical regions of extended solutions); any \emph{local} hidden-variable determinism (excluded by loophole-free Bell tests \cite{Hensen2015,Giustina2015,Shalm2015}). Historical proposals like a neutrino theory of photons are not consistent with current electroweak theory \cite{Perkins1965,PDG2024}.
+\item \textbf{Fully aligned with modern science:} One 4D Lorentzian manifold; null/angle foliations (Bondi–Sachs); GR tests including frame-dragging and gravitational waves; QFT on curved spacetime; QED precision; Kerr/Schwarzschild/Kruskal basics~\cite{Will2014,LIGO2016,GPB2011,BirrellDavies,ParkerToms,Kerr1963,Kraniotis2005,Kruskal1960,PDG2024}.
+\item \textbf{New but complementary (conceptual):} Born weights as angular weights; “luck as polar optics”; tension-network interpretation of diagrams; prime-seed design ansatz for compounded tension (intended for analog systems). Must be checked against Bell tests and precision constraints~\cite{Hensen2015,Giustina2015,Shalm2015,Bohm1952}.
+\item \textbf{Far-fetched/ruled-out as stated:} ``Everything is compactified light’’ (conflicts with SM content~\cite{PDG2024}); white-hole repulsion in nature (no evidence; white holes are non-astrophysical regions of extended solutions); any \emph{local} hidden-variable determinism (excluded by loophole-free Bell tests~\cite{Hensen2015,Giustina2015,Shalm2015}). Historical proposals like a neutrino theory of photons are not consistent with current electroweak theory~\cite{Perkins1965,PDG2024}.
 \end{itemize}
 
 % ============================================================
@@ -186,16 +186,16 @@ With $r=ct$ and $\angb\in S^2$ with area element $a^2(r,\angb)\,d\Omega$, define
 so angular detection weights are properly normalized on each radial slice.
 
 \section{Prime Mixing \& Average Tension}\label{app:primeproof}
-Let $f(\theta)=\sum_{n\ge1} a_n \cos(n\theta+\varphi_n)$. Then
-$\partial_\theta f=\sum_n (-n a_n)\sin(n\theta+\varphi_n)$ and
+  Let $f(\theta)=\sum_{n\ge1} a_n \cos{(n\theta+\varphi_n)}$. Then
+  $\partial_\theta f=\sum_n (-n a_n)\sin{(n\theta+\varphi_n)}$ and
 \[
-  \taufield(\theta)=\tfrac{\eta}{2}(\partial_\theta f)^2
-  = \tfrac{\eta}{2}\sum_{m,n} mn\,a_m a_n \sin(m\theta+\phi_m)\sin(n\theta+\phi_n).
+    \taufield{(\theta)}=\tfrac{\eta}{2}(\partial_\theta f)^2
+    = \tfrac{\eta}{2}\sum_{m,n} mn\,a_m a_n \sin{(m\theta+\phi_m)}\sin{(n\theta+\phi_n)}.
 \]
-Using $\sin u\,\sin v=\tfrac{1}{2}[\cos(u{-}v)-\cos(u{+}v)]$, quadratic mixing generates indices $|m\pm n|$. If $f$ is seeded only at primes, composites appear in $\taufield$ automatically. Averaging over $\theta$ kills cross terms, yielding Eq.~\eqref{eq:avg-tension}.
+  Using $\sin u\,\sin v=\tfrac{1}{2}[\cos{(u{-}v)}-\cos{(u{+}v)}]$, quadratic mixing generates indices $|m\pm n|$. If $f$ is seeded only at primes, composites appear in $\taufield$ automatically. Averaging over $\theta$ kills cross terms, yielding Eq.~\eqref{eq:avg-tension}.
 
 \section{Bell Constraints on ``Polar Luck''}
-Any claim that probabilities arise from inaccessible but \emph{local} angular phases is equivalent to a local hidden-variable model and violates loophole-free Bell inequalities \cite{Hensen2015,Giustina2015,Shalm2015}. Any deterministic completion must be nonlocal/contextual (or accept retrocausality), which we leave outside scope.
+Any claim that probabilities arise from inaccessible but \emph{local} angular phases is equivalent to a local hidden-variable model and violates loophole-free Bell inequalities~\cite{Hensen2015,Giustina2015,Shalm2015}. Any deterministic completion must be nonlocal/contextual (or accept retrocausality), which we leave outside scope.
 
 % ============================================================
 % ============================================================
