@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex spacetime_polar_optics"] 1755196153.19822 "spacetime_polar_optics.aux" "spacetime_polar_optics.bbl" "spacetime_polar_optics" 1755203165.36157 0
-  "./spacetime_polar_opticsNotes.bib" 1755203165.14076 104 4d8bb863c86f3d7b03a471e9d4707f34 ""
+["bibtex spacetime_polar_optics"] 1755205609.77192 "spacetime_polar_optics.aux" "spacetime_polar_optics.bbl" "spacetime_polar_optics" 1755205610.73956 2
+  "./spacetime_polar_opticsNotes.bib" 1755205610.51248 104 4d8bb863c86f3d7b03a471e9d4707f34 ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/revtex/apsrev4-2.bst" 1601932770 69609 e9dea59f0e753ccda3ddc8f5806d846d ""
-  "spacetime_polar_optics.aux" 1755203165.13982 5980 f0ea28bddc41f7f22b55a187c771da1d "pdflatex"
+  "spacetime_polar_optics.aux" 1755205610.5117 4528 ed33794bd73238e130506a24a38d7f31 "pdflatex"
   (generated)
   "spacetime_polar_optics.bbl"
   "spacetime_polar_optics.blg"
   (rewritten before read)
-["pdflatex"] 1755203164.57345 "/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex" "spacetime_polar_optics.pdf" "spacetime_polar_optics" 1755203165.36171 2
-  "/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex" 1755203163.42095 22572 c7303e15417414555588f552d515eafd ""
+["pdflatex"] 1755205609.94747 "/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex" "spacetime_polar_optics.pdf" "spacetime_polar_optics" 1755205610.73971 2
+  "/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex" 1755205608.51529 17068 21ae697cfcd67f1fa3dd8aef3b89d5bd ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -43,7 +43,6 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr9.tfm" 1136768653 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmss10.tfm" 1136768653 1316 b636689f1933f24d1294acdf6041daaa ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmss8.tfm" 1136768653 1296 d77f431d10d47c8ea2cc18cf45346274 ""
-  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmss9.tfm" 1136768653 1320 49357c421c0d469f88b867dd0c3d10e8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm" 1136768653 1116 25a7bf822c58caf309a702ef79f4afbb ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
@@ -148,10 +147,10 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1754508766 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "spacetime_polar_optics.aux" 1755203165.13982 5980 f0ea28bddc41f7f22b55a187c771da1d "pdflatex"
-  "spacetime_polar_optics.bbl" 1755196153.28143 1980 28c19e8c34138b62d4af8c2d0ed844b0 "bibtex spacetime_polar_optics"
-  "spacetime_polar_optics.out" 1755203165.14058 4767 faf1681b68dbf29d18457384a74d84e3 "pdflatex"
-  "spacetime_polar_optics.tex" 1755203163.42095 22572 c7303e15417414555588f552d515eafd ""
+  "spacetime_polar_optics.aux" 1755205610.5117 4528 ed33794bd73238e130506a24a38d7f31 "pdflatex"
+  "spacetime_polar_optics.bbl" 1755205609.85743 1980 28c19e8c34138b62d4af8c2d0ed844b0 "bibtex spacetime_polar_optics"
+  "spacetime_polar_optics.out" 1755205610.51232 4767 faf1681b68dbf29d18457384a74d84e3 "pdflatex"
+  "spacetime_polar_optics.tex" 1755205608.51529 17068 21ae697cfcd67f1fa3dd8aef3b89d5bd ""
   (generated)
   "spacetime_polar_optics.aux"
   "spacetime_polar_optics.log"
