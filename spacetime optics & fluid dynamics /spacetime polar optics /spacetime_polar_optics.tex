@@ -38,7 +38,7 @@
 \date{August 2025}
 
 \begin{abstract}
-This paper aims to formalize a unification ansatz in which both gravitational dynamics and quantum phenomena inhabit the \emph{same} four-dimensional geometry: time is represented as a radial coordinate $r=ct$ emanating from a start event, while distinct ``versions'' (appearances) of that event correspond to different angular perspectives $\polangb$ of a single history. A universal complex field $\A=|\A|e^{i\phi}$ models compactified standing-frequency excitations---``light'' broadly speaking---whose phase gradients generate stress and whose stress sources curvature through Einstein's equations. Measurement is recast as selecting frequency/phase within an angular kernel, so Born weights appear as geometric \emph{angular} weights on 4D light-cone slices. We articulate \emph{luck as polar optic mechanics}: apparent luck is angular/phase selection of a deterministic 4D propagation under finite signal speed. We provide a common action, a polar metric adapted to causal flow, a prime-indexed standing-mode ansatz yielding compounded (composite) tension on each ``ring of time,'' and a mapping between Feynman graphs~(\cite{FeynmanHibbs1965}) and 4D tension networks. For each major claim we add a rigorous status assessment vs.~modern GR, QFT, LQG, and String Theory, cite peer-reviewed literature, and include short proofs and test proposals.
+This paper aims to formalize a unification ansatz in which both gravitational dynamics and quantum phenomena inhabit the \emph{same} four-dimensional geometry: time is represented as a radial coordinate $r=ct$ emanating from a start event, while distinct ``versions'' (appearances) of that event correspond to different angular perspectives $\polangb$ of a single history. A universal complex field $\A=|\A|e^{i\phi}$ models compactified standing-frequency excitations--- ``light'' broadly speaking ---whose phase gradients generate stress and whose stress sources curvature through Einstein's equations. Measurement is recast as selecting frequency/phase within an angular kernel, so Born weights appear as geometric \emph{angular} weights on 4D light-cone slices. We articulate \emph{luck as polar optic mechanics}: apparent luck is angular/phase selection of a deterministic 4D propagation under finite signal speed. We provide a common action, a polar metric adapted to causal flow, a prime-indexed standing-mode ansatz yielding compounded (composite) tension on each ``ring of time,'' and a mapping between Feynman graphs~(\cite{FeynmanHibbs1965}) and 4D tension networks. For each major claim we add a rigorous status assessment vs.~modern GR, QFT, LQG, and String Theory, cite peer-reviewed literature, and include short proofs and test proposals.
 \end{abstract}
 
 \maketitle
@@ -73,7 +73,7 @@ Let $\A=|\A|e^{i\phi}$ with action
 \end{equation}
 yielding Einstein $G_{\mu\nu}=\kappa\, \T_{\mu\nu}^{(\A)}$ and a curved-space Klein-Gordon equation. Writing $\A=|\A|e^{i\phi}$ separates \emph{phase tension}
 \begin{equation}
-  \T_{\mu\nu}^{(\phi)} = \xi \Big(\nabla_\mu \phi\,\nabla_\nu \phi - \tfrac{1}{2} g_{\mu\nu} (\nabla\phi)^2 \Big),
+  \T_{\mu\nu}^{(\phi)} = \xi \Big(\nabla_\mu \phi\,\nabla_\nu \phi - \tfrac{1}{2} g_{\mu\nu} (\nabla \phi)^2 \Big),
   \label{eq:phase-tension}
 \end{equation}
 so phase gradients source curvature (akin to scalar-field stress in GR). String excitations interacting with strong gravitational waves exhibit resonant behavior~\cite{LiskaUnge2022}, supporting the broader wave/tension picture (though not this specific model).
@@ -112,7 +112,7 @@ Detection with instrument kernel $K_\omega$ yields
 Let
   \begin{equation}
     f(\theta)=\sum_{n\ge1} a_n \cos{(n\theta+\varphi_n)},\quad
-    \taufield{(\theta)}=\frac{\eta}{2}\big(\partial_\theta f\big)^2.
+    \taufield(\theta)=\frac{\eta}{2}\big(\partial_\theta f\big)^2.
   \label{eq:fourier-tension}
 \end{equation}
 If we \emph{seed} only prime harmonics $p\in\Primes$, quadratic mixing and weak nonlinearities generate composite indices via sum/difference identities; see Appendix~\ref{app:primeproof}. A von~Mangoldt-weighted ``sieve'' operator,
@@ -131,7 +131,7 @@ so rarity ($\sim 1/\ln p$) versus energy ($\propto p^2 a_p^2$) trade off (Prime 
 
 % ============================================================
 \section{Tension Networks and Feynman Graphs}
-Define the phase-tension scalar $\R = (\nabla\phi)^2$. High-$\R$ filaments define a graph $\mathcal{G}\subset\M$: edges follow large phase gradients, vertices are compactification knots, sheets are interference membranes. Feynman graphs then serve as bookkeeping shadows of stress/propagation on $\mathcal{G}$.
+Define the phase-tension scalar $\R = (\nabla \phi)^2$. High-$\R$ filaments define a graph $\mathcal{G}\subset\M$: edges follow large phase gradients, vertices are compactification knots, sheets are interference membranes. Feynman graphs then serve as bookkeeping shadows of stress/propagation on $\mathcal{G}$.
 
 \Assessment{Heuristic mapping. Aligned in spirit with path-integral/diagrammatics~\cite{Feynman1948,Dyson1949}. Novel as a literal identification of spacetime tension filaments with diagrammatic edges.}
 
@@ -188,7 +188,7 @@ so angular detection weights are properly normalized on each radial slice.
   Let $f(\theta)=\sum_{n\ge1} a_n \cos{(n\theta+\varphi_n)}$. Then
   $\partial_\theta f=\sum_n (-n a_n)\sin{(n\theta+\varphi_n)}$ and
 \[
-    \taufield{(\theta)}=\tfrac{\eta}{2}(\partial_\theta f)^2
+    \taufield(\theta)=\tfrac{\eta}{2}(\partial_\theta f)^2
     = \tfrac{\eta}{2}\sum_{m,n} mn\,a_m a_n \sin{(m\theta+\phi_m)}\sin{(n\theta+\phi_n)}.
 \]
   Using $\sin u\,\sin v=\tfrac{1}{2}[\cos{(u{-}v)}-\cos{(u{+}v)}]$, quadratic mixing generates indices $|m\pm n|$. If $f$ is seeded only at primes, composites appear in $\taufield$ automatically. Averaging over $\theta$ kills cross terms, yielding Eq.~\eqref{eq:avg-tension}.
