@@ -21,9 +21,8 @@
 \newcommand{\A}{\mathcal{A}}                   % Complex "light" field
 \newcommand{\T}{T}                             % Stress-energy (generic)
 \newcommand{\R}{\mathcal{R}}                   % Phase-tension scalar
-\newcommand{\ang}{\vartheta}                   % Angular coordinate
-\newcommand{\angb}{\boldsymbol{\vartheta}}     % Angular 2-sphere coords
-\newcommand{\grad}{\nabla}                     % Covariant derivative
+\newcommand{\polang}{\vartheta}                % Angular coordinate
+\newcommand{\polangb}{\boldsymbol{\vartheta}}  % Angular 2-sphere coords
 \newcommand{\Eavg}{\mathcal{E}_{\!\mathrm{avg}}}
 \newcommand{\taufield}{\mathsf{t}}             % tension density symbol
 \newcommand{\Assessment}[1]{\par\smallskip\noindent\textit{\color{blue}[Assessment:\ #1]}\par\smallskip}
@@ -39,7 +38,7 @@
 \date{August 2025}
 
 \begin{abstract}
-This paper aims to formalize a unification ansatz in which both gravitational dynamics and quantum phenomena inhabit the \emph{same} four-dimensional geometry: time is represented as a radial coordinate $r=ct$ emanating from a start event, while distinct ``versions'' (appearances) of that event correspond to different angular perspectives $\angb$ of a single history. A universal complex field $\A=|\A|e^{i\phi}$ models compactified standing-frequency excitations---``light'' broadly speaking---whose phase gradients generate stress and whose stress sources curvature through Einstein's equations. Measurement is recast as selecting frequency/phase within an angular kernel, so Born weights appear as geometric \emph{angular} weights on 4D light-cone slices. We articulate \emph{luck as polar optic mechanics}: apparent luck is angular/phase selection of a deterministic 4D propagation under finite signal speed. We provide a common action, a polar metric adapted to causal flow, a prime-indexed standing-mode ansatz yielding compounded (composite) tension on each ``ring of time,'' and a mapping between Feynman graphs~(\cite{FeynmanHibbs1965}) and 4D tension networks. For each major claim we add a rigorous status assessment vs.~modern GR, QFT, LQG, and String Theory, cite peer-reviewed literature, and include short proofs and test proposals.
+This paper aims to formalize a unification ansatz in which both gravitational dynamics and quantum phenomena inhabit the \emph{same} four-dimensional geometry: time is represented as a radial coordinate $r=ct$ emanating from a start event, while distinct ``versions'' (appearances) of that event correspond to different angular perspectives $\polangb$ of a single history. A universal complex field $\A=|\A|e^{i\phi}$ models compactified standing-frequency excitations---``light'' broadly speaking---whose phase gradients generate stress and whose stress sources curvature through Einstein's equations. Measurement is recast as selecting frequency/phase within an angular kernel, so Born weights appear as geometric \emph{angular} weights on 4D light-cone slices. We articulate \emph{luck as polar optic mechanics}: apparent luck is angular/phase selection of a deterministic 4D propagation under finite signal speed. We provide a common action, a polar metric adapted to causal flow, a prime-indexed standing-mode ansatz yielding compounded (composite) tension on each ``ring of time,'' and a mapping between Feynman graphs~(\cite{FeynmanHibbs1965}) and 4D tension networks. For each major claim we add a rigorous status assessment vs.~modern GR, QFT, LQG, and String Theory, cite peer-reviewed literature, and include short proofs and test proposals.
 \end{abstract}
 
 \maketitle
@@ -47,7 +46,7 @@ This paper aims to formalize a unification ansatz in which both gravitational dy
 % ============================================================
 \section{Principle: One Geometry, Two Theories}
 \textbf{Hypothesis.}
-(i) Spacetime $(\M,\g_{\mu\nu})$ is the \emph{same} stage for gravity and quantum kinematics; (ii) use a radial-angular chart $(r,\angb)$ adapted to causality with $r\equiv ct\ge 0$ and $\angb\in S^2$ labeling ``perspectives'' (Bondi-Sachs-type null/angular foliations justify this viewpoint near light cones); (iii) distinct observed ``versions'' of events are different $\angb$-slices of one 4D history; (iv) a universal complex field $\A$ underlies compactified standing modes.
+(i) Spacetime $(\M,\g_{\mu\nu})$ is the \emph{same} stage for gravity and quantum kinematics; (ii) use a radial-angular chart $(r,\polangb)$ adapted to causality with $r\equiv ct\ge 0$ and $\polangb\in S^2$ labeling ``perspectives'' (Bondi-Sachs-type null/angular foliations justify this viewpoint near light cones); (iii) distinct observed ``versions'' of events are different $\polangb$-slices of one 4D history; (iv) a universal complex field $\A$ underlies compactified standing modes.
 
 \Assessment{Aligned: One 4D Lorentzian manifold for both GR dynamics and quantum kinematics is standard (quantum fields on curved backgrounds)~\cite{BirrellDavies,ParkerToms}. Using light-cone-adapted angular coordinates is orthodox (Bondi-Sachs framework)~\cite{Bondi1962,Sachs1962}. Novel: interpreting Born weights as \emph{angular} weights and casting ``luck'' as polar optics. Determinism in GR is subtle (global hyperbolicity, Cauchy horizons)~\cite{SmeenkWuthrich2021}. Constraint: any hidden-variable determinism must respect Bell tests~\cite{Hensen2015,Giustina2015,Shalm2015}; Bohm’s nonlocal theory is a classic example~\cite{Bohm1952}.}
 
@@ -55,11 +54,11 @@ This paper aims to formalize a unification ansatz in which both gravitational dy
 \section{Radial-Angular Metric and Causality}
 Adopt a polar-like line element centered on a reference event:
 \begin{equation}
-  ds^2 = c^2\,dr^2 - a^2(r,\angb)\,d\Omega^2, 
-  \qquad d\Omega^2 = \gamma_{AB}(\angb)\,d\ang^A d\ang^B,
+  ds^2 = c^2\,dr^2 - a^2(r,\polangb)\,d\Omega^2, 
+  \qquad d\Omega^2 = \gamma_{AB}(\polangb)\,d\polang^A d\polang^B,
   \label{eq:polar-metric}
 \end{equation}
-with areal factor $a(r,\angb)$ encoding curvature/anisotropy; in flat space $a\to r$. This is consistent with light-cone/retarded-time (\`a la Bondi-Sachs) foliations used in gravitational radiation theory~\cite{Bondi1962,Sachs1962}. Radial nulls ($ds^2=0$) trace ordinary light cones; see also analyses of null cones in Minkowski backgrounds for GR reconstructions~\cite{PittsSchieve2004}.
+with areal factor $a(r,\polangb)$ encoding curvature/anisotropy; in flat space $a\to r$. This is consistent with light-cone/retarded-time (\`a la Bondi-Sachs) foliations used in gravitational radiation theory~\cite{Bondi1962,Sachs1962}. Radial nulls ($ds^2=0$) trace ordinary light cones; see also analyses of null cones in Minkowski backgrounds for GR reconstructions~\cite{PittsSchieve2004}.
 
 \Assessment{Aligned (as a coordinate choice). Globally, Eq.~\eqref{eq:polar-metric} is not unique nor always regular, but null-foliation/angle charts are standard near null infinity and in wave zones~\cite{Will2014}.}
 
@@ -68,13 +67,13 @@ with areal factor $a(r,\angb)$ encoding curvature/anisotropy; in flat space $a\t
 Let $\A=|\A|e^{i\phi}$ with action
 \begin{equation}
   S[\A,\g] = \int d^4x\,\sqrt{-g}\Big[\frac{1}{2\kappa}R
-    + \frac{\xi}{2}\,\grad_\mu \A\,\grad^\mu \A^* - V(|\A|)
+    + \frac{\xi}{2}\,\nabla_\mu \A\,\nabla^\mu \A^* - V(|\A|)
     \Big],
   \label{eq:unified-action}
 \end{equation}
 yielding Einstein $G_{\mu\nu}=\kappa\, \T_{\mu\nu}^{(\A)}$ and a curved-space Klein-Gordon equation. Writing $\A=|\A|e^{i\phi}$ separates \emph{phase tension}
 \begin{equation}
-  \T_{\mu\nu}^{(\phi)} = \xi \Big(\grad_\mu \phi\,\grad_\nu \phi - \tfrac{1}{2} g_{\mu\nu} (\grad\phi)^2 \Big),
+  \T_{\mu\nu}^{(\phi)} = \xi \Big(\nabla_\mu \phi\,\nabla_\nu \phi - \tfrac{1}{2} g_{\mu\nu} (\nabla\phi)^2 \Big),
   \label{eq:phase-tension}
 \end{equation}
 so phase gradients source curvature (akin to scalar-field stress in GR). String excitations interacting with strong gravitational waves exhibit resonant behavior~\cite{LiskaUnge2022}, supporting the broader wave/tension picture (though not this specific model).
@@ -83,9 +82,9 @@ so phase gradients source curvature (akin to scalar-field stress in GR). String 
 
 % ============================================================
 \section{Particles as Compactified Standing Modes}
-On an angular loop at fixed $r$ with length $L_\ang(r)=\int\sqrt{a^2\,d\Omega^2}$, standing modes satisfy
+On an angular loop at fixed $r$ with length $L_\polang(r)=\int\sqrt{a^2\,d\Omega^2}$, standing modes satisfy
 \begin{equation}
-  n\,\lambda = L_\ang(r),\qquad k_n=\frac{2\pi n}{L_\ang(r)},\ n\in\mathbb{N}.
+  n\,\lambda = L_\polang(r),\qquad k_n=\frac{2\pi n}{L_\polang(r)},\ n\in\mathbb{N}.
   \label{eq:quantization}
 \end{equation}
 Mode energies $E_n=\hbar\omega_n$ follow local dispersion set by $V$ and curvature. As an analogy for spectral selection in structured media, quasiperiodic arrays exhibit localization bands and nontrivial selection rules~\cite{WahlstromChao1988}.
@@ -96,13 +95,13 @@ Mode energies $E_n=\hbar\omega_n$ follow local dispersion set by $V$ and curvatu
 \section{Born Weights as Angular Weights; Luck as Polar Optic Mechanics}
 Define an angularly normalized field on each ring of time
 \begin{equation}
-  \tilde{\Psi}(r,\angb) \equiv \sqrt{\frac{1}{\Omega_r}}\,\A(r,\angb),\qquad
-  \Omega_r\equiv\int a^2(r,\angb)\,d\Omega.
+  \tilde{\Psi}(r,\polangb) \equiv \sqrt{\frac{1}{\Omega_r}}\,\A(r,\polangb),\qquad
+  \Omega_r\equiv\int a^2(r,\polangb)\,d\Omega.
   \label{eq:polar-psi}
 \end{equation}
 Detection with instrument kernel $K_\omega$ yields
 \begin{equation}
-  P(\omega,\angb\mid r)\propto\left|\int d\Omega'\,K_\omega(\angb,\angb')\,\tilde{\Psi}(r,\angb')\right|^2.
+  P(\omega,\polangb\mid r)\propto\left|\int d\Omega'\,K_\omega(\polangb,\polangb')\,\tilde{\Psi}(r,\polangb')\right|^2.
 \end{equation}
 \emph{Luck as polar optics:} apparent randomness reflects finite-$c$ access to phases from only part of $S^2$; probability is an angular under-sampling of an underlying interference field.
 
@@ -132,13 +131,13 @@ so rarity ($\sim 1/\ln p$) versus energy ($\propto p^2 a_p^2$) trade off (Prime 
 
 % ============================================================
 \section{Tension Networks and Feynman Graphs}
-Define the phase-tension scalar $\R = (\grad\phi)^2$. High-$\R$ filaments define a graph $\mathcal{G}\subset\M$: edges follow large phase gradients, vertices are compactification knots, sheets are interference membranes. Feynman graphs then serve as bookkeeping shadows of stress/propagation on $\mathcal{G}$.
+Define the phase-tension scalar $\R = (\nabla\phi)^2$. High-$\R$ filaments define a graph $\mathcal{G}\subset\M$: edges follow large phase gradients, vertices are compactification knots, sheets are interference membranes. Feynman graphs then serve as bookkeeping shadows of stress/propagation on $\mathcal{G}$.
 
 \Assessment{Heuristic mapping. Aligned in spirit with path-integral/diagrammatics~\cite{Feynman1948,Dyson1949}. Novel as a literal identification of spacetime tension filaments with diagrammatic edges.}
 
 % ============================================================
 \section{Black/White Holes as Condensates of the Same Jelly}
-When phase tension and energy focus, $a(r,\angb)$ shrinks and null congruences converge (black-hole trapping: Kerr etc.)~\cite{Kerr1963,Kraniotis2005}. The Kruskal extension of Schwarzschild includes a white-hole region as the time-reverse of a black hole~\cite{Kruskal1960}. Higher-dimensional analogs (5D black holes/rings) display rich surface geometry~\cite{FrolovGoswami2007}.
+When phase tension and energy focus, $a(r,\polangb)$ shrinks and null congruences converge (black-hole trapping: Kerr etc.)~\cite{Kerr1963,Kraniotis2005}. The Kruskal extension of Schwarzschild includes a white-hole region as the time-reverse of a black hole~\cite{Kruskal1960}. Higher-dimensional analogs (5D black holes/rings) display rich surface geometry~\cite{FrolovGoswami2007}.
 
 \Assessment{Aligned: black holes; white holes exist as time-reversed regions in extended solutions. Novel/speculative: ``mutual reopening/repulsion'' of nearby white-hole–like sources in nature. No observational support; GR allows white-hole regions mathematically but they are unstable/unobserved.}
 
@@ -156,7 +155,7 @@ When phase tension and energy focus, $a(r,\angb)$ shrinks and null congruences c
 \section{Phenomenology and Tests}
 \textbf{Analog fluids/photonics.} Drive superfluids or optical cavities with prime-indexed phase masks; verify composite lines appear by mixing and that adding a ``missing prime'' reduces sieve error (nonlinear mixing calibrated by~\cite{BoydNLO}).
 
-\textbf{Interferometry as angular tomography.} Multi-aperture interferometers resolving $\angb$ should exhibit curvature-dependent reweighting of fringe envelopes consistent with $a(r,\angb)$ (a geometric calibration of angular Born weights).
+\textbf{Interferometry as angular tomography.} Multi-aperture interferometers resolving $\polangb$ should exhibit curvature-dependent reweighting of fringe envelopes consistent with $a(r,\polangb)$ (a geometric calibration of angular Born weights).
 
 \textbf{Hydrodynamic quantum analogs.} Examine whether droplet pilot-wave analogs show prime-seeded stability bands~\cite{CouderFort2006,Bush2015}.
 
@@ -178,10 +177,10 @@ Assuming one 4D geometry with time as radius and angles as perspectives produces
 \appendix
 
 \section{Polar Normalization and Perspective Weights}\label{app:polar}
-With $r=ct$ and $\angb\in S^2$ with area element $a^2(r,\angb)\,d\Omega$, define $\tilde{\Psi}$ by Eq.~\eqref{eq:polar-psi}. Then
+With $r=ct$ and $\polangb\in S^2$ with area element $a^2(r,\polangb)\,d\Omega$, define $\tilde{\Psi}$ by Eq.~\eqref{eq:polar-psi}. Then
 \begin{align}
- \int_{S^2} |\tilde{\Psi}(r,\angb)|^2\, a^2(r,\angb)\, d\Omega
- &= \frac{1}{\Omega_r}\int_{S^2} |\A(r,\angb)|^2 a^2\, d\Omega \;=\; 1,
+ \int_{S^2} |\tilde{\Psi}(r,\polangb)|^2\, a^2(r,\polangb)\, d\Omega
+ &= \frac{1}{\Omega_r}\int_{S^2} |\A(r,\polangb)|^2 a^2\, d\Omega \;=\; 1,
 \end{align}
 so angular detection weights are properly normalized on each radial slice.
 
