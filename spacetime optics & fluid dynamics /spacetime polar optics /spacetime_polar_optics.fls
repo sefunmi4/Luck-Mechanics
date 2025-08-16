@@ -136,9 +136,6 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/graphics/color.sty
-INPUT ./spacetime_polar_optics.aux
-INPUT ./spacetime_polar_optics.aux
-INPUT spacetime_polar_optics.aux
 OUTPUT spacetime_polar_optics.aux
 INPUT /usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -148,14 +145,8 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.st
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-INPUT ./spacetime_polar_optics.out
-INPUT ./spacetime_polar_optics.out
-INPUT spacetime_polar_optics.out
-INPUT spacetime_polar_optics.out
-OUTPUT spacetime_polar_optics.pdf
-INPUT ./spacetime_polar_optics.out
-INPUT ./spacetime_polar_optics.out
 OUTPUT spacetime_polar_optics.out
+OUTPUT spacetime_polar_optics.pdf
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
