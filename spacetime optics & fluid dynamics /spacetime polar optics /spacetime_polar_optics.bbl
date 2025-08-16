@@ -1,52 +1,178 @@
-%apsrev4-2.bst 2019-01-14 (MD) hand-edited version of apsrev4-1.bst
-%Control: key (0)
-%Control: author (8) initials jnrlst
-%Control: editor formatted (1) identically to author
-%Control: production of article title (0) allowed
-%Control: page (0) single
-%Control: year (1) truncated
-%Control: production of eprint (0) enabled
-\begin{thebibliography}{0}%
-\makeatletter
-\providecommand \@ifxundefined [1]{%
- \@ifx{#1\undefined}
-}%
-\providecommand \@ifnum [1]{%
- \ifnum #1\expandafter \@firstoftwo
- \else \expandafter \@secondoftwo
- \fi
-}%
-\providecommand \@ifx [1]{%
- \ifx #1\expandafter \@firstoftwo
- \else \expandafter \@secondoftwo
- \fi
-}%
-\providecommand \natexlab [1]{#1}%
-\providecommand \enquote  [1]{``#1''}%
-\providecommand \bibnamefont  [1]{#1}%
-\providecommand \bibfnamefont [1]{#1}%
-\providecommand \citenamefont [1]{#1}%
-\providecommand \href@noop [0]{\@secondoftwo}%
-\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
-\providecommand \@href[1]{\@@startlink{#1}\@@href}%
-\providecommand \@@href[1]{\endgroup#1\@@endlink}%
-\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
-\providecommand \@@startlink[1]{}%
-\providecommand \@@endlink[0]{}%
-\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
-\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
-\providecommand \urlprefix  [0]{URL }%
-\providecommand \Eprint [0]{\href }%
-\providecommand \doibase [0]{https://doi.org/}%
-\providecommand \selectlanguage [0]{\@gobble}%
-\providecommand \bibinfo  [0]{\@secondoftwo}%
-\providecommand \bibfield  [0]{\@secondoftwo}%
-\providecommand \translation [1]{[#1]}%
-\providecommand \BibitemOpen [0]{}%
-\providecommand \bibitemStop [0]{}%
-\providecommand \bibitemNoStop [0]{.\EOS\space}%
-\providecommand \EOS [0]{\spacefactor3000\relax}%
-\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
-\let\auto@bib@innerbib\@empty
-%</preamble>
-\end{thebibliography}%
+\begin{thebibliography}{33}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abbott et~al.(2016)Abbott, others (LIGO Scientific~Collaboration, and Collaboration)]{LIGO2016}
+B.~P. Abbott, others (LIGO Scientific~Collaboration, and Virgo Collaboration).
+\newblock Observation of gravitational waves from a binary black hole merger.
+\newblock \emph{Phys. Rev. Lett.}, 116:\penalty0 061102, 2016.
+
+\bibitem[Aoyama et~al.(2012)Aoyama, Hayakawa, Kinoshita, and Nio]{Aoyama2012}
+T.~Aoyama, M.~Hayakawa, T.~Kinoshita, and M.~Nio.
+\newblock Tenth-order qed contribution to the electron g-2 and an improved value of the fine-structure constant.
+\newblock \emph{Phys. Rev. Lett.}, 109:\penalty0 111807, 2012.
+
+\bibitem[Berry and Keating(1999)]{BerryKeating1999}
+M.~V. Berry and J.~P. Keating.
+\newblock The riemann zeros and eigenvalue asymptotics.
+\newblock \emph{Proc. R. Soc. A}, 456:\penalty0 2579--2589, 1999.
+
+\bibitem[Birrell and Davies(1982)]{BirrellDavies}
+N.~D. Birrell and P.~C.~W. Davies.
+\newblock \emph{Quantum Fields in Curved Space}.
+\newblock Cambridge University Press, 1982.
+
+\bibitem[Bohm(1952)]{Bohm1952}
+David Bohm.
+\newblock A suggested interpretation of the quantum theory in terms of 'hidden' variables i, ii.
+\newblock \emph{Phys. Rev.}, 85:\penalty0 166--193, 180--193, 1952.
+
+\bibitem[Bondi et~al.(1962)Bondi, van~der Burg, and Metzner]{Bondi1962}
+Hermann Bondi, M.~G.~J. van~der Burg, and A.~W.~K. Metzner.
+\newblock Gravitational waves in general relativity. vii. waves from axi-symmetric isolated systems.
+\newblock \emph{Proc. Roy. Soc. A}, 269:\penalty0 21--52, 1962.
+
+\bibitem[Boyd(2008)]{BoydNLO}
+Robert~W. Boyd.
+\newblock \emph{Nonlinear Optics}.
+\newblock Academic Press, 3 edition, 2008.
+
+\bibitem[Bush(2015)]{Bush2015}
+John W.~M. Bush.
+\newblock Pilot-wave hydrodynamics.
+\newblock \emph{Annu. Rev. Fluid Mech.}, 47:\penalty0 269--292, 2015.
+
+\bibitem[Couder and Fort(2006)]{CouderFort2006}
+Yves Couder and Emmanuel Fort.
+\newblock Single-particle diffraction and interference at a macroscopic scale.
+\newblock \emph{Phys. Rev. Lett.}, 97:\penalty0 154101, 2006.
+
+\bibitem[Dyson(1949)]{Dyson1949}
+Freeman~J. Dyson.
+\newblock The s-matrix in quantum electrodynamics.
+\newblock \emph{Phys. Rev.}, 75:\penalty0 1736--1755, 1949.
+
+\bibitem[Everitt et~al.(2011)]{GPB2011}
+C.~W.~F. Everitt et~al.
+\newblock Gravity probe b: Final results of a space experiment to test general relativity.
+\newblock \emph{Phys. Rev. Lett.}, 106:\penalty0 221101, 2011.
+
+\bibitem[Feynman(1948)]{Feynman1948}
+Richard~P. Feynman.
+\newblock Space-time approach to non-relativistic quantum mechanics.
+\newblock \emph{Rev. Mod. Phys.}, 20:\penalty0 367--387, 1948.
+
+\bibitem[Feynman and Hibbs(1965)]{FeynmanHibbs1965}
+Richard~P. Feynman and Albert~R. Hibbs.
+\newblock \emph{Quantum Mechanics and Path Integrals}.
+\newblock McGraw--Hill, 1965.
+
+\bibitem[Frolov and Goswami(2007)]{FrolovGoswami2007}
+Valeri~P. Frolov and Rituparno Goswami.
+\newblock Higher-dimensional black holes: properties and geodesics.
+\newblock \emph{Phys. Rev. D}, 2007.
+\newblock Placeholder entry--update with exact citation.
+
+\bibitem[Giustina et~al.(2015)]{Giustina2015}
+M.~Giustina et~al.
+\newblock Significant-loophole-free test of bell's theorem with entangled photons.
+\newblock \emph{Phys. Rev. Lett.}, 115:\penalty0 250401, 2015.
+
+\bibitem[Hanneke et~al.(2008)Hanneke, Fogwell, and Gabrielse]{Hanneke2008}
+D.~Hanneke, S.~Fogwell, and G.~Gabrielse.
+\newblock New measurement of the electron magnetic moment and the fine structure constant.
+\newblock \emph{Phys. Rev. Lett.}, 100:\penalty0 120801, 2008.
+
+\bibitem[Hensen et~al.(2015)]{Hensen2015}
+B.~Hensen et~al.
+\newblock Loophole-free bell inequality violation using electron spins separated by 1.3 km.
+\newblock \emph{Nature}, 526:\penalty0 682--686, 2015.
+
+\bibitem[Kerr(1963)]{Kerr1963}
+Roy~P. Kerr.
+\newblock Gravitational field of a spinning mass as an example of algebraically special metrics.
+\newblock \emph{Phys. Rev. Lett.}, 11:\penalty0 237--238, 1963.
+
+\bibitem[Kraniotis(2005)]{Kraniotis2005}
+George~V. Kraniotis.
+\newblock Precise relativistic orbits in kerr and kerr-de sitter spacetimes.
+\newblock \emph{Class. Quantum Grav.}, 21:\penalty0 4743--4769, 2005.
+
+\bibitem[Kruskal(1960)]{Kruskal1960}
+Martin~D. Kruskal.
+\newblock Maximal extension of schwarzschild metric.
+\newblock \emph{Phys. Rev.}, 119:\penalty0 1743--1745, 1960.
+
+\bibitem[Liska and von Unge(2022)]{LiskaUnge2022}
+Tomas Liska and Rikard von Unge.
+\newblock Strings in gravitational wave backgrounds.
+\newblock \emph{JHEP}, 2022.
+\newblock Details to be completed.
+
+\bibitem[Mandel and Wolf(1995)]{MandelWolf1995}
+Leonard Mandel and Emil Wolf.
+\newblock \emph{Optical Coherence and Quantum Optics}.
+\newblock Cambridge University Press, 1995.
+
+\bibitem[Montgomery(1973)]{Montgomery1973}
+H.~L. Montgomery.
+\newblock The pair correlation of zeros of the zeta function.
+\newblock In \emph{Proc. Symp. Pure Math.}, volume~24, pages 181--193. AMS, 1973.
+
+\bibitem[Parker and Toms(2009)]{ParkerToms}
+Leonard~E. Parker and David Toms.
+\newblock \emph{Quantum Field Theory in Curved Spacetime: Quantized Fields and Gravity}.
+\newblock Cambridge University Press, 2009.
+
+\bibitem[Parker et~al.(2018)]{Parker2018}
+Richard~H. Parker et~al.
+\newblock Measurement of the fine-structure constant as a test of the standard model.
+\newblock \emph{Science}, 360:\penalty0 191--195, 2018.
+
+\bibitem[Perkins(1965)]{Perkins1965}
+Donald~H. Perkins.
+\newblock On a neutrino theory of light.
+\newblock \emph{Proc. Roy. Soc. A}, 1965.
+\newblock Placeholder entry--update with exact details.
+
+\bibitem[Pitts and Schieve(2004)]{PittsSchieve2004}
+J.~Brian Pitts and William~C. Schieve.
+\newblock Null cones and einstein's equations.
+\newblock \emph{Foundations of Physics}, 34:\penalty0 211--238, 2004.
+
+\bibitem[Sachs(1962)]{Sachs1962}
+Rainer~K. Sachs.
+\newblock Gravitational waves in general relativity. viii. waves in asymptotically flat space-time.
+\newblock \emph{Proc. Roy. Soc. A}, 270:\penalty0 103--126, 1962.
+
+\bibitem[Shalm et~al.(2015)]{Shalm2015}
+L.~K. Shalm et~al.
+\newblock Strong loophole-free test of local realism.
+\newblock \emph{Phys. Rev. Lett.}, 115:\penalty0 250402, 2015.
+
+\bibitem[Smeenk and W{"u}thrich(2021)]{SmeenkWuthrich2021}
+Chris Smeenk and Christian W{"u}thrich.
+\newblock Determinism in physics.
+\newblock In \emph{Stanford Encyclopedia of Philosophy}. Metaphysics Research Lab, Stanford University, 2021.
+\newblock Article, SEP.
+
+\bibitem[Wahlstr{"o}m and Chao(1988)]{WahlstromChao1988}
+C.-G. Wahlstr{"o}m and K.~Chao.
+\newblock Spectral properties of quasiperiodic arrays.
+\newblock \emph{Journal}, 1988.
+\newblock Placeholder entry--update with correct venue/pages.
+
+\bibitem[Will(2014)]{Will2014}
+Clifford~M. Will.
+\newblock The confrontation between general relativity and experiment.
+\newblock \emph{Living Reviews in Relativity}, 17:\penalty0 4, 2014.
+
+\bibitem[Workman and others (Particle Data~Group)(2024)]{PDG2024}
+R.~L. Workman and others (Particle Data~Group).
+\newblock Review of particle physics.
+\newblock \emph{Prog. Theor. Exp. Phys.}, 2024:\penalty0 083C01, 2024.
+
+\end{thebibliography}
