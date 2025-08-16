@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  14 AUG 2025 17:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  16 AUG 2025 02:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex"
-(/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex
+**"/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex"
+(/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/revtex/revtex4-2.cls
@@ -414,7 +414,7 @@ Package: amsthm 2020/05/29 v2.20.6
 \dth@everypar=\toks32
 )
 
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex:24: LaTeX Error: Command \ang already defined.
+/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:24: LaTeX Error: Command \ang already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -428,7 +428,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex:26: LaTeX Error: Command \grad already defined.
+/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:26: LaTeX Error: Command \grad already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -519,6 +519,9 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
+Package natbib Warning: Citation `FeynmanHibbs1965' on page 1 undefined on input line 42.
+
+
 Package natbib Warning: Citation `BirrellDavies' on page 1 undefined on input line 52.
 
 
@@ -546,7 +549,7 @@ Package natbib Warning: Citation `Shalm2015' on page 1 undefined on input line 5
 Package natbib Warning: Citation `Bohm1952' on page 1 undefined on input line 52.
 
 
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex:59: Package siunitx Error: Invalid number '^'.
+/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:59: Package siunitx Error: Invalid number '^'.
 
 For immediate help type H <return>.
  ...                                              
@@ -559,7 +562,7 @@ module documentation.
 
 
 
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex:59: Package siunitx Error: Invalid number '^'.
+/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:59: Package siunitx Error: Invalid number '^'.
 
 For immediate help type H <return>.
  ...                                              
@@ -598,7 +601,7 @@ Package natbib Warning: Citation `ParkerToms' on page 1 undefined on input line 
 
 Package natbib Warning: Citation `PDG2024' on page 1 undefined on input line 82.
 
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex:86: Missing { inserted.
+/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:86: Missing { inserted.
 <to be read again> 
                    \tex_let:D 
 l.86 ...ular loop at fixed $r$ with length $L_\ang
@@ -609,7 +612,7 @@ so that I will find a matching right brace soon.
 (If you're confused by all this, try typing `I}' now.)
 
 
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex:86: Package siunitx Error: Invalid number '('.
+/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:86: Package siunitx Error: Invalid number '('.
 
 For immediate help type H <return>.
  ...                                              
@@ -621,7 +624,7 @@ The input '(' could not be parsed as a number following the format defined in
 module documentation.
 
 
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex:86: Missing } inserted.
+/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:86: Missing } inserted.
 <inserted text> 
                 }
 l.86 ...ngth $L_\ang(r)=\int\sqrt{a^2\,d\Omega^2}$
@@ -637,7 +640,7 @@ Underfull \hbox (badness 6220) in paragraph at lines 86--87
 []\OT1/cmr/m/n/10 On an an-gu-lar loop at fixed $\OML/cmm/m/it/10 r$ \OT1/cmr/m/n/10 with length
  []
 
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex:88: Missing { inserted.
+/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:88: Missing { inserted.
 <to be read again> 
                    \tex_let:D 
 l.88   n\,\lambda = L_\ang
@@ -648,7 +651,7 @@ so that I will find a matching right brace soon.
 (If you're confused by all this, try typing `I}' now.)
 
 
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex:88: Package siunitx Error: Invalid number '('.
+/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:88: Package siunitx Error: Invalid number '('.
 
 For immediate help type H <return>.
  ...                                              
@@ -660,7 +663,7 @@ The input '(' could not be parsed as a number following the format defined in
 module documentation.
 
 
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex:88: Missing { inserted.
+/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:88: Missing { inserted.
 <to be read again> 
                    \tex_let:D 
 l.88 ...ang(r),\qquad k_n=\frac{2\pi n}{L_\ang(r)}
@@ -671,7 +674,7 @@ so that I will find a matching right brace soon.
 (If you're confused by all this, try typing `I}' now.)
 
 
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex:88: Package siunitx Error: Invalid number '('.
+/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:88: Package siunitx Error: Invalid number '('.
 
 For immediate help type H <return>.
  ...                                              
@@ -683,7 +686,7 @@ The input '(' could not be parsed as a number following the format defined in
 module documentation.
 
 
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex:90: You can't use `\eqno' in math mode.
+/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:90: You can't use `\eqno' in math mode.
 \veqno ->\@kernel@eqno 
                        \aftergroup \ignorespaces 
 l.90 \end{equation}
@@ -693,7 +696,7 @@ I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex:90: Missing } inserted.
+/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:90: Missing } inserted.
 <inserted text> 
                 }
 l.90 \end{equation}
@@ -704,7 +707,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/spacetime_polar_optics.tex:90: Missing } inserted.
+/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:90: Missing } inserted.
 <inserted text> 
                 }
 l.90 \end{equation}
@@ -911,8 +914,8 @@ Package natbib Warning: Citation `PDG2024' on page 3 undefined on input line 170
 LaTeX Warning: Reference `eq:polar-psi' on page 3 undefined on input line 181.
 
 
-Overfull \hbox (16.82741pt too wide) detected at line 194
-\OT1/cmss/m/n/10 t\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R\OT1/cmr/m/n/10 ) = [](\OML/cmm/m/it/10 @[]f\OT1/cmr/m/n/10 )[] = [] [] \OML/cmm/m/it/10 mn a[]a[] [][][] [][][]:
+Overfull \hbox (20.16066pt too wide) detected at line 194
+\OT1/cmss/m/n/10 t[] \OT1/cmr/m/n/10 = [](\OML/cmm/m/it/10 @[]f\OT1/cmr/m/n/10 )[] = [] [] \OML/cmm/m/it/10 mn a[]a[] [] [] [] []:
  []
 
 
@@ -957,18 +960,18 @@ Package rerunfilecheck Warning: File `spacetime_polar_optics.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `spacetime_polar_optics.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  FAF1681B68DBF29D18457384A74D84E3;4767.
+(rerunfilecheck)             After:  FE1C068039E4DEC9DD823D5422A15884;4761.
  ) 
 Here is how much of TeX's memory you used:
  17385 strings out of 473190
- 322680 string characters out of 5715801
+ 322812 string characters out of 5715801
  723693 words of memory out of 5000000
  40421 multiletter control sequences out of 15000+600000
  570777 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,9n,93p,1493b,1102s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,9n,93p,1557b,1102s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on spacetime_polar_optics.pdf (4 pages, 319609 bytes).
+Output written on spacetime_polar_optics.pdf (4 pages, 319973 bytes).
 PDF statistics:
  195 PDF objects out of 1000 (max. 8388607)
  133 compressed objects within 2 object streams
