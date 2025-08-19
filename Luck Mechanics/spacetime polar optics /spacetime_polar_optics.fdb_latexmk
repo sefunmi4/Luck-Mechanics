@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex spacetime_polar_optics"] 1755370754.94177 "spacetime_polar_optics.aux" "spacetime_polar_optics.bbl" "spacetime_polar_optics" 1755371226.05271 0
-  "./references.bib" 1755369017.33293 13616 bf95863317353dfe7a8b0dd0414693db ""
-  "./spacetime_polar_opticsNotes.bib" 1755371225.5312 0 d41d8cd98f00b204e9800998ecf8427e ""
+["bibtex spacetime_polar_optics"] 1755566442.78386 "spacetime_polar_optics.aux" "spacetime_polar_optics.bbl" "spacetime_polar_optics" 1755566461.33164 2
+  "./references.bib" 1755562796.73607 8756 e8d0c1bd1945688e02a98df776149b17 ""
+  "./spacetime_polar_opticsNotes.bib" 1755566460.84696 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "spacetime_polar_optics.aux" 1755371225.75674 6505 2cef6d358f178615ed528a2b19e33a59 "pdflatex"
+  "spacetime_polar_optics.aux" 1755566461.04647 4374 dc5cfa98d08088e6964342d18f819a1c "pdflatex"
   (generated)
   "spacetime_polar_optics.bbl"
   "spacetime_polar_optics.blg"
   (rewritten before read)
-["pdflatex"] 1755371225.1672 "/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex" "spacetime_polar_optics.pdf" "spacetime_polar_optics" 1755371226.05288 0
-  "/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex" 1755371224.96 17148 9fa26b63968d1091fc807772e1ad580b ""
+["pdflatex"] 1755566460.46193 "/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex" "spacetime_polar_optics.pdf" "spacetime_polar_optics" 1755566461.33178 2
+  "/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex" 1755566459.19885 17178 01078e94c0611f8dbeea75dac0bc20ef ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -143,10 +143,10 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1754508766 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "spacetime_polar_optics.aux" 1755371225.75674 6505 2cef6d358f178615ed528a2b19e33a59 "pdflatex"
-  "spacetime_polar_optics.bbl" 1755370755.02316 7312 3803c3b0de06cbf04bd57ec652ac2691 "bibtex spacetime_polar_optics"
-  "spacetime_polar_optics.out" 1755371225.75728 4761 fe1c068039e4dec9dd823d5422a15884 "pdflatex"
-  "spacetime_polar_optics.tex" 1755371224.96 17148 9fa26b63968d1091fc807772e1ad580b ""
+  "spacetime_polar_optics.aux" 1755566461.04647 4374 dc5cfa98d08088e6964342d18f819a1c "pdflatex"
+  "spacetime_polar_optics.bbl" 1755566442.87142 0 d41d8cd98f00b204e9800998ecf8427e "bibtex spacetime_polar_optics"
+  "spacetime_polar_optics.out" 1755566461.04696 4655 1f1f2d06a55ff819399ff5c6156164d3 "pdflatex"
+  "spacetime_polar_optics.tex" 1755566459.19885 17178 01078e94c0611f8dbeea75dac0bc20ef ""
   (generated)
   "spacetime_polar_optics.aux"
   "spacetime_polar_optics.log"

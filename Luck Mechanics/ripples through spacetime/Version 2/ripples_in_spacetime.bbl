@@ -1,0 +1,19 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[von Neumann(1932)]{vonNeumann1932}
+J.~von Neumann.
+\newblock \emph{Mathematical Foundations of Quantum Mechanics}.
+\newblock Princeton University Press, 1932.
+\newblock [Density Matrices].
+
+\bibitem[Wigner(1932)]{wigner1932}
+E.~P. Wigner.
+\newblock On the quantum correction for thermodynamic equilibrium.
+\newblock \emph{Phys. Rev.}, 40\penalty0 (1):\penalty0 749--759, 1932.
+
+\end{thebibliography}

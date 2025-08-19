@@ -1,8 +1,8 @@
-PWD /Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/ripples through spacetime
+PWD /Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /ripples through spacetime/Version 1
 INPUT /usr/local/texlive/2025/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/ripples through spacetime/ripples_in_spacetime.tex
+INPUT /Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /ripples through spacetime/Version 1/ripples_in_spacetime.tex
 OUTPUT ripples_in_spacetime.log
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls

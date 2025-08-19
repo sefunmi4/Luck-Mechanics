@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex ripples_in_spacetime"] 1755285555.02517 "ripples_in_spacetime.aux" "ripples_in_spacetime.bbl" "ripples_in_spacetime" 1755285555.6727 0
-  "./references.bib" 1755285547.08501 5859 c201e065eeabe0131110800af0636278 ""
+["bibtex ripples_in_spacetime"] 1755630517.28529 "ripples_in_spacetime.aux" "ripples_in_spacetime.bbl" "ripples_in_spacetime" 1755630517.93962 0
+  "./references.bib" 1755369047.24097 13615 5005d6ded38580e3b4310270276804fa ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "ripples_in_spacetime.aux" 1755285555.48042 7846 91231f6fbcf67e219f973eb109cbbc0e "pdflatex"
+  "ripples_in_spacetime.aux" 1755630517.73928 7846 91231f6fbcf67e219f973eb109cbbc0e "pdflatex"
   (generated)
   "ripples_in_spacetime.bbl"
   "ripples_in_spacetime.blg"
   (rewritten before read)
-["pdflatex"] 1755285555.10032 "/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/ripples through spacetime/ripples_in_spacetime.tex" "ripples_in_spacetime.pdf" "ripples_in_spacetime" 1755285555.6728 0
-  "/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/Luck Mechanics/ripples through spacetime/ripples_in_spacetime.tex" 1755285547.08928 64166 e578f23d5acc3277903da19766d1a302 ""
+["pdflatex"] 1755630517.36118 "/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /ripples through spacetime/Version 1/ripples_in_spacetime.tex" "ripples_in_spacetime.pdf" "ripples_in_spacetime" 1755630517.93973 0
+  "/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /ripples through spacetime/Version 1/ripples_in_spacetime.tex" 1755630515.74452 64166 e578f23d5acc3277903da19766d1a302 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -108,11 +108,11 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1754508766 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "ripples_in_spacetime.aux" 1755285555.48042 7846 91231f6fbcf67e219f973eb109cbbc0e "pdflatex"
-  "ripples_in_spacetime.bbl" 1755285555.09884 3789 1c2c593ebd8db072732f877d0ef03ea3 "bibtex ripples_in_spacetime"
-  "ripples_in_spacetime.out" 1755285555.48143 7100 169e151196116f48d84edd36ef365c1c "pdflatex"
-  "ripples_in_spacetime.tex" 1755285547.08928 64166 e578f23d5acc3277903da19766d1a302 ""
-  "ripples_in_spacetime.toc" 1755285555.48163 3435 69b0e97a74a759f4723805bdb48fc44f "pdflatex"
+  "ripples_in_spacetime.aux" 1755630517.73928 7846 91231f6fbcf67e219f973eb109cbbc0e "pdflatex"
+  "ripples_in_spacetime.bbl" 1755630517.35959 3789 1c2c593ebd8db072732f877d0ef03ea3 "bibtex ripples_in_spacetime"
+  "ripples_in_spacetime.out" 1755630517.74028 7100 169e151196116f48d84edd36ef365c1c "pdflatex"
+  "ripples_in_spacetime.tex" 1755630515.74452 64166 e578f23d5acc3277903da19766d1a302 ""
+  "ripples_in_spacetime.toc" 1755630517.74049 3435 69b0e97a74a759f4723805bdb48fc44f "pdflatex"
   (generated)
   "ripples_in_spacetime.aux"
   "ripples_in_spacetime.log"

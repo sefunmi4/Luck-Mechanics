@@ -1,0 +1,125 @@
+\documentclass[reprint,amsmath,amssymb,aps,pra]{revtex4-2}
+
+% ---------- Packages ----------
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage{xcolor}
+\usepackage{amsthm}
+\usepackage[numbers]{natbib}
+
+% Resolve siunitx/physics package overlap
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
+
+% ---------- Macros ----------
+\newcommand{\Primes}{\mathbb{P}}              % Set of primes
+\newcommand{\N}{\mathbb{N}}                   % Natural numbers
+\newcommand{\Z}{\mathbb{Z}}                   % Integers
+\newcommand{\R}{\mathbb{R}}                   % Reals
+\newcommand{\M}{\mathcal{M}}                  % Model
+\newcommand{\g}{g}                            % Generic function
+\newcommand{\A}{\mathcal{A}}                  % Wave amplitude
+\newcommand{\T}{T}                            % Period
+\newcommand{\W}{\Psi}                         % Wavefunction
+
+\begin{document}
+
+% ---------- Title ----------
+\title{Prime Numbers as Superposed Wavefunctions: A Harmonic Approach to Composite Detection and Distribution}
+
+\author{Sefunmi Ashiru}
+\affiliation{Architecture of Homosapiens Research}
+
+\date{\today}
+
+% ---------- Abstract ----------
+\begin{abstract}
+We introduce a wavefunction-based framework for detecting prime numbers and their composites by superimposing periodic functions defined over the natural numbers. Each prime $p$ is represented as a standing wave with troughs located at $n p$ for $n \in \N$, marking the positions of multiples. The peaks between troughs correspond to candidate primes. By superimposing multiple prime wavefunctions, composite numbers emerge naturally as interference points, while true primes remain uncancelled. This framework formalizes the analogy between prime detection and Fourier superposition, allowing one to define ``coverage ratios'' of the integer line by prime harmonics. We discuss implications for prime rarity, distribution, and infinite expansion, showing that primes behave as fundamental harmonics of the number line. 
+\end{abstract}
+
+\maketitle
+
+% ---------- Introduction ----------
+\section{Introduction}
+Prime numbers have been historically studied as the building blocks of arithmetic \cite{HardyWright}. Classical approaches such as the sieve of Eratosthenes iteratively remove multiples of primes from the integer line. In this work, we reinterpret primes as \emph{wavefunctions}, periodic signals whose nodes identify multiples and whose peaks encode prime discovery.
+
+This approach connects prime distribution to the language of physics and signal processing. Wave interference naturally explains the overlap between different primes (e.g., the shared coverage of $6$ by $2$ and $3$), while the decreasing density of primes with increasing $n$ can be rephrased as the diminishing contribution of higher-frequency harmonics to the completion of the number line.
+
+% ---------- Mathematical Framework ----------
+\section{Prime Wavefunctions}
+Define the \emph{prime wavefunction} $\W_p: \Z \to \{-1,0,+1\}$ for prime $p$ as
+\begin{equation}
+\W_p(n) = \cos\left(\frac{2\pi n}{p}\right).
+\end{equation}
+We declare $n$ to be a \emph{trough} if $\W_p(n) = -1$, which occurs at $n = kp$ for $k \in \N$. These troughs correspond to multiples of $p$ and hence non-primes. The first nonzero trough (at $n = p$) confirms the primality of $p$ itself, while later troughs eliminate its composites.
+
+Between troughs, peaks occur at values such as $p+1, p+2$, representing prime candidates. If these values are not eliminated by earlier primes, they are accepted as primes. For example, $\W_2(n)$ eliminates all even numbers, leaving $3,5,7,9,\dots$ as candidates. Superimposing $\W_3$ then cancels $9,15,21,\dots$, leaving $5,7,11,\dots$ as true primes.
+
+% ---------- Superposition Principle ----------
+\section{Superposition and Composite Detection}
+The essence of this framework is that primes form a basis of wavefunctions. The superposition
+\begin{equation}
+\W_{\mathrm{tot}}(n) = \sum_{p \in \Primes} \W_p(n)
+\end{equation}
+produces destructive interference at composites. Each new prime wave introduces additional structure, canceling out higher-order errors such as squares ($p^2$), cubes ($p^3$), and beyond. In this sense, composite detection arises naturally from harmonic interference.
+
+% ---------- Coverage Ratios ----------
+\section{Coverage Ratios and Prime Density}
+The fraction of the number line eliminated by a prime $p$ alone is $\frac{1}{p}$. However, overlaps reduce the novelty of this coverage. For example, $p=2$ eliminates 50\% of integers, while $p=3$ would eliminate 33\%, but half of these are already eliminated by $p=2$. Thus, the net new coverage from $p=3$ is only $1/3 \cdot (1-1/2) = 1/6$.
+
+In general, the effective contribution of prime $p$ is
+\begin{equation}
+f(p) = \frac{1}{p} \prod_{q < p} \left(1-\frac{1}{q}\right),
+\end{equation}
+which mirrors the inclusion-exclusion principle in number theory. The cumulative coverage approaches $1$, reflecting that primes collectively partition the integers.
+
+% ---------- Figures ----------
+\section{Figures}
+We include numerical demonstrations of the prime wave model. Figure~\ref{fig:psi2psi3} shows the $p=2$ and $p=3$ wavefunctions, while Figure~\ref{fig:fftmask} shows the superposition mask up to $p=11$. Figure~\ref{fig:coverage} tracks the uncovered fraction of the integer line as more primes are added.
+
+\begin{figure}[h]
+\includegraphics[width=\linewidth]{psi2_psi3_plot.png}
+\caption{Prime wavefunctions $\Psi_2$ and $\Psi_3$ with troughs at multiples of 2 and 3.}
+\label{fig:psi2psi3}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=\linewidth]{fft_mask_210.png}
+\caption{Composite mask formed by superposition of prime wavefunctions up to $p=11$. White regions indicate primes, black regions composites.}
+\label{fig:fftmask}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=\linewidth]{uncovered_fraction_plot.png}
+\caption{Fraction of the integer line not yet eliminated as more primes are added. The uncovered fraction decreases toward zero, consistent with the Prime Number Theorem.}
+\label{fig:coverage}
+\end{figure}
+
+% ---------- Infinity and Limiting Behavior ----------
+\section{Infinity and the ``Largest Prime''}
+As primes grow, their new coverage fraction $f(p)$ approaches zero. This suggests that primes become ``rarer'' but never vanish, aligning with the infinitude of primes \cite{Euclid}. Conceptually, one might regard the ``largest prime'' as the trivial wave with only a trough at $n=0$ and $n=\infty$, a limiting case in which all finite coverage is exhausted.
+
+% ---------- Discussion ----------
+\section{Discussion}
+This wave-based view provides a harmonic reinterpretation of the sieve of Eratosthenes, recast as superposition and cancellation. It also suggests physical analogies: primes as fundamental frequencies, composites as higher harmonics, and infinity as the closure of the Fourier spectrum. Potential extensions include:
+\begin{itemize}
+\item Mapping primes to eigenmodes of operators.
+\item Investigating zeta-function zeros as resonance conditions.
+\item Connecting to quantum wavefunction collapse and number-theoretic randomness.
+\end{itemize}
+
+% ---------- Conclusion ----------
+\section{Conclusion}
+We have shown that primes can be represented as standing wavefunctions whose troughs eliminate composites, and whose peaks identify true primes. Superposition yields a natural sieve, while coverage ratios reflect the decreasing density of primes. This harmonic analogy offers both intuitive and formal insight into prime distribution, infinity, and composite structure.
+
+% ---------- References ----------
+\bibliographystyle{plainnat}
+\begin{thebibliography}{9}
+\bibitem{HardyWright} G. H. Hardy and E. M. Wright, \textit{An Introduction to the Theory of Numbers}, Oxford Univ. Press, 1979.
+\bibitem{Euclid} Euclid, \textit{Elements, Book IX}, Proposition 20.
+\end{thebibliography}
+
+\end{document}
