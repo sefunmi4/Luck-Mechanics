@@ -4,114 +4,591 @@
 % PACKAGES
 % ----------------------------------------------------
 \usepackage{amsmath, amssymb, amsthm}
+\usepackage{tikz}
 \usepackage{geometry}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{natbib}
 \geometry{margin=1in}
+\usepackage{hyperref}
 
 % ----------------------------------------------------
-% META INFO
+% THEOREM ENVIRONMENTS (use as needed)
 % ----------------------------------------------------
-% Update these per paper
-\title{[Working Title for Paper X]\\
-Subtitle if needed}
-\author{Sefunmi Ashiru}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{example}{Example}
+
+% ====================================================
+% VERSION NOTES (remove in camera-ready)
+% ====================================================
+% v2 EDITOR NOTES:
+% 1) Add precise statements + short proofs for:
+%    (i) One-point compactification: R ~ S^1, R^2 ~ S^2 via stereographic projection.
+%    (ii) "Limit at infinity" <-> "continuous extension to compactification".
+%    (iii) Irrational rotations on S^1: density/equidistribution (Weyl/Kronecker).
+%    (iv) Complex case: classify behavior at infinity for meromorphic f (removable/pole/essential).
+% 2) Keep "role of pi" claim mathematically careful: it's not "uniqueness", it's
+%    "avoidance of short rational periods" and (under hypotheses) uniform angular distribution.
+% 3) Include 2–3 figures: (A) Stereographic map for R ↔ S^1 and C ↔ \hat{\mathbb{C}},
+%    (B) Spiral compactification on unit disk (to discuss ±∞ identification),
+%    (C) Directional approach to ∞ on S^2 (arrows to North pole).
+% 4) Add a brief Related Work paragraph citing standard texts (topology, complex analysis).
+% 5) Ensure every informal statement has either a reference or a short proof sketch.
+
+
+
+\begin{document}
+
+% ----------------------------------------------------
+% META
+% ----------------------------------------------------
+\title{Limits to Complex Infinities:\\ Mapping Infinite Numbers to Circles and Spheres}
+\author{Daniel Valvo, Sefunmi Ashiru}
 \date{\today}
 
-% ----------------------------------------------------
-\begin{document}
 \maketitle
 
-% ----------------------------------------------------
 \begin{abstract}
-% Keep the abstract short (150–250 words).
-% 1–2 sentences: motivation (why this problem matters).
-% 1–2 sentences: method or approach (the math you introduce).
-% 1–2 sentences: results and implications.
+    The behavior of functions at infinity remains ambiguous in analysis, particularly over $\mathbb{R}^n$ where $+\infty$ and $-\infty$ may be treated as either distinct endpoints or compactified into a single point. This paper develops a geometric framework for resolving such ambiguities by mapping infinite values onto circles, spheres, and ultimately the Riemann sphere. The method employs $\pi$ as a natural angular scaling constant, avoiding rational periodic degeneracies and ensuring dense coverage under compactification. We first formalize mappings from $\mathbb{R} \to S^1$ and $\mathbb{R}^2 \to S^2$, then extend to $\mathbb{C}$ via stereographic projection, where infinity corresponds to the north pole. Within this framework, we establish conditions under which limits at $\pm\infty$ coincide, classify cases of continuous versus discontinuous infinity, and provide criteria for continuity of functions under compactification. The results yield a unified treatment of limits and convergence in both real and complex settings, while highlighting implications for number theory, modular arithmetic, and physical models with periodic boundary conditions.
 \end{abstract}
 
-\newpage
 \tableofcontents
-\newpage
 
 % ====================================================
 \section{Introduction}
-% - Introduce the field (math, physics, AI).
-% - State the specific gap/problem.
-% - Place your contribution in 1–2 clear sentences.
-% - End with roadmap: “This paper is structured as follows…”
+Infinity is traditionally approached linearly along the extended real line 
+$\overline{\mathbb{R}} = \mathbb{R} \cup \{\pm \infty\}$. In this model, $+\infty$ and 
+$-\infty$ are treated as distinct endpoints, and limits are analyzed separately along 
+each direction. However, this representation obscures deeper geometric structure. 
+Compactification techniques provide an alternative: by embedding $\mathbb{R}$ or 
+$\mathbb{R}^n$ into a closed manifold such as a circle or sphere, one may replace 
+the “ends” of the line or plane with a single point at infinity. This reframing 
+not only unifies the analysis of limits but also aligns naturally with the 
+Riemann sphere construction in complex analysis, where $\infty$ appears as an 
+ordinary point of the extended plane.  
 
-% Example phrasing template:
-% The distribution of prime numbers has long fascinated mathematicians...
-% In this paper, we reinterpret the classical sieve as a wavefunction interference problem.
-% Our contributions are: (1) definition..., (2) proof..., (3) discussion...
-% The paper is organized as follows: Section 2 reviews..., Section 3 introduces..., etc.
-% ---------------------------------------------------
+The purpose of this paper is to develop a systematic framework for mapping 
+infinite values to curved spaces and to analyze the implications for limits, 
+continuity, and convergence. Our main contributions are as follows:  
 
-% ====================================================
-\section{Related Work}
-% - Tailor this section per discipline.
-%   Math → cite sieve theory, PNT, zeta.
-%   Physics → cite GR, QFT, wave interference.
-%   AI → cite attention mechanisms, frequency analysis.
-% - 3–6 key references are enough for a preprint.
-% - Keep the tone respectful but concise: “Prior approaches have focused on..., here we propose...”
-% ---------------------------------------------------
+\begin{enumerate}
+    \item We formalize the compactification of $\mathbb{R}$ onto $S^1$ and 
+    $\mathbb{R}^2$ onto $S^2$, establishing their equivalence to stereographic 
+    projection models (Theorem~\ref{thm:compactification-equivalence}).  
+    \item We prove that a function $f : \mathbb{R} \to \mathbb{R}$ admits a limit 
+    at infinity if and only if it extends continuously to the added point under 
+    circle or sphere compactification (Theorem~\ref{thm:limit-extension}).  
+    \item We show that irrational angular scalings, such as those involving $\pi$, 
+    produce dense or equidistributed images on $S^1$, thereby avoiding 
+    short-period degeneracies that arise with rational multiples 
+    (Proposition~\ref{prop:irrational-scaling}).  
+    \item For the complex case, we use stereographic projection to identify 
+    $\mathbb{C} \cup \{\infty\}$ with the Riemann sphere. We classify the behavior 
+    of limits at infinity for meromorphic functions in terms of the image of the 
+    north pole (Theorem~\ref{thm:riemann-meromorphic}).  
+\end{enumerate}
 
-% ====================================================
-\section{Mathematical Framework / Model}
-% - This is the “proof core”.
-% - Define symbols and functions carefully.
-% - Copy the math skeleton from your proposal here.
-% - Use Lemma / Theorem / Proof environments if useful.
-%
-% Example:
-% \begin{theorem}
-% For prime $p$, the function $\psi_p(n) = \sin(2\pi n/p)$ vanishes at all multiples of $p$.
-% \end{theorem}
-% \begin{proof}
-% ...
-% \end{proof}
-% ---------------------------------------------------
+Taken together, these results provide a unified treatment of infinity across real 
+and complex settings, clarifying when infinity behaves as a single continuous 
+point and when it must be considered in its directional form.  
 
-% ====================================================
-\section{Results and Applications}
-% - Apply the framework to concrete cases.
-% - For math papers: plots of prime density, coverage ratios.
-% - For physics papers: diagrams of luck cones, ripple visualizations.
-% - For AI/consciousness: toy model, frequency kernel.
-% - Figures: always include 1–2 figures per paper, consistent style.
-%
-% Example:
-% \begin{figure}[h]
-%   \centering
-%   \includegraphics[width=0.8\linewidth]{example_plot.png}
-%   \caption{Example plot of prime wavefunction interference.}
-%   \label{fig:primewave}
-% \end{figure}
-% ---------------------------------------------------
+\textbf{Paper roadmap.} Section~2 reviews related work in compactification and 
+conformal geometry. Section~3 develops the mathematical framework and states the 
+main theorems. Section~4 applies the framework to real, spherical, and complex 
+cases with illustrative figures. Section~5 discusses implications and limitations, 
+and Section~6 concludes with future directions.  
 
 % ====================================================
-\section{Discussion}
-% - Interpret the results.
-% - What is new here? Why does it matter to this field?
-% - What are the limitations? (reviewers look for this).
-% - Connect gently back to the “Luck Mechanics” thesis
-%   but keep this paper self-contained.
-% ---------------------------------------------------
+\section{Preliminaries and Notation}
+\label{sec:preliminaries}
+
+% PURPOSE: Collect standard definitions so later proofs read smoothly.
+% Balance rigor with intuitive explanations.
+
+We begin by recalling standard notions from topology and analysis that will 
+underpin the compactification framework. Whenever possible, we accompany the 
+formal definition with an intuitive picture.
+
+\begin{definition}[One-point compactification]
+Let $X$ be a locally compact, non-compact Hausdorff space. The one-point 
+compactification $X^* := X \cup \{\infty\}$ is obtained by adjoining a single 
+“point at infinity” to $X$. A neighborhood of $\infty$ is defined to be the 
+complement of a compact subset of $X$, while the open sets of $X$ remain 
+unchanged.
+\end{definition}
+
+\begin{remark}[Intuition]
+On the real line $\mathbb{R}$, this means we bend the line into a circle by 
+gluing the two “ends” ($+\infty$ and $-\infty$) together into a single new point. 
+This is why the one-point compactification of $\mathbb{R}$ is homeomorphic to a 
+circle $S^1$, and more generally $\mathbb{R}^n$ compactifies to the $n$-sphere $S^n$. 
+This matches the geometric idea of “closing off” infinity by wrapping the space 
+onto a sphere.
+\end{remark}
+
+\begin{definition}[Limit at infinity on $\mathbb{R}^n$]
+For $f:\mathbb{R}^n \to \mathbb{R}^m$, we write 
+\[
+\lim_{\|x\|\to \infty} f(x) = L
+\]
+if for every $\varepsilon > 0$ there exists $R > 0$ such that 
+$\|x\| > R \implies \|f(x)-L\| < \varepsilon$. 
+\end{definition}
+
+\begin{remark}[Intuition]
+This definition says: as you go further and further away from the origin in 
+$\mathbb{R}^n$, the outputs of $f$ settle arbitrarily close to $L$. The compactified 
+picture replaces “going further and further” with “approaching the added point at infinity.”
+\end{remark}
+
+\begin{definition}[Stereographic projection]
+The stereographic projection $\sigma : S^n \setminus \{N\} \to \mathbb{R}^n$ 
+is the map obtained by projecting from the north pole $N$ of the $n$-sphere $S^n$ 
+onto the equatorial hyperplane. Its inverse extends $\mathbb{R}^n$ by sending the 
+“point at infinity” to $N$. For $n=2$, this identifies the extended complex plane 
+$\hat{\mathbb{C}} = \mathbb{C}\cup\{\infty\}$ with the Riemann sphere.
+\end{definition}
+
+\begin{remark}[Accessible picture]
+Imagine placing a unit circle so that it sits on the number line, centered at 0. 
+Pick a point $x$ on the line, and draw a straight line from the top of the circle 
+(the point at angle $\pi/2$) through $x$. That line hits the circumference at 
+a unique point, which we take as the projection of $x$. This triangle construction 
+gives a continuous way to map the entire line onto the circle, with the 
+point at infinity corresponding to the top of the circle. In higher dimensions, 
+the same idea projects $\mathbb{R}^n$ onto a sphere $S^n$.
+\end{remark}
+
+\begin{definition}[Conformal property]
+For $n=2$, stereographic projection is conformal: it preserves angles between 
+curves. In particular, straight lines and circles in $\mathbb{C}$ correspond to 
+circles on $S^2$ (possibly through the point at infinity).
+\end{definition}
+
+\begin{remark}
+This property explains why the Riemann sphere is so natural in complex analysis: 
+it allows us to treat infinity as just another point, without breaking the 
+geometric rules for angles.
+\end{remark}
+
+\begin{definition}[Irrational rotation on the circle]
+Let $\alpha \in \mathbb{R} \setminus \mathbb{Q}$. The map 
+$R_\alpha : S^1 \to S^1$, defined by 
+\[
+R_\alpha(\theta) = \theta + 2\pi \alpha \pmod{2\pi},
+\]
+generates a dense orbit on $S^1$. In contrast, rational rotations yield finite 
+cyclic orbits.
+\end{definition}
+
+\begin{remark}[Connection to $\pi$]
+Choosing $\pi$ (or any irrational multiple) as a scaling constant ensures that 
+points mapped from $\mathbb{R}$ wrap around $S^1$ without repeating in a short 
+cycle. Instead, they fill the circle densely in a uniform fashion. This avoids 
+degenerate periodicities and makes $\pi$ central to the compactification scheme.
+\end{remark}
+
+% References:
+% - Munkres, *Topology*
+% - Rudin, *Real and Complex Analysis*
+% - Ahlfors, *Complex Analysis*
+% - Walters, *An Introduction to Ergodic Theory* (irrational rotations).
 
 % ====================================================
-\section{Conclusion and Future Work}
-% - Summarize contributions in 2–3 sentences.
-% - Suggest next steps (e.g., extend to complex plane, test experimentally, integrate into physics).
-% - End with one sentence that hints at connection to other Luck Mechanics papers.
+\section{Real Line Mapping to a Circle}
+\label{sec:circle}
+
+We first consider how to compactify $\mathbb{R}$ onto a circle $S^1$. There are 
+several complementary constructions, each emphasizing different properties.  
+
 % ---------------------------------------------------
+\subsection{Periodic wrapping map}
+\label{sec:wrap}
+A natural first attempt is to wrap the line around the unit circle periodically:
+\begin{equation}\label{eq:wrap}
+f: \mathbb{R} \to S^1, 
+\quad f(x) = (\cos(\alpha x), \sin(\alpha x)), 
+\quad \alpha = \frac{1}{R}.
+\end{equation}
+For $R=1$, the mapping has period $2\pi$. 
+
+\begin{proposition}[Irrational rotation avoids short-period degeneracy]
+If $\alpha/(2\pi)\notin \mathbb{Q}$, then the orbit $\{e^{i\alpha n} : n \in \mathbb{Z}\}$ 
+is dense in $S^1$. 
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+This is the classical Kronecker–Weyl equidistribution theorem: rational rotations 
+yield finite orbits, while irrational rotations equidistribute on the circle.  
+\end{proof}
+
+\begin{remark}
+This construction is not injective, since points differing by multiples of $2\pi/\alpha$ 
+map to the same point. It is most useful for illustrating how irrational scalings 
+such as $\pi$ prevent short cycles and create dense coverage.
+\end{remark}
+
+% ---------------------------------------------------
+\subsection{Spiral embedding}
+Another option is to embed $\mathbb{R}$ into the unit disk with a spiral:
+\begin{definition}[Spiral compactification]
+Define $h:\mathbb{R}\to \overline{\mathbb{D}}$ by
+\[
+h(x) = r(x)\,(\cos x, \sin x), \quad r(x) = 1-e^{-|x|}.
+\]
+Then $h$ is injective, and its image spirals toward the unit circle as 
+$|x|\to\infty$. Identifying the entire boundary circle to a single point realizes 
+the one-point compactification.
+\end{definition}
+
+This picture preserves injectivity on $\mathbb{R}$ but requires collapsing the 
+boundary circle to unify $+\infty$ and $-\infty$.  
+
+% ---------------------------------------------------
+\subsection{Tangent half-angle compactification}
+The canonical construction comes from the tangent half-angle formulas. Define
+\begin{equation}\label{eq:tangent}
+\phi:\mathbb{R}\to S^1, \quad
+\phi(t) = \left(\frac{1-t^2}{1+t^2},\ \frac{2t}{1+t^2}\right), \quad t\in\mathbb{R}.
+\end{equation}
+This is equivalent to setting $\theta = 2\arctan(t)$ and using 
+$(\cos\theta,\sin\theta)$. 
+
+\begin{remark}[Geometric interpretation]
+Imagine a unit circle centered at the origin. From the north pole $(0,1)$, draw a 
+straight line through a point $(t,0)$ on the real axis. The intersection with the 
+circle is $\phi(t)$. As $t\to\pm\infty$, the point approaches the north pole. Thus 
+$\mathbb{R}\cup\{\infty\}\cong S^1$.
+\end{remark}
+
+\begin{theorem}[One-point compactification via tangent half-angle]\label{thm:tangent}
+The map $\phi$ is a homeomorphism between $\mathbb{R}\cup\{\infty\}$ and $S^1$.  
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Continuity and bijectivity follow from the tangent half-angle identities for 
+$\sin\theta,\cos\theta$, with $\infty$ corresponding to $\theta=\pi$.  
+\end{proof}
+
+\begin{remark}[Contrast with other maps]
+Unlike the periodic wrapping \eqref{eq:wrap}, $\phi$ is injective. Unlike the spiral, 
+it is the canonical stereographic projection and thus standard in topology.  
+\end{remark}
+
+% ---------------------------------------------------
+\subsection{Bias and focal rotation parameter}
+To “focus attention” near a chosen point $b\in\mathbb{R}$, we introduce a bias 
+parameter. Define
+\begin{equation}\label{eq:bias}
+\phi_b(t) = \left(\frac{1-(t-b)^2}{1+(t-b)^2},\ \frac{2(t-b)}{1+(t-b)^2}\right).
+\end{equation}
+Geometrically, this shifts the center of compactification so that $t=b$ is mapped 
+to the south pole $(0,-1)$, and the “point at infinity” lies directly opposite.  
+
+\begin{remark}[Interpretation]
+- For $b=0$, we recover the symmetric compactification with detail near the origin.  
+- For large positive $b$, the projection emphasizes structure near $x=b$ while 
+sending both ends of the number line far away.  
+- This gives a tunable way to zoom: we can view $\infty$ as the focus (north pole), 
+or we can center the detail elsewhere on the line.  
+\end{remark}
+
+% ---------------------------------------------------
+\subsection{Limits at infinity via circle compactification}
+\begin{theorem}[Limit at infinity via circle compactification]\label{thm:RtoS1}
+Let $f:\mathbb{R}\to\mathbb{R}^m$ be continuous. The following are equivalent:
+\begin{enumerate}
+    \item $\lim_{x\to\pm\infty} f(x)$ exists and the two one-sided limits agree.  
+    \item $f$ extends continuously to a map $\tilde f:S^1\to\mathbb{R}^m$ under 
+    the tangent half-angle compactification.  
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}[Distinct endpoints model]
+If we instead use the extended line $\overline{\mathbb{R}}$ with two endpoints, 
+the condition weakens: $\lim_{x\to +\infty}$ and $\lim_{x\to -\infty}$ may differ, 
+corresponding to continuity at two separate points.  
+\end{remark}
 
 % ====================================================
-\bibliographystyle{plainnat}
-\bibliography{references}
-% Keep one shared .bib file across all 6 papers for consistency.
-% ---------------------------------------------------
+\section{Extension to the Sphere}
+\label{sec:sphere}
+
+The one-dimensional circle compactification has a natural higher-dimensional 
+analogue: wrapping the plane $\mathbb{R}^2$ onto the two-sphere $S^2$. 
+This is realized by stereographic projection, which can be derived using 
+the same tangent half-angle trick introduced in Section~\ref{sec:circle}.
+
+% ----------------------------------------------------
+\subsection{Stereographic projection from the plane}
+
+\begin{definition}[Stereographic projection from $\mathbb{R}^2$ to $S^2$]
+Define 
+\begin{equation}\label{eq:stereographic}
+\mathrm{St}:\mathbb{R}^2 \to S^2\setminus\{N\}, \qquad
+(x,y)\mapsto \left(\frac{2x}{x^2+y^2+1},\ \frac{2y}{x^2+y^2+1},\ \frac{x^2+y^2-1}{x^2+y^2+1}\right),
+\end{equation}
+where $N=(0,0,1)$ is the north pole of the unit sphere $S^2$. Its inverse 
+$\mathrm{St}^{-1}:S^2\setminus\{N\}\to\mathbb{R}^2$ maps a point on the sphere 
+back to the plane.
+\end{definition}
+
+\begin{remark}[Geometric picture]
+Place a sphere so that it rests on the plane at the south pole. For each 
+$(x,y)\in\mathbb{R}^2$, draw a straight line from the north pole $N$ through 
+$(x,y,0)$. This line intersects the sphere at a unique point, which is 
+$\mathrm{St}(x,y)$. The “missing point” $N$ corresponds to the point at infinity.  
+This directly generalizes the circle construction of Section~\ref{sec:circle}.
+\end{remark}
+
+% ----------------------------------------------------
+\subsection{Tangent half-angle derivation}
+
+In polar coordinates $(x,y) = (r\cos\varphi,r\sin\varphi)$, define the colatitude 
+$\Theta$ (angle from the north pole) by the relation
+\[
+\tan\!\left(\frac{\Theta}{2}\right) = \frac{1}{r}.
+\]
+Using half-angle identities, one computes
+\[
+\sin\Theta = \frac{2r}{1+r^2}, \qquad \cos\Theta = \frac{r^2-1}{r^2+1}.
+\]
+Thus the projection point in Cartesian coordinates is
+\begin{equation}
+(X,Y,Z) = \left(\frac{2x}{1+r^2},\ \frac{2y}{1+r^2},\ \frac{r^2-1}{r^2+1}\right),
+\end{equation}
+which agrees with formula~\eqref{eq:stereographic}.  
+
+\begin{remark}[Analogy with the circle case]
+For large $r$, $\Theta \to 0$ and the point approaches the north pole.  
+For small $r$, $\Theta \to \pi$ and the point lies near the south pole.  
+This is exactly the 2D analogue of the tangent half-angle parametrization 
+that compactified $\mathbb{R}$ to $S^1$.  
+\end{remark}
+
+% ----------------------------------------------------
+\subsection{One-point compactification in higher dimensions}
+
+\begin{theorem}[One-point compactification of $\mathbb{R}^n$]\label{thm:onepoint}
+For $n\geq 1$, the one-point compactification $\mathbb{R}^n\cup\{\infty\}$ is 
+homeomorphic to the $n$-sphere $S^n$, realized by stereographic projection from 
+the north pole.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Stereographic projection is a continuous bijection from $\mathbb{R}^n$ onto 
+$S^n\setminus\{N\}$, with continuous inverse. Adding $N$ corresponds to the 
+point at infinity, and the induced topology matches the one-point 
+compactification. See \citet{munkres2000topology} for details.
+\end{proof}
+
+\begin{remark}[Bias parameter in higher dimensions]
+Just as in Section~\ref{sec:circle}, one can introduce a translation parameter 
+$(x,y)\mapsto(x-b,y-c)$ before projection. This has the effect of focusing 
+compactification around $(b,c)$ on the plane, giving more “resolution” to features 
+near that point while treating other regions as further toward infinity.  
+\end{remark}
+
+% ----------------------------------------------------
+\subsection{Limits at infinity on the plane}
+
+\begin{theorem}[Limit at infinity on $\mathbb{R}^2$]\label{thm:R2limit}
+Let $f:\mathbb{R}^2\to\mathbb{R}^m$ be continuous. Then 
+\[
+\lim_{\|(x,y)\|\to\infty} f(x,y)=L
+\]
+exists if and only if the composition
+\[
+\tilde f := f\circ \mathrm{St}^{-1}: S^2\setminus\{N\}\to \mathbb{R}^m
+\]
+extends continuously to $N$ with value $L$.
+\end{theorem}
+
+\begin{remark}[Directional vs. unified infinity]
+In $\mathbb{R}^2$, one may “go to infinity” along infinitely many directions. 
+In the compactified model, these correspond to approaching the north pole along 
+different meridians. A two-dimensional limit at infinity exists only if all 
+approaches converge to the same value. Otherwise, the function has 
+direction-dependent behavior at infinity.
+\end{remark}
+
+% ----------------------------------------------------
+\subsection{Complex case: the Riemann sphere}
+
+\begin{definition}[Riemann sphere]
+The extended complex plane 
+\[
+\hat{\mathbb{C}} = \mathbb{C}\cup\{\infty\}
+\]
+is identified with the sphere $S^2$ via stereographic projection. The point at 
+infinity corresponds to the north pole. 
+\end{definition}
+
+\begin{theorem}[Limit at infinity for meromorphic functions]\label{thm:riemann-meromorphic}
+Let $f:\hat{\mathbb{C}}\to\hat{\mathbb{C}}$ be meromorphic. Then the following 
+are equivalent:
+\begin{enumerate}
+    \item $\lim_{z\to\infty} f(z)=L$ in $\hat{\mathbb{C}}$.
+    \item $f$ extends continuously to $\infty$ on the Riemann sphere with 
+    $f(\infty)=L$.
+\end{enumerate}
+Moreover, $f$ has a pole at $\infty$ if $|f(z)|\to\infty$ as $z\to\infty$.
+\end{theorem}
+
+\begin{remark}[Why this matters]
+This classification is central in complex analysis:
+\begin{itemize}
+    \item Polynomials satisfy $f(\infty)=\infty$ (a pole at infinity).
+    \item Rational functions either converge to a finite value or diverge at $\infty$.
+    \item Entire bounded functions extend continuously to $\infty$ as constants 
+    (Liouville’s theorem).
+\end{itemize}
+Compactification via the Riemann sphere thus provides a unified perspective on 
+limits, continuity, and singularities at infinity.
+\end{remark}
+
+% ----------------------------------------------------
+\subsection{Figures for illustration (to add in v2)}
+
+\begin{itemize}
+    \item \textbf{Figure 1:} Circle compactification of $\mathbb{R}$ via tangent 
+    half-angle projection, showing how points far out map near the north pole.  
+    \item \textbf{Figure 2:} Stereographic projection of $\mathbb{R}^2$ onto $S^2$, 
+    with lines from north pole to plane.  
+    \item \textbf{Figure 3:} The Riemann sphere depiction, with complex plane drawn 
+    at equator and $\infty$ at north pole.  
+\end{itemize}
+
+% ====================================================
+\section{Implications and Limitations}
+\label{sec:discussion}
+
+The compactification framework developed in Sections~\ref{sec:circle} and 
+\ref{sec:sphere} has several conceptual and practical implications for analysis, 
+geometry, and physics. At the same time, it is important to be clear about the 
+scope of the results and where open questions remain.
+
+% ----------------------------------------------------
+\subsection{Implications}
+
+\begin{enumerate}
+    \item \textbf{Unification of infinities.}  
+    On the real line, the traditional distinction between $+\infty$ and $-\infty$ 
+    forces separate limit conditions. By embedding $\mathbb{R}$ into $S^1$ via 
+    tangent half-angle compactification, these two ends merge into a single 
+    point, producing a continuous model of infinity. Similarly, for 
+    $\mathbb{R}^2$ and higher dimensions, stereographic projection identifies 
+    all directions of escape to infinity with the north pole of the sphere. 
+    Limits at infinity are thus reformulated as continuity conditions at a 
+    single added point.
+
+    \item \textbf{Classification of behavior at infinity.}  
+    The Riemann sphere model provides a clear taxonomy for meromorphic functions 
+    at infinity: removable singularities, poles, and essential singularities. 
+    This taxonomy is powerful because it translates asymptotic growth into 
+    a local property of the compactified space:
+    \begin{itemize}
+        \item Rational functions extend meromorphically with a finite value or $\infty$ at infinity.  
+        \item Polynomials correspond to a pole at infinity.  
+        \item Exponential-type functions exhibit essential singularities at infinity.  
+    \end{itemize}
+
+    \item \textbf{Geometric interpretation of limits.}  
+    Compactification replaces the vague notion of “going further and further 
+    away” with the precise operation of approaching a fixed point on a compact 
+    space. In higher dimensions, the requirement that all meridians into the 
+    north pole converge to the same value explains why many two-dimensional 
+    limits fail to exist.
+
+    \item \textbf{Bias and focal control.}  
+    Introducing a bias parameter before projection makes it possible to 
+    “zoom in” on a region of interest. For instance, shifting the circle or 
+    plane before compactification emphasizes resolution near that region while 
+    compressing detail elsewhere. This offers flexibility for applications that 
+    need directional focus rather than a purely symmetric treatment of infinity.
+
+    \item \textbf{Connections to analysis and physics.}  
+    Compactification techniques appear naturally in Fourier analysis (periodic 
+    boundary conditions), dynamical systems (circle rotations, ergodic theory), 
+    and physics (conformal compactifications of spacetime). The tangent 
+    half-angle and stereographic models here provide simple prototypes of these 
+    more general constructions.
+\end{enumerate}
+
+% ----------------------------------------------------
+\subsection{Limitations}
+
+\begin{enumerate}
+    \item \textbf{Compactification is not unique.}  
+    The one-point compactification is canonical in topology, but other models 
+    exist (e.g.\ the extended real line $\overline{\mathbb{R}}$ that preserves 
+    separate $+\infty$ and $-\infty$). The appropriate choice depends on 
+    context: probability theory often requires directional infinities, while 
+    complex analysis prefers a unified infinity.
+
+    \item \textbf{Loss of directional information.}  
+    Stereographic projection collapses all escape directions to a single point. 
+    This is powerful for continuity arguments, but sacrifices fine-grained 
+    directional data about how a function behaves toward infinity.
+
+    \item \textbf{Dependence on scaling and bias.}  
+    Using irrational angular scalings (e.g.\ multiples of $\pi$) avoids 
+    degenerate periodicities and yields dense coverage of $S^1$, but rational 
+    choices can lead to finite orbits. Similarly, introducing a bias parameter 
+    changes the apparent “resolution” of infinity, which is useful but also 
+    context-dependent. Compactification is therefore not a universal solution, 
+    but a tunable tool.
+
+    \item \textbf{Analytic limitations.}  
+    The framework is topological in nature. It clarifies the structure of limits 
+    at infinity but does not by itself resolve analytic questions of growth, 
+    oscillation, or essential singularities. For example, functions with 
+    essential singularities at infinity remain unpredictable even when classified 
+    neatly on the Riemann sphere.
+\end{enumerate}
+
+% ----------------------------------------------------
+\subsection{Summary}
+Compactifying infinity via circles, spheres, and the Riemann sphere provides a 
+unified and geometrically intuitive framework. It clarifies when limits exist, 
+offers a natural classification for complex functions, and connects to 
+applications across mathematics and physics. At the same time, it collapses 
+directional information and depends on context-specific choices of scaling or 
+bias. These trade-offs mark both the power and the boundaries of the approach.
+
+% ====================================================
+\section{Conclusion}
+
+This paper has shown how the real line, the plane, and the complex plane can be 
+compactified by mapping them onto the circle, the sphere, and the Riemann sphere, 
+respectively. Through tangent half-angle and stereographic projection, we proved 
+that limits at infinity exist precisely when functions extend continuously to the 
+added point at infinity. This provides a unified framework in which $+\infty$ and 
+$-\infty$ on $\mathbb{R}$, or infinitely many escape directions on $\mathbb{R}^2$, 
+are collapsed into a single continuous notion of infinity.  
+
+The benefit of this approach is twofold: it clarifies when limits and continuity 
+at infinity are well-defined, and it translates asymptotic growth into local 
+behavior on a compact manifold. The framework further yields a geometric 
+classification of functions in complex analysis, highlighting how removable 
+singularities, poles, and essential singularities at infinity naturally arise on 
+the Riemann sphere.  
+
+Future work will explore how compactification interacts with frequency and 
+equidistribution results (e.g.\ irrational rotations on $S^1$), how PDEs behave 
+on compactified domains, and how conformal compactification methods can inform 
+both dynamical systems and physical models such as quantum mechanics and 
+spacetime geometry.
+
+% ====================================================
+% REFERENCES (add in final; placeholder comment here)
+% - Topology: Munkres, Hatcher (one-point compactification).
+% - Complex Analysis: Ahlfors, Stein–Shakarchi, Needham (Riemann sphere, stereographic).
+% - Equidistribution: Weyl 1916; Kuipers–Niederreiter (uniform distribution sequences).
+% - Dynamical systems: Katok–Hasselblatt (irrational rotations).
+% Use your shared .bib across the series for consistency.
 
 \end{document}

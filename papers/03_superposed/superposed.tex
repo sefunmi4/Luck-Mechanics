@@ -1,117 +1,325 @@
-\documentclass[12pt]{article}
+\documentclass[reprint,amsmath,amssymb,aps,pra]{revtex4-2}
+
+% ====================================================
+% VERSION 2 CHECKLIST (read once, then sweep each TODO)
+% ====================================================
+% GOALS:
+% 1) Replace the informal "troughs at multiples" cosine with a rigorous
+%    divisibility indicator built from a *sum of cosines* (or complex exponentials).
+% 2) Make the "superposition" step mathematically correct by using a PRODUCT mask
+%    for the sieve (not a plain sum). Optionally keep the "sum/interference" story
+%    as a visualization, but clearly labeled heuristic.
+% 3) Tie coverage ratios to Mertens' product and connect to PNT carefully.
+% 4) Add Lemma/Theorem proof stubs so you can fill in details without changing structure.
+% 5) Lock in a figure-generation plan (exact scripts / parameters in comments).
+% 6) Sanitize the "largest prime" language—reframe as a limit statement about coverage.
+
+% STYLE:
+% - Keep revtex+natbib+plainnat (okay for arXiv).
+% - Prefer theorem/lemma environments for the math.
+% - Use a single shared .bib later; for now, bibitems have TODO keys.
 
 % ----------------------------------------------------
 % PACKAGES
 % ----------------------------------------------------
-\usepackage{amsmath, amssymb, amsthm}
-\usepackage{geometry}
 \usepackage{graphicx}
+\usepackage{bm}
 \usepackage{hyperref}
-\usepackage{natbib}
-\geometry{margin=1in}
+\usepackage{mathtools}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage{xcolor}
+\usepackage{amsthm}
+\usepackage[numbers]{natbib}
+
+% Resolve siunitx/physics overlap
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
 
 % ----------------------------------------------------
-% META INFO
+% THEOREM ENVIRONMENTS
 % ----------------------------------------------------
-% Update these per paper
-\title{[Working Title for Paper X]\\
-Subtitle if needed}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+% ----------------------------------------------------
+% MACROS
+% ----------------------------------------------------
+\newcommand{\Primes}{\mathbb{P}}              % Set of primes
+\newcommand{\N}{\mathbb{N}}                   % Natural numbers
+\newcommand{\Z}{\mathbb{Z}}                   % Integers
+\newcommand{\R}{\mathbb{R}}                   % Reals
+\newcommand{\A}{\mathcal{A}}                  % (kept for narrative)
+\newcommand{\W}{\Psi}                         % Wavefunction symbol
+
+% --- New helpful macros for rigorous detector ---
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\DivInd}[1]{\mathbf{1}_{#1}}      % Indicator macro: \DivInd{condition}
+
+% ====================================================
+\begin{document}
+
+% ---------- Title ----------
+\title{Prime Numbers as Superposed Wavefunctions: A Harmonic Approach to Composite Detection and Distribution}
+
 \author{Sefunmi Ashiru}
+\affiliation{Architecture of Homosapiens Research}
+
 \date{\today}
 
-% ----------------------------------------------------
-\begin{document}
-\maketitle
-
-% ----------------------------------------------------
+% ---------- Abstract ----------
 \begin{abstract}
-% Keep the abstract short (150–250 words).
-% 1–2 sentences: motivation (why this problem matters).
-% 1–2 sentences: method or approach (the math you introduce).
-% 1–2 sentences: results and implications.
+% TODO: Keep 150–200 words. State: (i) idea, (ii) precise construct used,
+% (iii) results you *prove*, (iv) numeric demos, (v) implications.
+%
+% IMPORTANT: Mention both the rigorous mask and the visual/heuristic view so
+% reviewers see you understand the difference.
+
+We recast the sieve of Eratosthenes in a harmonic framework. Rigourously, for each prime $p$ we build a \emph{divisibility detector} from a normalized cosine sum
+\[
+\chi_p(n)\coloneqq \frac{1}{p}\sum_{k=0}^{p-1}\cos\!\Big(\frac{2\pi k n}{p}\Big),
+\]
+which equals $1$ iff $p\mid n$ and $0$ otherwise. A multiplicative \emph{sieve mask}
+\[
+\mathcal{M}_Y(n)\coloneqq \prod_{p\le Y}\bigl(1-\chi_p(n)\bigr)
+\]
+vanishes exactly at integers $n$ divisible by a prime $\le Y$, and equals $1$ otherwise. Choosing $Y=\sqrt{x}$ eliminates every composite $\le x$. We analyze the uncovered density via the Mertens product $\prod_{p\le Y}(1-1/p)\sim \mathrm{e}^{-\gamma}/\log Y$ and connect this to the prime number theorem heuristics. As a visualization, we also discuss a \emph{wave superposition} picture (cosine “interference”) that matches the rigorous mask while providing intuition and figures. Numerical experiments illustrate the mask, uncovered fraction, and the approach to zero uncovered density as $Y\to\infty$.
 \end{abstract}
 
-\newpage
-\tableofcontents
-\newpage
+\maketitle
 
-% ====================================================
+% ---------- Introduction ----------
 \section{Introduction}
-% - Introduce the field (math, physics, AI).
-% - State the specific gap/problem.
-% - Place your contribution in 1–2 clear sentences.
-% - End with roadmap: “This paper is structured as follows…”
+% TODO: 1–2 paragraphs motivation + 1 paragraph your angle.
+% Cite classical sieve, density of primes, and harmonic analysis links.
+% End with a clear contributions list that mirrors the abstract.
 
-% Example phrasing template:
-% The distribution of prime numbers has long fascinated mathematicians...
-% In this paper, we reinterpret the classical sieve as a wavefunction interference problem.
-% Our contributions are: (1) definition..., (2) proof..., (3) discussion...
-% The paper is organized as follows: Section 2 reviews..., Section 3 introduces..., etc.
-% ---------------------------------------------------
+Prime numbers are the multiplicative atoms of the integers~\cite{HardyWright}. Classical sieves remove multiples of small primes to reveal larger primes. We revisit this process through harmonic constructions: periodic signals that \emph{exactly} detect divisibility and, when combined multiplicatively, implement a sieve.
 
-% ====================================================
-\section{Related Work}
-% - Tailor this section per discipline.
-%   Math → cite sieve theory, PNT, zeta.
-%   Physics → cite GR, QFT, wave interference.
-%   AI → cite attention mechanisms, frequency analysis.
-% - 3–6 key references are enough for a preprint.
-% - Keep the tone respectful but concise: “Prior approaches have focused on..., here we propose...”
-% ---------------------------------------------------
+\textbf{Contributions.} (i) We formalize for each prime $p$ a normalized cosine-sum detector $\chi_p(n)$ with $\chi_p(n)=1$ iff $p\mid n$; (ii) we define a multiplicative sieve mask $\mathcal{M}_Y$ that removes all composites $\le x$ by taking $Y=\sqrt{x}$; (iii) we quantify the uncovered density with Mertens’ product and relate it to prime density heuristics; (iv) we provide a wave-superposition visualization consistent with the rigorous construction, and report numerical illustrations.
 
-% ====================================================
-\section{Mathematical Framework / Model}
-% - This is the “proof core”.
-% - Define symbols and functions carefully.
-% - Copy the math skeleton from your proposal here.
-% - Use Lemma / Theorem / Proof environments if useful.
-%
-% Example:
-% \begin{theorem}
-% For prime $p$, the function $\psi_p(n) = \sin(2\pi n/p)$ vanishes at all multiples of $p$.
-% \end{theorem}
-% \begin{proof}
-% ...
-% \end{proof}
-% ---------------------------------------------------
+% ---------- Mathematical Framework ----------
+\section{Prime Wavefunctions and Divisibility Detectors}
+% BIG FIX: Your original \Psi_p(n)=cos(2\pi n/p) had “troughs at multiples”.
+% That’s off by a phase (cos(2πk)=+1, not -1) AND it isn’t an indicator.
+% Below we give (A) a rigorous indicator from a cosine *sum*, and (B) a
+% “physicist’s wave” for pictures. Keep (A) as the core; (B) as heuristic.
 
-% ====================================================
-\section{Results and Applications}
-% - Apply the framework to concrete cases.
-% - For math papers: plots of prime density, coverage ratios.
-% - For physics papers: diagrams of luck cones, ripple visualizations.
-% - For AI/consciousness: toy model, frequency kernel.
-% - Figures: always include 1–2 figures per paper, consistent style.
-%
-% Example:
-% \begin{figure}[h]
-%   \centering
-%   \includegraphics[width=0.8\linewidth]{example_plot.png}
-%   \caption{Example plot of prime wavefunction interference.}
-%   \label{fig:primewave}
-% \end{figure}
-% ---------------------------------------------------
+\subsection{Rigorous detector via cosine superposition}
+Define for prime $p$,
+\begin{equation}
+\chi_p(n) \coloneqq \frac{1}{p}\sum_{k=0}^{p-1}\cos\!\Big(\frac{2\pi k n}{p}\Big).
+\label{eq:cos-indicator}
+\end{equation}
+\begin{lemma}[Divisibility Indicator]
+For any integer $n$ and prime $p$, $\chi_p(n)=1$ if $p\mid n$ and $\chi_p(n)=0$ otherwise.
+\end{lemma}
+\begin{proof}
+% TODO: Fill the 3-line proof.
+% Hint: Use complex exponentials S(n)=p^{-1}\sum_{k=0}^{p-1}e^{2\pi i k n/p}
+% which equals 1 if p|n and 0 otherwise (finite geometric series). Take Re.
+\end{proof}
 
-% ====================================================
+% COMMENT: If you prefer complex form, define
+%   \tilde{\chi}_p(n)=\frac{1}{p}\sum_{k=0}^{p-1} e^{2\pi i k n/p},
+% then \chi_p(n)=\Re \tilde{\chi}_p(n), but the real sum already suffices.
+
+\subsection{Heuristic “wavefunction” for visualization}
+% Keep this clearly labeled as heuristic; do NOT claim it’s an indicator.
+Define a phase-shifted cosine
+\begin{equation}
+\W^{\mathrm{viz}}_p(n) \coloneqq -\cos\!\Big(\frac{2\pi n}{p}\Big),
+\label{eq:viz-wave}
+\end{equation}
+so $\W^{\mathrm{viz}}_p(kp)=-1$ at multiples $kp$.
+\begin{remark}
+$\W^{\mathrm{viz}}_p$ is \emph{not} an exact detector; it visualizes “troughs at multiples” (helpful for figures), while $\chi_p$ in Eq.~\eqref{eq:cos-indicator} does the exact combinatorial work.
+\end{remark}
+
+% ---------- Sieve Mask and Superposition ----------
+\section{Multiplicative Sieve Mask and “Interference”}
+% KEY POINT: The sieve is multiplicative. The mask below is exact.
+
+\subsection{Exact multiplicative mask}
+For a cutoff $Y\ge 2$, define
+\begin{equation}
+\mathcal{M}_Y(n) \coloneqq \prod_{p\le Y}\bigl(1-\chi_p(n)\bigr).
+\label{eq:mask}
+\end{equation}
+\begin{proposition}[Correctness up to a range]
+Let $x\ge 4$ and choose $Y=\sqrt{x}$. Then for all $2\le n\le x$,
+\[
+\mathcal{M}_Y(n)=
+\begin{cases}
+0, & \text{if $n$ is composite},\\
+1, & \text{if $n$ is prime.}
+\end{cases}
+\]
+\end{proposition}
+\begin{proof}
+% TODO: Standard sieve fact. If $n$ is composite and $n\le x$, then it has
+% a prime factor $\le \sqrt{x}=Y$, so some \chi_p(n)=1 makes the product zero.
+% If $n$ is prime, no prime p\le Y divides it, so all terms are (1-0)=1.
+% (Exclude n=1 by convention.)
+\end{proof}
+
+\subsection{Additive “interference” view (visual story)}
+% This is optional narrative that matches figures.
+Define an additive score
+\begin{equation}
+S_Y(n)\coloneqq \sum_{p\le Y}\W^{\mathrm{viz}}_p(n).
+\end{equation}
+Multiples of small primes accumulate negative contributions (many “troughs”). While $S_Y$ is not a classifier, its contrast aligns qualitatively with the exact mask $\mathcal{M}_Y$ and produces informative images.
+
+% ---------- Coverage Ratios and Density ----------
+\section{Coverage Ratios and Prime Density Links}
+% Your f(p) formula was a good heuristic; formalize and connect to Mertens.
+
+\subsection{Novelty of a new prime in the sieve order}
+If primes are applied in increasing order, the fresh fraction eliminated by $p$ is
+\begin{equation}
+f(p)=\frac{1}{p}\prod_{q<p}\Bigl(1-\frac{1}{q}\Bigr),
+\label{eq:fresh-coverage}
+\end{equation}
+by inclusion–exclusion. Summing $f(p)$ over $p\le Y$ gives the total eliminated density, i.e.,
+\[
+1 - U(Y),\qquad
+U(Y)\coloneqq \prod_{p\le Y}\Bigl(1-\frac{1}{p}\Bigr).
+\]
+
+\subsection{Asymptotics via Mertens’ product}
+\begin{theorem}[Mertens’ product]
+As $Y\to\infty$,
+\begin{equation}
+\prod_{p\le Y}\Bigl(1-\frac{1}{p}\Bigr)\sim \frac{\e^{-\gamma}}{\log Y},
+\label{eq:mertens}
+\end{equation}
+where $\gamma$ is the Euler–Mascheroni constant.
+\end{theorem}
+\begin{proof}
+% TODO: Cite a standard reference (e.g., Tenenbaum or Montgomery–Vaughan).
+% You can sketch the classical proof outline or refer readers to the text.
+\end{proof}
+
+\begin{remark}[Heuristic bridge to PNT]
+If the sieve removes all composites up to $x$ by taking $Y=\sqrt{x}$, then
+\[
+U(\sqrt{x}) \sim \frac{\e^{-\gamma}}{\tfrac12\log x} = \frac{2\e^{-\gamma}}{\log x},
+\]
+which mirrors the leading $1/\log x$ scale in the prime number theorem. This does not constitute a proof of PNT but is a standard consistency check of sieve heuristics.
+\end{remark}
+
+% ---------- Figures ----------
+\section{Figures}
+% TODO: Use a consistent plotting style (same fonts, sizes). Save as PNGs.
+
+% (1) psi2_psi3_plot.png: show \W^{viz}_2 and \W^{viz}_3 across n=1..(say) 36
+%     overlay vertical lines at multiples. Comment that these are *visual* waves.
+
+% (2) fft_mask_210.png: really this is better named "mask_up_to_11.png".
+%     Build \mathcal{M}_{11}(n) for n=1..210 (=2*3*5*7)
+%     Display white where \mathcal{M}_{11}(n)=1, black otherwise.
+%     NOTE: \mathcal{M}_{11}==1 at 1 and at integers with no prime factor \le 11;
+%           for n\le 121, this equals {1} ∪ {primes > 11}. Label clearly.
+
+% (3) uncovered_fraction_plot.png:
+%     For Y in {2,3,5,7,11,...,P}, estimate U(Y) empirically over n\le N (e.g., N=10^6),
+%     and overlay the theoretical \prod_{p\le Y}(1-1/p) and the asymptotic e^{-gamma}/log Y.
+
+\begin{figure}[h]
+\includegraphics[width=\linewidth]{psi2_psi3_plot.png}
+\caption{Visualization waves $\W^{\mathrm{viz}}_2$ and $\W^{\mathrm{viz}}_3$ over $n\in[1,36]$, showing troughs at multiples. (Heuristic; the exact detector uses Eq.~\eqref{eq:cos-indicator}.)}
+\label{fig:psi2psi3}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=\linewidth]{fft_mask_210.png}
+\caption{Exact mask $\mathcal{M}_{11}(n)$ on $1\le n\le 210$. White indicates $\mathcal{M}_{11}(n)=1$ (no factor $\le 11$), black indicates eliminated.}
+\label{fig:fftmask}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=\linewidth]{uncovered_fraction_plot.png}
+\caption{Uncovered fraction $U(Y)$ vs.\ $Y$ (points: empirical; solid: $\prod_{p\le Y}(1-1/p)$; dashed: $\e^{-\gamma}/\log Y$). Convergence follows Mertens’ product.}
+\label{fig:coverage}
+\end{figure}
+
+% CODE NOTES (keep for reproducibility):
+% Python pseudo:
+%   import numpy as np
+%   from sympy import primerange, isprime
+%   def chi_p(n,p): return (1/p)*sum(np.cos(2*np.pi*k*n/p) for k in range(p))
+%   def M_Y(n,Y): 
+%       out=1.0
+%       for p in primerange(2,Y+1):
+%           out*= (1-chi_p(n,p))
+%       return out  # will be exactly 0 or 1 numerically up to float eps.
+%   # Plot waves:
+%   # Build mask grid for n=1..210, Y=11.
+%   # Compute uncovered fraction: mean(M_Y(n,Y) for n in 1..N), compare to product.
+
+% ---------- Infinity / Limiting Behavior ----------
+\section{Limiting Behavior and “Rarity”}
+% IMPORTANT: Avoid “largest prime” language. Replace with a clean limit claim.
+
+As $Y\to\infty$, the uncovered density $U(Y)=\prod_{p\le Y}(1-1/p)$ tends to $0$ by Eq.~\eqref{eq:mertens}. In sieve terms, primes collectively remove “almost all” integers in the sense that numbers with no small prime factor have vanishing density. This aligns with the intuitive rarity of integers that survive many sieving stages, without implying any maximal prime.
+
+% ---------- Discussion ----------
 \section{Discussion}
-% - Interpret the results.
-% - What is new here? Why does it matter to this field?
-% - What are the limitations? (reviewers look for this).
-% - Connect gently back to the “Luck Mechanics” thesis
-%   but keep this paper self-contained.
-% ---------------------------------------------------
+% TODO bullets to expand:
+% - What is genuinely new: packaging the exact detector (chi_p) as a cosine sum,
+%   pairing it with a narrative/visual wave picture that matches the exact mask.
+% - Relation to Ramanujan sums: you can mention c_p(n) as another route.
+%   c_p(n) = \sum_{a=1}^{p-1} e^{2\pi i a n/p} equals p-1 if p|n, else -1.
+%   Normalizations give alternative detectors; our choice uses k=0..p-1 and stays purely real.
+% - Limitations: additive “interference” S_Y(n) is heuristic; classification
+%   should use \mathcal{M}_Y.
+% - Natural extensions:
+%   (1) Replace cosines by exponentials and use convolution language.
+%   (2) Study distribution of S_Y(n) contrast vs n and Y.
+%   (3) Link to Dirichlet characters and explore selectivity mod m.
+%   (4) Explore connections to \Lambda(n) and \zeta(s) via harmonic expansions.
 
-% ====================================================
-\section{Conclusion and Future Work}
-% - Summarize contributions in 2–3 sentences.
-% - Suggest next steps (e.g., extend to complex plane, test experimentally, integrate into physics).
-% - End with one sentence that hints at connection to other Luck Mechanics papers.
-% ---------------------------------------------------
+% ---------- Conclusion ----------
+\section{Conclusion}
+% TODO: 3–5 sentences summarizing formal construct, correctness window Y=√x,
+% coverage asymptotics, and value of the visualization.
 
-% ====================================================
+We presented a harmonic reformulation of sieving: exact divisibility detectors $\chi_p$ built from cosine superpositions, an associated multiplicative mask that eliminates all composites up to a range, and density estimates via Mertens’ product consistent with prime asymptotics. The companion wave visualization aids intuition and supports clear numerical demonstrations.
+
+% ---------- Acknowledgments (optional) ----------
+% \section*{Acknowledgments}
+% TODO (optional): Thanks, funding, discussions.
+
+% ---------- References ----------
+% TODO: For arXiv, switch to \bibliography{refs} with a shared .bib later.
 \bibliographystyle{plainnat}
-\bibliography{references}
-% Keep one shared .bib file across all 6 papers for consistency.
-% ---------------------------------------------------
+\begin{thebibliography}{9}
+
+\bibitem{HardyWright}
+G.~H. Hardy and E.~M. Wright,
+\textit{An Introduction to the Theory of Numbers},
+Oxford Univ. Press, 5th ed., 1979.
+
+% TODO: Replace placeholders with proper bib entries when you move to a .bib file.
+\bibitem{Mertens}
+F.~Mertens,
+\"Uber eine zahlentheoretische Funktion,
+Sitzungsberichte der Kaiserlichen Akademie der Wissenschaften, Wien (1874).
+% (Use a modern reference too, e.g., Tenenbaum.)
+
+\bibitem{Tenenbaum}
+G.~Tenenbaum,
+\textit{Introduction to Analytic and Probabilistic Number Theory},
+3rd ed., AMS, 2015.
+
+\bibitem{MontgomeryVaughan}
+H.~L. Montgomery and R.~C. Vaughan,
+\textit{Multiplicative Number Theory I: Classical Theory},
+Cambridge, 2006.
+
+\end{thebibliography}
 
 \end{document}

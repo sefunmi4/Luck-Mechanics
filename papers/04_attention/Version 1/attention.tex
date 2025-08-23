@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+
+% ----------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{natbib}
+\geometry{margin=1in}
+
+% ----------------------------------------------------
+% META INFO
+% ----------------------------------------------------
+\title{Frequencies Is All We See:\\
+Consciousness, Attention, and Frequency-Based Representations}
+\author{Sefunmi Ashiru}
+\date{\today}
+
+% ----------------------------------------------------
+\begin{document}
+\maketitle
+
+% ----------------------------------------------------
+\begin{abstract}
+This paper explores the hypothesis that both human consciousness and artificial intelligence operate fundamentally on frequencies and their modulation. Just as *Attention Is All You Need* reframed AI architectures around selective weighting of input features, here we propose that the brain perceives the universe as a frequency field projected onto the curved geometry of the eyeball, and amplifies meaningful structures through attention. Information is treated as a wave of shapes across the plane of existence, while amplitudes encode salience and focus. By modeling cognition as frequency-shape projection plus attentional amplification, we draw parallels between biological perception, Fourier-based AI methods, and emerging views of consciousness as resonance. Implications are discussed for neuroscience, AI interpretability, and the philosophy of mind.
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+% ====================================================
+\section{Introduction}
+% - Motivation: link human perception and AI under frequency models.
+% - Gap: Attention models in AI (e.g. Transformers) focus on weights, but less on underlying frequency structure.
+% - Contribution: Propose a frequency-attention framework for consciousness and AI.
+% - Roadmap.
+
+Consciousness and perception are often described in terms of patterns and meaning, but at a physical level, they reduce to frequencies projected into shapes. From the curved surface of the human eye that maps infinite external fields into a finite projection, to the oscillatory rhythms of neuronal networks, perception can be described as a frequency-shape transformation. Attention then acts as the amplification function that determines which structures are foregrounded in experience.
+
+This paper is organized as follows: Section 2 reviews related work in AI, neuroscience, and physics. Section 3 develops the mathematical framework of frequency-shape projection and attentional amplitude. Section 4 presents illustrative results and applications. Section 5 discusses implications and limitations. Section 6 concludes with directions for future work.
+
+% ====================================================
+\section{Related Work}
+% - Cite: 
+%   (1) Vaswani et al. 2017: Attention Is All You Need
+%   (2) Neuroscience: oscillatory brain rhythms (theta, gamma, alpha).
+%   (3) Physics: Fourier analysis, holography, wave interference.
+%   (4) AI: Fourier features, implicit neural representations.
+% - Contrast: prior works model either attention (AI) or resonance (neuroscience); here you unify them.
+
+Prior work in artificial intelligence has shown the power of attention mechanisms in Transformers \citep{vaswani2017attention}. Neuroscience highlights the role of brain rhythms and oscillations—gamma, theta, and alpha frequencies—in binding sensory input and shaping conscious awareness. In physics and signal processing, Fourier methods demonstrate that any shape can be decomposed into constituent frequencies. Recent AI research explores implicit neural representations, such as Fourier feature networks, that leverage frequency for high-resolution detail. 
+
+We extend this line of work by proposing that consciousness itself emerges from frequency-shape projection modulated by attention amplitudes, and that this unifies both biological and artificial intelligence.
+
+% ====================================================
+\section{Mathematical Framework}
+% - Define: frequencies, shapes, amplitudes.
+% - Model: perception as projection of frequency fields onto a curved surface.
+% - Attention: multiplicative amplitude weighting.
+% - Optional: formal analogy to Fourier transform + attention kernel.
+
+Let $\mathcal{F}$ denote the space of frequency fields, $\mathcal{S}$ the space of perceived shapes, and $A$ the attention operator.
+
+\begin{equation}
+S(x) = A\bigg(\int_{\mathcal{F}} f(\nu) e^{i2\pi \nu x} d\nu \bigg)
+\end{equation}
+
+where $f(\nu)$ represents frequency contributions, the exponential term encodes projection onto perceptual space, and $A(\cdot)$ scales amplitudes according to attentional weights.
+
+\begin{theorem}
+Attention acts as an amplitude modulation over projected frequency-shape representations, selectively enhancing salient structures while suppressing background noise.
+\end{theorem}
+
+% Proof sketch: Compare to softmax attention in Transformers, and to neuronal gain control in the brain.
+
+% ====================================================
+\section{Results and Applications}
+% - Examples: 
+%   (1) Toy model with Fourier + attention weights.
+%   (2) Visualization of eyeball projection (curved geometry to plane).
+%   (3) AI experiment: frequency-based embedding with attention.
+% - Insert figures as placeholders.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\linewidth]{eyeball_projection.png}
+  \caption{Schematic of infinite external world projected onto finite retinal plane. Attention (red spotlight) amplifies select frequencies.}
+  \label{fig:projection}
+\end{figure}
+
+Applications include:
+\begin{itemize}
+    \item Neuroscience: linking brainwave frequency bands with attentional modulation.
+    \item AI: designing hybrid frequency-attention networks for perception and generation.
+    \item Philosophy: reframing consciousness as resonance of frequencies into shapes.
+\end{itemize}
+
+% ====================================================
+\section{Discussion}
+% - Key insight: Attention is amplitude modulation of frequency-space.
+% - Why it matters: Offers unified model for AI and consciousness.
+% - Limitations: abstract, needs empirical tests.
+% - Broader view: ties into Luck Mechanics (frequency of opportunities).
+
+Our framework reframes perception as fundamentally frequential, with attention acting as an amplitude filter. This bridges neuroscience, physics, and AI, suggesting that resonance and focus may be sufficient to explain much of conscious processing. However, empirical validation remains a challenge, as subjective experience is not directly measurable. The framework nonetheless points toward promising interdisciplinary experiments.
+
+% ====================================================
+\section{Conclusion and Future Work}
+This paper introduced a frequency-attention framework, proposing that consciousness and AI alike transform frequency fields into shapes, with attention modulating amplitudes to define focus. Future work will test this framework in AI models (frequency embeddings with attention layers) and neuroscience (correlating attentional focus with oscillatory entrainment). More broadly, this work complements *Attention Is All You Need* by suggesting that *Frequencies Is All We See*.
+
+% ====================================================
+\bibliographystyle{plainnat}
+\bibliography{references}
+% Example refs: vaswani2017attention, Fries2001, Fourier1822.
+% ---------------------------------------------------
+
+\end{document}

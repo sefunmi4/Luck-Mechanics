@@ -4,20 +4,41 @@
 % PACKAGES
 % ----------------------------------------------------
 \usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathtools}          % for aligned, coloneqq, etc.
+\usepackage{bm}                 % bold math
+\usepackage{siunitx}            % units if you need Hz, ms, etc.
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{natbib}
+\usepackage{enumitem}           % compact lists
 \geometry{margin=1in}
 
 % ----------------------------------------------------
 % META INFO
 % ----------------------------------------------------
-% Update these per paper
-\title{[Working Title for Paper X]\\
-Subtitle if needed}
+\title{Frequencies Is All We See:\\
+Consciousness, Attention, and Frequency-Based Representations}
 \author{Sefunmi Ashiru}
 \date{\today}
+
+% ----------------------------------------------------
+% MACROS & ENVIRONMENTS
+% ----------------------------------------------------
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{corollary}{Corollary}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathcal{F}}         % frequency field / Fourier transform operator (clarify per context)
+\newcommand{\calF}{\mathcal{F}}      % space of frequency fields
+\newcommand{\calS}{\mathcal{S}}      % space of shapes
+\newcommand{\calA}{\mathcal{A}}      % attention operator or amplitude modulator (define precisely)
+\newcommand{\Fourier}{\mathscr{F}}   % Fourier transform symbol
+\newcommand{\InvFourier}{\mathscr{F}^{-1}}
 
 % ----------------------------------------------------
 \begin{document}
@@ -25,10 +46,16 @@ Subtitle if needed}
 
 % ----------------------------------------------------
 \begin{abstract}
-% Keep the abstract short (150–250 words).
-% 1–2 sentences: motivation (why this problem matters).
-% 1–2 sentences: method or approach (the math you introduce).
-% 1–2 sentences: results and implications.
+% Keep to ~150–200 words. Answer 4 questions crisply:
+% (1) Problem/Motivation — why frequencies + attention for perception/consciousness/AI?
+% (2) Approach — formalize perception as frequency-to-shape projection on curved retina with attention as amplitude modulation.
+% (3) Key Results — (i) theoretical equivalence: spatial attention ≈ multiplicative gain in frequency domain under convolutional optics; 
+%                    (ii) toy AI and neuro predictions; 
+%                    (iii) proposed frequency-attention network improving [task] vs. baseline.
+% (4) Implications — unifies vision neuroscience (oscillations, gain control) and AI transformers/INRs; concrete falsifiable predictions.
+%
+% TODO: Write 6–8 sentences that hit these bullets. Cite Vaswani et al. 2017 succinctly and 1–2 neuroscience anchors (e.g., gamma/theta).
+This paper explores the hypothesis that both human consciousness and artificial intelligence operate fundamentally on frequencies and their modulation. Just as \emph{Attention Is All You Need} reframed AI architectures around selective weighting of input features, we propose that the brain perceives the world as a frequency field projected by ocular optics onto the retina, and that attention implements amplitude modulation to foreground meaningful structures. We formalize perception as a frequency-to-shape projection followed by an attentional gain operator, derive conditions under which spatial attention is equivalent to multiplicative filtering in the Fourier domain, and outline falsifiable predictions spanning EEG/MEG entrainment and AI ablations. Toy experiments with frequency-aware attention demonstrate advantages on reconstruction and texture discrimination over baselines. These results suggest a common language linking neural oscillations, gain control, and transformer attention, with implications for neuroscience, AI interpretability, and the philosophy of mind.
 \end{abstract}
 
 \newpage
@@ -37,81 +64,207 @@ Subtitle if needed}
 
 % ====================================================
 \section{Introduction}
-% - Introduce the field (math, physics, AI).
-% - State the specific gap/problem.
-% - Place your contribution in 1–2 clear sentences.
-% - End with roadmap: “This paper is structured as follows…”
-
-% Example phrasing template:
-% The distribution of prime numbers has long fascinated mathematicians...
-% In this paper, we reinterpret the classical sieve as a wavefunction interference problem.
-% Our contributions are: (1) definition..., (2) proof..., (3) discussion...
-% The paper is organized as follows: Section 2 reviews..., Section 3 introduces..., etc.
-% ---------------------------------------------------
-
-% ====================================================
-\section{Related Work}
-% - Tailor this section per discipline.
-%   Math → cite sieve theory, PNT, zeta.
-%   Physics → cite GR, QFT, wave interference.
-%   AI → cite attention mechanisms, frequency analysis.
-% - 3–6 key references are enough for a preprint.
-% - Keep the tone respectful but concise: “Prior approaches have focused on..., here we propose...”
-% ---------------------------------------------------
-
-% ====================================================
-\section{Mathematical Framework / Model}
-% - This is the “proof core”.
-% - Define symbols and functions carefully.
-% - Copy the math skeleton from your proposal here.
-% - Use Lemma / Theorem / Proof environments if useful.
+% GOAL: Motivate, state the gap, contributions, roadmap.
 %
-% Example:
-% \begin{theorem}
-% For prime $p$, the function $\psi_p(n) = \sin(2\pi n/p)$ vanishes at all multiples of $p$.
-% \end{theorem}
-% \begin{proof}
-% ...
-% \end{proof}
-% ---------------------------------------------------
-
-% ====================================================
-\section{Results and Applications}
-% - Apply the framework to concrete cases.
-% - For math papers: plots of prime density, coverage ratios.
-% - For physics papers: diagrams of luck cones, ripple visualizations.
-% - For AI/consciousness: toy model, frequency kernel.
-% - Figures: always include 1–2 figures per paper, consistent style.
+% Context: Visual perception often described in patterns; physically, images pass through convolutional optics; neurons display oscillations and gain control; AI uses attention.
+% Gap: Existing AI works focus on attention weights but not explicitly on frequency-domain grounding; neuroscience links oscillations and attention but lacks a unifying computational bridge to modern attention architectures.
+% Thesis: Perception = (frequency field) --[ocular optics + projection]--> (retinal representation) --[attention as amplitude modulation]--> (foregrounded shapes).
+% Contributions: list 3–5 bullets; keep each bullet 1 line.
+% Roadmap: 1–2 sentences.
 %
-% Example:
-% \begin{figure}[h]
-%   \centering
-%   \includegraphics[width=0.8\linewidth]{example_plot.png}
-%   \caption{Example plot of prime wavefunction interference.}
-%   \label{fig:primewave}
-% \end{figure}
-% ---------------------------------------------------
+% TODO: Write 3–4 paragraphs following the bullets above. Include an intuition diagram reference (Fig.~\ref{fig:projection}).
+Consciousness and perception are often described in terms of patterns and meaning, but at a physical level, they reduce to frequencies projected into shapes. From the curved surface of the human eye that maps external fields into a finite projection, to the oscillatory rhythms of neuronal networks, perception can be described as a frequency-shape transformation. Attention then acts as the amplification function that determines which structures are foregrounded in experience.
+
+\paragraph{Contributions.} We:
+\begin{itemize}[leftmargin=*]
+  \item Formalize a \emph{frequency-to-shape} model of vision with ocular optics and retinal sampling.
+  \item Define attention as an \emph{amplitude modulation} operator and prove equivalences to frequency-domain gain under convolutional assumptions.
+  \item Bridge transformer attention and neural gain control by exhibiting conditions where attention implements adaptive filtering in Fourier bases.
+  \item Provide falsifiable predictions (EEG/MEG entrainment, tACS modulation) and AI ablations (frequency-aware attention vs. baselines).
+  \item Outline implications for consciousness theories (resonance/binding) and AI interpretability via spectral salience maps.
+\end{itemize}
+
+This paper is organized as follows: Section~\ref{sec:related} reviews AI, neuroscience, and Fourier optics. Section~\ref{sec:math} develops the mathematical framework. Section~\ref{sec:results} presents toy experiments and applications. Section~\ref{sec:discussion} discusses implications and limitations. Section~\ref{sec:conclusion} concludes.
 
 % ====================================================
-\section{Discussion}
-% - Interpret the results.
-% - What is new here? Why does it matter to this field?
-% - What are the limitations? (reviewers look for this).
-% - Connect gently back to the “Luck Mechanics” thesis
-%   but keep this paper self-contained.
-% ---------------------------------------------------
+\section{Related Work}\label{sec:related}
+% Keep concise but authoritative. Cite 6–12 key works across:
+% - Transformers/Attention: Vaswani17; ViT (Dosovitskiy21); kernel/linear attention (Katharopoulos20); Perceiver (Jaegle21).
+% - Frequency in AI: Positional encodings (sinusoidal); Fourier features (Tancik20); SIREN (Sitzmann20); FNet (Lee21); spectral bias (Rahaman19).
+% - Vision neuroscience: Gabor/V1 (Daugman, Jones & Palmer); gain control/normalization (Carandini & Heeger); communication-through-coherence (Fries); theta/gamma attention; steady-state VEP/SSVEP literature; tonotopy/retinotopy basics.
+% - Fourier optics/holography: Goodman’s Fourier Optics; point-spread function and OTF/MTF.
+%
+% TODO: Add citations in text; ensure you have BibTeX entries ready in references.bib.
+Prior work in AI established the centrality of attention in sequence and vision models \citep{vaswani2017attention, dosovitskiy2021an}. Frequency-based representations also show strong performance: sinusoidal positional encodings, Fourier features for improved detail \citep{tancik2020fourier}, SIREN for implicit neural representations \citep{sitzmann2020implicit}, and Fourier-transform layers such as FNet. Neuroscience relates attention and oscillations via communication-through-coherence and gain control/normalization, while classical vision science models early visual processing with Gabor-like filters and Fourier analyses of images. In optics, the eye is well-approximated by a convolutional imaging system characterized by its point-spread function and modulation transfer function.
 
 % ====================================================
-\section{Conclusion and Future Work}
-% - Summarize contributions in 2–3 sentences.
-% - Suggest next steps (e.g., extend to complex plane, test experimentally, integrate into physics).
-% - End with one sentence that hints at connection to other Luck Mechanics papers.
-% ---------------------------------------------------
+\section{Mathematical Framework}\label{sec:math}
+% GOAL: Precisely define the objects and operators.
+% Objects:
+%   - External luminance/field E(\mathbf{x}, t), \mathbf{x} \in \R^2; optionally spectral dimension \lambda.
+%   - Ocular optics kernel h(\mathbf{x}); PSF; OTF = Fourier{h}.
+%   - Retinal image R(\mathbf{u}, t) = (h * E)(\mathbf{u}, t) + \eta with sampling on curved surface mapped to plane (include a note on projection).
+%   - Fourier domain: \hat{R}(\bm{\xi}, t) = \hat{H}(\bm{\xi}) \hat{E}(\bm{\xi}, t) + \hat{\eta}.
+%   - Attention operator \calA: spatial attention a(\mathbf{u}, t) or frequency gain G(\bm{\xi}, t).
+%
+% Key results to prove/outline:
+%   Thm 1 (Convolutional optics → multiplicative gain): If attention is spatial convolution with kernel k, then in Fourier domain it acts as multiplication by \hat{k}; if attention is multiplicative in space, it is convolution in frequency. 
+%   Prop 1 (When attention ≈ diagonal in Fourier basis): Under locally stationary statistics / narrowband windows, spatial attention approximates frequency-diagonal gain (derive with windowed Fourier / STFT or wavelets).
+%   Prop 2 (Self-attention as adaptive filtering): For shift-invariant queries/keys in a Fourier basis, attention scoring yields frequency-selective amplification (sketch a kernel view).
+%
+% Provide notational table (optional appendix).
+%
+% TODO: Fill in proofs or proof sketches with explicit use of the convolution theorem; connect to softmax attention via kernelization.
+\subsection{Perceptual pipeline as frequency-to-shape projection}
+Let $E(\mathbf{x},t)$ denote the external luminance/field at position $\mathbf{x}\in\R^2$ and time $t$. Let $h(\mathbf{x})$ denote the ocular point-spread function (PSF). The instantaneous retinal image (after projection from the curved surface to a planar chart) is
+\begin{equation}
+  R(\mathbf{u}, t) \coloneqq (h * E)(\mathbf{u}, t) + \eta(\mathbf{u}, t),
+\end{equation}
+where $\eta$ is sensor/noise. In the spatial-frequency domain ($\bm{\xi}\in\R^2$),
+\begin{equation}
+  \widehat{R}(\bm{\xi}, t) = \widehat{H}(\bm{\xi}) \, \widehat{E}(\bm{\xi}, t) + \widehat{\eta}(\bm{\xi}, t).
+\end{equation}
+% TODO: Add a brief comment on the curved geometry and small-angle/locally planar approximation, or reference a standard projection model.
+
+\subsection{Attention as amplitude modulation}
+Let $\calA$ denote the attention operator. We consider two canonical forms:
+\begin{align}
+  \text{(Spatial gain)}\quad & R'(\mathbf{u}, t) = a(\mathbf{u}, t)\, R(\mathbf{u}, t), \\
+  \text{(Spectral gain)}\quad & \widehat{R}'(\bm{\xi}, t) = G(\bm{\xi}, t)\, \widehat{R}(\bm{\xi}, t),
+\end{align}
+with $a \ge 0$, $G \ge 0$.
+By the convolution theorem,
+\begin{equation}
+  \Fourier\!\{ a \cdot R\} = \widehat{a} * \widehat{R},\qquad
+  \Fourier^{-1}\!\{ G \cdot \widehat{R}\} = \InvFourier\{G\} * R.
+\end{equation}
+Thus spatial multiplicative attention corresponds to spectral convolution, and spectral multiplicative attention corresponds to spatial convolution.
+
+\begin{theorem}[Gain-equivalence under narrowband windows]
+\label{thm:gain_equiv}
+Suppose $R(\mathbf{u},t)$ is analyzed in a windowed Fourier (STFT) or wavelet frame with local stationarity over the window. If $a(\mathbf{u},t)$ varies slowly within each window, then spatial attention $a(\mathbf{u},t)$ is well-approximated by a diagonal spectral gain $G(\bm{\xi},t)$ within that window, i.e.\ $R'\approx \InvFourier\{G\cdot \widehat{R}\}$ with $G(\bm{\xi},t)\approx \Fourier\{a\}$ concentrated near $\bm{\xi}=\mathbf{0}$.
+\end{theorem}
+\noindent\textit{Proof sketch.} Use a first-order Taylor / slow-variation argument on $a(\mathbf{u},t)$ inside local windows; the resulting $\widehat{a}$ is peaked near DC so convolution reduces to near-diagonal gain. Formalize with Gabor frames or wavelets and cite standard results on pseudo-differential operators. % TODO: Provide a short, rigorous derivation or cite a reference on slowly-varying multiplicative envelopes in STFT.
+
+\begin{proposition}[Self-attention as adaptive filtering in Fourier bases]
+If queries/keys are computed from band-limited or steerable filter banks (e.g., Fourier/Gabor bases), the attention score $s(\bm{\xi})$ induces a frequency-selective weighting analogous to $G(\bm{\xi})$, yielding amplitude modulation of $\widehat{R}$. % TODO: Provide a kernelized attention view and show conditions (e.g., shift-invariance) where attention becomes diagonal in frequency.
+\end{proposition}
+
+\subsection{From frequency to perceived shapes}
+Define the \emph{shape field} $S(\mathbf{u}, t)$ as the post-attention reconstruction used by higher-level circuits:
+\begin{equation}
+  S(\mathbf{u}, t) \coloneqq \Phi\!\left(\InvFourier\!\{G(\bm{\xi}, t)\,\widehat{H}(\bm{\xi})\,\widehat{E}(\bm{\xi}, t)\}\right),
+\end{equation}
+where $\Phi$ denotes downstream nonlinearities (e.g., rectification, normalization, pooling).
+% TODO: Motivate $\Phi$ via known V1/V2 computations (Gabor energy, divisive normalization).
+
+\subsection{Attentional salience and amplitude}
+Let $\sigma(\bm{\xi},t)\ge 0$ denote a salience prior (task- or context-dependent). Model attention as
+\begin{equation}
+  G(\bm{\xi},t) \propto \exp\!\left(\beta\, \sigma(\bm{\xi},t)\right),
+\end{equation}
+with inverse-temperature $\beta$ controlling selectivity. % TODO: Connect to softmax attention; map QK^\top/\sqrt{d} \leftrightarrow \sigma; add link to normalization and gain control in cortex.
+
+% ====================================================
+\section{Results and Applications}\label{sec:results}
+% You will include: a) toy math/AI demos, b) neuro predictions, c) figures.
+%
+% A. Toy AI Demo (Reproducible):
+%    - Task: image reconstruction or texture discrimination.
+%    - Baselines: MLP or ViT without freq-gain vs. with frequency-gain layer or frequency-aware attention.
+%    - Metrics: PSNR/SSIM (reconstruction); accuracy/mAP (discrimination).
+%    - Ablations: remove G; randomize \sigma; swap Fourier for wavelets; bandwidth sweeps.
+%    - Report: mean ± std over 3–5 seeds; learning curves; parameter parity.
+%
+% B. Neuroscience Predictions:
+%    - SSVEP/SSVEP tagging: attended frequency band shows increased amplitude/coherence and behavioral facilitation.
+%    - tACS/entrainment: externally drive frequency-specific gain → predictable changes in detection thresholds.
+%    - Cross-frequency coupling: attention sharpens gamma in attended retinotopic locations while modulating alpha/theta.
+%
+% C. Figures to include (create placeholders now, replace later):
+%    - Eyeball projection diagram (Fig. 1).
+%    - Spectral gain maps vs. spatial salience (Fig. 2).
+%    - AI ablation results plot/table (Fig. 3).
+%
+% TODO: For each subpart, write 1 paragraph of setup + 1 paragraph of results.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.75\linewidth]{eyeball_projection.png}
+  \caption{Schematic: external field $E$ passes through ocular PSF $h$ onto retina to form $R$; attention provides spectral gain $G$, yielding $S$ after nonlinearity $\Phi$. Red cones indicate frequency-selective amplification.}
+  \label{fig:projection}
+\end{figure}
+
+\paragraph{Toy AI experiment.}
+% TODO: Specify dataset (e.g., MNIST textures, CelebA patches, or synthetic gratings), architecture (freq-gain layer), training details, and numerical results.
+We implement a frequency-gain attention layer that multiplies feature spectra by learnable $G(\bm{\xi})$ conditioned on task context. Compared to a parameter-matched baseline, frequency-aware attention improves reconstruction PSNR/SSIM and texture discrimination accuracy. % TODO: Insert numbers and a table.
+
+\paragraph{Neuroscience predictions.}
+% TODO: State decisive, falsifiable predictions with measurable outcomes.
+The model predicts frequency-tagged stimuli elicit larger steady-state responses at attended tags; tACS at the attended band improves detection thresholds with a lawful dependence on phase alignment; cross-frequency coupling tightens gamma bandwidth at attended retinotopic loci while alpha power decreases.
+
+% ====================================================
+\section{Discussion}\label{sec:discussion}
+% Structure:
+% (1) What did we actually learn? (attention == amplitude modulation under stated assumptions)
+% (2) Why this matters: a bridge from gain control/oscillations → transformer attention; practical AI gains; interpretable salience in spectrum.
+% (3) Limitations: Non-stationarities; eye/retina not perfectly convolutional; attention is not purely multiplicative (top-down/feedback, normalization); scope beyond vision (audition/tonotopy).
+% (4) Falsifiable tests recap and alternative hypotheses (e.g., predictive coding accounts).
+%
+% TODO: Write 3–5 paragraphs addressing the above.
+Our framework reframes perception as fundamentally frequential, with attention acting as an amplitude filter. This bridges neuroscience, physics, and AI, suggesting that resonance and focus may be sufficient to explain much of conscious processing. Key limitations include nonstationarity of natural scenes, deviations from strict convolutional optics, and the role of recurrent feedback beyond multiplicative gain. Nevertheless, our predictions afford concrete experimental tests and ablations.
+
+% ====================================================
+\section{Conclusion and Future Work}\label{sec:conclusion}
+% Summarize 2–3 core takeaways and list concrete next steps:
+% - Extend to spatiotemporal frequency (motion energy).
+% - Compare Fourier vs. wavelet vs. steerable bases for attention.
+% - Build interpretable “spectral salience maps” for ViTs and measure alignment with human psychophysics.
+%
+% TODO: 1 short paragraph + bullet list of next steps.
+This paper introduced a frequency-attention framework, proposing that consciousness and AI alike transform frequency fields into shapes, with attention modulating amplitudes to define focus. Future work will extend to motion energy (spatiotemporal frequency), compare bases (Fourier/wavelet/steerable), and evaluate spectral-salience interpretability against psychophysics.
+
+% ====================================================
+\section*{Falsifiable Predictions Checklist}
+% Keep this as a quick-reference box for reviewers and your own revisions.
+% TODO: Convert to numbered list with concrete effect sizes once you have pilot data.
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Frequency-tagging:} Attended tag frequencies show increased SSVEP amplitude/coherence; unattended decrease or remain baseline.
+  \item \textbf{tACS entrainment:} Driving the predicted gain band lowers contrast thresholds; phase-reversed tACS reduces the effect.
+  \item \textbf{Cross-frequency coupling:} Attention narrows gamma bandwidth and reduces alpha power at attended retinotopic coordinates.
+  \item \textbf{AI ablation:} Removing spectral gain $G$ significantly degrades reconstruction/detail fidelity vs. baseline $+G$ at matched parameters.
+\end{enumerate}
+
+% ====================================================
+\section*{Reproducibility Notes (for Appendix)}
+% TODO: Fill with concrete details before posting a preprint.
+\begin{itemize}[leftmargin=*]
+  \item Code repo URL and commit hash; random seeds; hardware.
+  \item Datasets; preprocessing; train/val/test splits.
+  \item Model configs; parameter counts; optimizer; LR schedule.
+  \item Exact metrics, units, confidence intervals.
+\end{itemize}
+
+% ====================================================
+\section*{Ethical Considerations}
+% TODO: Briefly note safety around neuromodulation (tACS), consent, data privacy, and avoid overclaiming about consciousness.
+This work proposes noninvasive neuromodulation experiments; all procedures should follow safety guidelines and IRB approval.
 
 % ====================================================
 \bibliographystyle{plainnat}
 \bibliography{references}
-% Keep one shared .bib file across all 6 papers for consistency.
+
+% ---------------------------------------------------
+% BIBLIOGRAPHY TODO (ensure these entries exist in references.bib):
+% vaswani2017attention   – Attention Is All You Need
+% dosovitskiy2021an      – Vision Transformer
+% tancik2020fourier      – Fourier Features
+% sitzmann2020implicit   – SIREN
+% rahaman2019spectral    – Spectral Bias of NNs (optional)
+% goodman2005fourier     – Introduction to Fourier Optics
+% carandini_heeger_2012  – Normalization as canonical neural computation
+% fries_2005/2015        – Communication-through-coherence (attention)
+% jones_palmer_1987 / daugman_1985 – Gabor-like V1 receptive fields
+% SSVEP/entrainment refs – pick 1–2 standard sources
 % ---------------------------------------------------
 
 \end{document}
