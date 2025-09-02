@@ -1,0 +1,174 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm, bm}
+\usepackage{mathtools}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{filecontents}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+
+\title{Luck Mechanics: A Unified Framework for Probabilistic Wavefunctions,\\
+Compactification, Prime Interference, Attention Dynamics, and Polar Spacetime Optics in the Omniverse}
+\author{Sefunmi Ashiru}
+\date{\today}
+
+\newcommand{\Luck}{\mathcal{L}}
+\newcommand{\Opp}{\mathcal{O}}
+\newcommand{\Prep}{\mathcal{P}}
+\newcommand{\Circ}{\mathcal{C}}
+\newcommand{\Afield}{\mathcal{A}}
+\newcommand{\phiang}{\phi}
+\newcommand{\Psit}{\tilde{\Psi}}
+\newcommand{\Sphere}{S^2}
+\newcommand{\Circle}{S^1}
+
+\newcommand{\Primes}{\mathbb{P}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\Stereo}{\Phi}
+\newcommand{\LuckFormula}{\Luck = (\Opp \cdot \Prep) + \Circ}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+  We introduce \emph{Luck Mechanics}, a framework that treats ``luck'' as the tensioned energy of frequency permeating the universe—from particle oscillations to gravitational waves. In this view, energy is frequency across scales, while gravity appears as the manifestation of this tension force. Black and white holes act as spectral gates, retuning harmonics and shaping the flow of information.  
+  
+  Matter is reinterpreted as compactified light: outward-radiating frequencies stabilize into particles through tension, forming persistent ``luck force.'' This same tension underlies gravity across atomic to cosmic domains. Einstein’s relation \(E=mc^2\) extends to the full relativistic form
+  \[
+  E^2 = (mc^2)^2 + (pc)^2,
+  \]
+  where momentum (\(p\)) accounts for dynamical contributions. In parallel, Luck Mechanics formalizes its canonical law as
+  \[
+  \Luck = (\Opp \cdot \Prep) + \Circ,
+  \]
+  where opportunity (\(\Opp\)) is probabilistic, preparation (\(\Prep\)) is deterministic, and context (\(\Circ\)) represents the angular measurement of events within a light/luck cone on a four-dimensional hyperspectral plane radiating from an origin point.  
+  
+  At the Planck scale, polar reparameterization—time as radial, length as angular—visualizes spacetime as a continuous expansion where angular sectors represent different perspectives of a single universe. The so-called multiverse is thus reframed as directional viewpoints within one connected cosmos.  
+  
+  Luck Mechanics synthesizes compactification, interference, frequency-selective amplification, and polar optics into a unified framework, positioned alongside string vibration, entropic gravity, and frequency–tension models. We conclude with testable predictions and prototypes that treat luck as a guiding principle for directing probabilistic outcomes across physics and cognition.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+Modern theoretical physics increasingly treats spacetime and gravity as emergent from deeper structures:
+\begin{itemize}[leftmargin=1.1em]
+  \item \textbf{Frequency–tension models} where gravity, time, and energy arise from an underlying oscillatory medium \citep{STheory}.
+  \item \textbf{String theory} where particles are vibrational modes, linking energy directly to frequency \citep{Backreaction}.
+  \item \textbf{Entropic/information-based gravity} that frames gravitation as emergent from entropy gradients and quantum information \citep{EntropicGravity}.
+\end{itemize}
+At the Planck scale, characteristic units \(t_P\) and \(\ell_P\) set natural temporal and spatial cutoffs for new physics \citep{PlanckUnits}, motivating the polar (radial–angular) reparameterization we employ \citep{PolarCoords}.
+
+\paragraph{Motivation.}  
+This paper builds on three lines of earlier work I have drafted and circulated as preliminary articles but not yet published in peer-reviewed journals:
+\begin{enumerate}[leftmargin=1.1em]
+    \item \emph{Limits to Complex Infinities} (Valvo \& Ashiru), which explores stereographic compactification of $\R^n$ and $\C$,
+    \item \emph{Wavefunction Sieve of Eratosthenes} (Ashiru \& Valvo), which reformulates prime sieving as interference of sinusoidal kernels,
+    \item \emph{Frequencies Is All We See} (Ashiru), which interprets cognitive attention as multiplicative gain in the Fourier domain.
+\end{enumerate}
+While still in article form, these works provide the conceptual scaffolding for the present framework. Here, we unify their themes into \emph{Luck Mechanics}, a proposal that treats probability, interference, and attention as governed by a shared geometry of frequencies.
+
+\subsection{Related Work}
+A number of recent proposals have sought to bridge quantum mechanics and general relativity through geometric or frequency-based approaches.  
+Cheok, Nardelli, Srichan, and collaborators \citep{Cheok2025} suggest that both quantum physics and Einstein’s equations can be derived from a shared Riemannian and Planck-scale formalism, where mass and charge are emergent from curvature–energy interactions. While their framework is bold, it has faced critical scrutiny.  
+
+Luck Mechanics differs in emphasis: rather than starting from curvature tensors, we take \emph{frequency–tension} as the universal substrate. Compactification stabilizes infinities, prime interference encodes arithmetic cancellation, and attention kernels modulate probability distributions. This offers a mathematically transparent and experimentally approachable bridge, complementary to curvature-based approaches.
+
+\paragraph{Organization.}  
+Section~2 introduces notation and preliminaries. Section~3 develops the cross-domain synthesis. Section~4 proposes experimental predictions. Section~5 discusses implications and limitations. Section~6 concludes.
+
+
+
+\section{Unified Notation and Preliminaries}
+\subsection{Luck field}
+\begin{definition}[Luck field]
+Let \(\Opp,\Prep,\Circ : \mathbb{R}^d \times \mathbb{R} \to \mathbb{R}\). Define
+\[
+\Luck(x,t) = \Opp(x,t)\,\Prep(x,t) + \Circ(x,t).
+\]
+\end{definition}
+
+\subsection{Polar representation}
+\begin{definition}[Polar mapping]
+For \(x \in [-L/2,L/2]\) and \(t \ge 0\), let \(r = c t\), \(\theta(x) = 2\pi\frac{x + L/2}{L}\),
+\[
+\Psit(r,\theta) = \sqrt{\frac{2\pi}{L}}\,\Psi(x(\theta), t).
+\]
+\end{definition}
+
+\subsection{Compactification and prime wave-sieve}
+Following \cite{valvo2024limits}, compactify $\R \to S^1$ and $\R^2 \to S^2$ via stereographic projection. Define prime wavefunctions by
+\[
+\psi_p(n) = \sin\!\left(\tfrac{2\pi n}{p}\right), 
+\quad \Phi(n) = \prod_{p \le \sqrt{n}} \psi_p(n).
+\]
+By \cite{ashiru2024wave}, $\Phi(n)=0$ iff $n$ is composite, yielding interference-based arithmetic structure.
+
+\section{Cross-Domain Synthesis: Emerging Harmony}
+\subsection{Compactification meets interference}
+Compactification unifies $+\infty$ and $-\infty$ into a single continuous point. When combined with the prime wave-sieve, this produces dense angular distributions of residues on $S^1$, consistent with irrational rotation equidistribution (Weyl, Kronecker).
+
+\subsection{Luck cones in polar geometry}
+Branches of $\Psi$ mapped to angular sectors generate \emph{luck cones}, where overlapping polar trajectories act as probabilistic amplifiers. This connects compactified infinities to many-worlds style branching.
+
+\subsection{Attention as frequency modulation}
+As shown in \cite{ashiru2024frequencies}, attention can be formalized as multiplicative gain in Fourier space. In Luck Mechanics, this becomes the operator that foregrounds certain trajectories, aligning with experiential ``focus'' as probabilistic amplification.
+
+\subsection{Polar coordinates and unified fields}
+By shifting to polar coordinates where Planck time is represented as a radial line and Planck length as an angular domain \citep{PlanckUnits,PolarCoords}, we obtain a natural visualization of the continuous structure of space and time. In this representation, the evolution of fields is mapped onto radial--angular sectors, making explicit the continuity of both temporal flow and spatial extension. This polar mapping not only unifies quantum field theoretic descriptions with gravitational curvature, but also provides a lens for modeling black-hole and white-hole horizons as angular retunings of the same radial field. Within Luck Mechanics, all physical media are reinterpreted as a single frequency-tension substrate---a \emph{luck field}---whose oscillations encode chance encounters and probabilistic outcomes. The overlapping of these probabilistic light cones produces interference regions, or ``luck cones,'' which align with the branching structures of many-worlds interpretations while remaining grounded in a unified frequency geometry; compare with phase-space (measure) viewpoints on cosmological ensembles \citep{GibbonsTurok2006}. Furthermore, constraints near the Planck scale suggest frequency/angle–tension couplings consistent with relativistic uncertainty bounds \citep{PhysRevResearch033343}.
+
+\subsection{Polar optics and emergent gravity}
+Let $\Afield = |\Afield|e^{i\phiang}$. Phase gradients induce tension analogous to stress-energy, generating curvature-like effects—linking frequency–tension models to emergent gravity.
+
+\section{Experimental Predictions}
+\begin{itemize}[leftmargin=1.1em]
+  \item \textbf{Mechanical/optical sieve:} Oscillatory masks replicating prime-sieve interference nulls.
+  \item \textbf{Angular interferometry:} Optics that measure phase-dependent amplification in ``luck cones.''
+  \item \textbf{Macro tension fields:} Resonant membranes to model emergent curvature.
+\end{itemize}
+
+\section{Discussion \& Limitations}
+\paragraph{Synthesis achieved.} Luck Mechanics integrates:
+\begin{enumerate}[leftmargin=1.1em]
+  \item Compactification of infinities into geometric continuity,
+  \item Prime interference as exact arithmetic cancellation,
+  \item Attention as spectral amplification,
+  \item Polar coordinates as a unifying map of Planck domains into radial--angular geometry,
+  \item Polar optics as emergent curvature.
+\end{enumerate}
+
+\paragraph{Relation to prior approaches.} Unlike curvature-only frameworks such as Cheok \emph{et al.}~\citep{Cheok2025}, which begin with Riemannian tensors, Luck Mechanics emphasizes polar compactification at the Planck scale \citep{PlanckUnits}. By treating Planck time as radial and Planck length as angular \citep{PolarCoords}, the continuous nature of spacetime becomes directly visualizable, and fields can be mapped consistently across QFT, gravity, and white/black hole mechanics, with angular “retuning” replacing singular behavior \citep{PhysRevResearch033343}.
+
+\paragraph{Limitations.} The framework is speculative and does not yet recover the Standard Model. Compactification sacrifices directional detail, the wave-sieve is $n$-dependent, and attention in real cognition involves recurrent feedback beyond multiplicative gain.
+
+\paragraph{Future work.} Extensions include spatiotemporal frequency (motion energy), links to Dirichlet characters and Ramanujan sums, and neuromodulation tests of spectral gain operators.
+
+\section{Conclusion}
+Luck Mechanics reframes probability, interference, and focus as manifestations of one frequency–tension field. Compactification, prime interference, and frequency-attention unify into a single polar-optical framework: the omniverse as a jelly-like frequency network where ``luck'' is measurable interference across scales. 
+
+\section*{Acknowledgments}
+I thank my parents, my family, and especially my mother for their unwavering love and support throughout this journey.  
+I am deeply grateful to Dr.~Scales for introducing me to the field through lab work on quantum photonics, which provided a foundation for much of my later research.  
+I also thank Daniel Valvo for foundational discussions on compactification and sieves, and my colleagues for their insights on attention and frequency-based models.
+
+\end{document}

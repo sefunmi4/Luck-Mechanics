@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  18 AUG 2025 21:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  28 AUG 2025 13:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex"
-(/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex
+**"/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/papers/06_polar_optics/Version 1/spacetime_polar_optics.tex"
+(/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/papers/06_polar_optics/Version 1/spacetime_polar_optics.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/revtex/revtex4-2.cls
@@ -414,7 +414,7 @@ Package: amsthm 2020/05/29 v2.20.6
 \dth@everypar=\toks32
 )
 
-/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/spacetime optics & fluid dynamics /spacetime polar optics /spacetime_polar_optics.tex:14: LaTeX Error: Option clash for package natbib.
+/Users/oluwaseunfunmiashiru/Dev/Luck-Mechanics/papers/06_polar_optics/Version 1/spacetime_polar_optics.tex:14: LaTeX Error: Option clash for package natbib.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -804,12 +804,12 @@ Package rerunfilecheck Info: Checksums for `spacetime_polar_optics.out':
  ) 
 Here is how much of TeX's memory you used:
  17375 strings out of 473190
- 322657 string characters out of 5715801
+ 322579 string characters out of 5715801
  723696 words of memory out of 5000000
  40412 multiletter control sequences out of 15000+600000
  570777 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,9n,93p,1160b,1102s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,9n,93p,1134b,1102s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
 Output written on spacetime_polar_optics.pdf (4 pages, 283971 bytes).
 PDF statistics:

@@ -1,0 +1,191 @@
+\documentclass[12pt]{article}
+
+% ----------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage{xcolor}
+\usepackage[numbers]{natbib}
+
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
+
+% ----------------------------------------------------
+% THEOREM ENVIRONMENTS
+% ----------------------------------------------------
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{definition}{Definition}
+
+% ----------------------------------------------------
+% MACROS
+% ----------------------------------------------------
+\newcommand{\Primes}{\mathbb{P}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\W}{\Psi}                    % wavefunction symbol
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\Luck}{\mathcal{L}}
+\newcommand{\Opp}{\mathcal{O}}
+\newcommand{\Prep}{\mathcal{P}}
+\newcommand{\Circ}{\mathcal{C}}
+
+% ----------------------------------------------------
+\begin{document}
+
+\title{Computational Frequency: Wavefunction Algebra and Logic}
+
+\author{Sefunmi Ashiru}
+\date{\today}
+
+\maketitle
+
+% ---------- Abstract ----------
+\begin{abstract}
+We propose \emph{Computational Frequency}, a framework in which symbolic logic, arithmetic, and learning are performed as \emph{wavefunction computations}. The key ingredients are: (i) a compactification of integers via “Limits to Complex Infinities” so that $\pm\infty$ unify on $S^1/S^2$, enabling frequency-stable encodings; (ii) a harmonic prime mask that formalizes “prime rarity” as exact divisibility detection; and (iii) a \emph{wavefunction algebra} where values are represented by frequencies and operations act by period/phase transforms (e.g., $\sqrt{\cdot}$ as period halving). We show how modern AI fits this picture: transformer attention modulates amplitudes (gains) in a spectral basis, so \emph{attention is amplitude} and discrete outputs correspond to learned spectral codes; see \emph{Attention Is All You Need} for the canonical attention formalism. Finally, we cast \emph{Luck} as a probabilistic computation
+\[
+\Luck=(\Opp\cdot\Prep)+\Circ,
+\]
+with the AI mapping \(\Prep=\) training, \(\Circ=\) input context, \(\Opp=\) requested output direction. The result is a unified story where primes structure frequency-selective logic, compactification stabilizes limits, and attention implements amplitude control for frequency-coded computation.
+\end{abstract}
+
+
+% ---------- 1. Introduction ----------
+\section{Introduction}
+Two observations motivate this work. First, integers and limits become geometrically well-behaved under \emph{compactification} (e.g., stereographic projection maps $\R,\R^2$ to $S^1,S^2$), allowing periodic/frequency encodings to treat “infinity” as a regular point. Second, modern AI computes with \emph{attention}, i.e., context-dependent \emph{gains} that amplify some components and suppress others~\citep{vaswani2017attention}. Marrying these ideas suggests a computational paradigm where \emph{values are frequencies}, \emph{operations are transformations of period/phase}, and \emph{reasoning} is implemented via \emph{spectral masks and gains}.
+
+\textbf{Contributions.} We:
+\begin{itemize}
+  \item Present a compactification-first view that stabilizes frequency encodings of integers and limits (circle/sphere models).
+  \item Build an exact \emph{prime divisibility detector} from cosine/exponential superpositions and a multiplicative \emph{prime sieve mask}.
+  \item Define a practical \emph{wavefunction algebra}: map $a\mapsto$ frequency $\omega(a)$; then addition/multiplication/square-root become additive/scaling rules on $\omega$ (with $\sqrt{\cdot}$ realized by \emph{halving the period}).
+  \item Show how AI attention implements amplitude (gain) over spectral codes, so “\emph{Frequencies Is All We See}”: attention is amplitude; outputs are frequency-coded shapes/numbers.
+  \item Integrate \emph{Luck} as a probabilistic control law linking opportunity, training (preparation), and input context to spectral gains and outputs.
+\end{itemize}
+
+% ---------- 2. Compactification and integer–frequency encoding ----------
+\section{Compactification and integer--frequency encoding}
+\subsection{Limits to Complex Infinities (circle/sphere model)}
+The one-point compactification identifies $\R\cup\{\infty\}\cong S^1$ and $\R^2\cup\{\infty\}\cong S^2$ via stereographic projection. This replaces $+\infty$ and $-\infty$ by a single regular point, enabling uniform periodic encodings of integers without “edge cases” at infinity (cf.\ standard topology/complex-analysis texts).
+
+\subsection{A frequency code for arithmetic}
+We use a \emph{log-frequency code} to linearize multiplication:
+\begin{equation}
+\label{eq:logfreq}
+\text{Encode } a>0 \ \mapsto\ \W_a(n) \coloneqq \cos\!\big(2\pi\, \omega(a)\, n + \phi_a\big),
+\quad \omega(a) \coloneqq \alpha \log a,
+\end{equation}
+for some scale $\alpha>0$ and phase $\phi_a$. Then
+\[
+\omega(ab)=\omega(a)+\omega(b), \quad
+\omega(\sqrt{a})=\tfrac12\,\omega(a), \quad
+\omega(a^k)=k\,\omega(a).
+\]
+Thus \textbf{multiplication} becomes \emph{frequency addition}, \textbf{square root} becomes \emph{frequency halving} (equivalently, \emph{period doubling}), and \textbf{division} is \emph{frequency subtraction}. The \emph{value} can be recovered by $a=\exp(\omega/\alpha)$ when needed.
+
+\begin{remark}
+Other codes are possible (e.g., direct frequency $\omega\propto a$ for linear arithmetic, or mixed codes for modular arithmetic). We choose~\eqref{eq:logfreq} because it turns products into sums, making many algebraic operations simple period/phase edits.
+\end{remark}
+
+% ---------- 3. Prime rarity as harmonic masks ----------
+\section{Prime rarity as harmonic masks}
+\subsection{Exact divisibility detectors}
+For a prime $p$, define the normalized exponential sum
+\begin{equation}
+\label{eq:chip}
+\chi_p(n)\coloneqq \frac{1}{p}\sum_{k=0}^{p-1} \exp\!\Big(\frac{2\pi \ii k n}{p}\Big).
+\end{equation}
+Then $\chi_p(n)=1$ iff $p\mid n$ and $0$ otherwise (finite geometric series). Taking the real part gives an equivalent cosine-sum form.
+
+\subsection{Multiplicative sieve mask}
+For a cutoff $Y$, define
+\begin{equation}
+\label{eq:mask}
+\mathcal{M}_Y(n)\coloneqq \prod_{p\le Y}\bigl(1-\chi_p(n)\bigr),
+\end{equation}
+which equals $0$ exactly at integers divisible by some $p\le Y$, and $1$ otherwise. Choosing $Y=\sqrt{x}$ eliminates all composites $\le x$ (standard sieve window). The uncovered density is $\prod_{p\le Y}(1-1/p)\sim \e^{-\gamma}/\log Y$ (Mertens product), consistent with prime number theorem heuristics.
+
+\begin{remark}
+These masks double as \emph{frequency-selective logic gates} when integers are represented in periodic codes on $S^1$: they “black out” composite-aligned phases while preserving prime-aligned phases—structuring a logic substrate from prime rarity.
+\end{remark}
+
+% ---------- 4. Wavefunction algebra and logic ----------
+\section{Wavefunction algebra and logic}
+\subsection{Core operations (period/phase calculus)}
+Let $\W_a$ encode scalar $a$ using~\eqref{eq:logfreq}. Then:
+\begin{align*}
+\textbf{Addition (of encoded values):}\quad & 
+\W_{a\cdot b} \Leftarrow \text{add frequencies } \omega(a)+\omega(b); \\
+\textbf{Multiplication (of values):}\quad & 
+\W_{a^k} \Leftarrow \text{scale frequency by } k; \\
+\textbf{Square root:}\quad & 
+\W_{\sqrt{a}} \Leftarrow \text{halve frequency } \omega(a)/2 \ (\text{double period}); \\
+\textbf{Inverse:}\quad & 
+\W_{a^{-1}} \Leftarrow \text{negate frequency } -\omega(a); \\
+\textbf{Superposition:}\quad & 
+\W \Leftarrow \sum_i A_i\, \W_{a_i}\quad \text{(mixtures, ambiguity, priors)}.
+\end{align*}
+Arithmetic reduces to edits on \emph{periodicity} and \emph{phase}; gates can be implemented by masks (e.g., prime masks, band-pass windows).
+
+\subsection{Logic in frequency}
+Represent booleans with phases/frequencies and implement gates via products and projections:
+\begin{itemize}
+  \item \textbf{Conjunction (AND):} multiply wavefunctions and project back into the code subspace; overlapping bands survive, others attenuate.
+  \item \textbf{Disjunction (OR):} additive superposition followed by normalization.
+  \item \textbf{Negation (NOT):} phase flip $\phi\mapsto \phi+\pi$ (or complement band in frequency).
+\end{itemize}
+In hardware, these are gains, mixers, and filters; in software, they are linear layers plus nonlinearity constrained to the spectral code.
+
+% ---------- 5. AI as wavefunction computation ----------
+\section{AI as wavefunction computation: attention is amplitude}
+Transformer attention computes content-dependent weights that amplify or suppress components of a representation~\citep{vaswani2017attention}. In our lens, attention implements a \emph{spectral gain} $G(\omega)$ applied to wavefunctions $\W$, i.e.,
+\[
+\widehat{\W}'(\omega)=G(\omega)\,\widehat{\W}(\omega),
+\]
+so \emph{attention is amplitude}. “\emph{Frequencies Is All We See}” means: the model detects and manipulates frequency-coded structures; discrete symbols (tokens, classes, digits) are learned \emph{spectral codes} (unique bands/constellations) that the network amplifies when context demands.
+
+\begin{remark}
+This also explains why sinusoids (positional encodings, Fourier features) and implicit neural representations work so well: they linearize geometry and arithmetic in the frequency domain, where attention/gain is simple and powerful.
+\end{remark}
+
+% ---------- 6. Lucky computation (probabilistic control) ----------
+\section{Lucky computation: a probabilistic control law}
+We formalize \emph{Luck} as the probabilistic computation
+\[
+\Luck = (\Opp\cdot \Prep) + \Circ,
+\]
+with the AI mapping:
+\[
+\Prep=\text{training (learned spectral priors)},\quad
+\Circ=\text{input context (observed spectrum)},\quad
+\Opp=\text{requested output direction from input (task prompt/objective)}.
+\]
+During inference, $\Opp$ defines a target spectral pattern, $\Prep$ constrains feasible gains (what the model knows), and $\Circ$ supplies observed bands. Attention selects gains $G(\omega)$ that maximize alignment with $\Opp$ under $\Prep$, yielding a stochastic but directed superposition—\emph{lucky computation}.
+
+% ---------- 7. Implementation sketch ----------
+\section{Implementation sketch (software/hardware)}
+\textbf{Software.} Use an FFT (or learned spectral basis) to map features into frequency; apply learnable, context-conditioned gains $G(\omega)$; invert. Numeric operations (e.g., $\sqrt{\cdot}$) are period edits in the frequency code. Logic is band selection and phase flips.
+
+\textbf{Hardware.} RF/photonic pipelines naturally implement gains, mixers, and filters; compactified phases on rings/spheres provide stable boundary behavior.
+
+% ---------- 8. Discussion and Limitations ----------
+\section{Discussion and limitations}
+This paper offers a coherent frequency-first view of computation and learning: primes give masks (rarity $\Rightarrow$ selectivity), compactification stabilizes limits, attention is amplitude, and arithmetic/logic are period/phase calculus. Limitations include: code design trade-offs (log-frequency vs.\ linear), noise/aliasing, and the need for robust projection operators back to the valid code subspace. Empirical validation requires benchmarks where spectral code edits (e.g., halving periods for $\sqrt{\cdot}$) are performed end-to-end.
+
+% ---------- 9. Conclusion ----------
+\section{Conclusion}
+\emph{Computational Frequency} merges prime-structured masks, compactified limits, and spectral attention into a single wavefunction algebra and logic. With “Frequencies Is All We See,” AI becomes wavefunction computation: attention modulates amplitudes, logic is filtering, and numbers are periods. Luck then quantifies how training, input, and requested direction combine to steer probabilistic outcomes.
+
+% ---------- References ----------
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
