@@ -1,0 +1,316 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,bm}
+\usepackage{mathtools}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\title{Polar Spacetime Optics: A Review Framing General Relativity and Quantum Fields\\
+in Radial--Angular Coordinates at the Planck Scale}
+\author{Sefunmi Ashiru}
+\date{\today}
+
+% -------- Macros
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\g}{g}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\Iplus}{\mathcal{I}^+}
+\newcommand{\Iminus}{\mathcal{I}^-}
+\newcommand{\scri}{\mathcal{I}}
+\newcommand{\rhat}{\hat r}
+\newcommand{\that}{\hat \theta}
+\newcommand{\phat}{\hat \phi}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We review a polar reparameterization of spacetime in which \emph{Planck time} is modeled as a radial axis ($r=ct$) and \emph{Planck length} as an angular unit on a two--sphere of directions. In this chart, general relativity (GR) and quantum field theory (QFT) share a common geometric stage: null propagation rides radial characteristics, while field content decomposes into angular sectors (``perspectives'') of an expanding light--cone history. This provides a natural way to smooth discrete Planck--scale ``pixels'' into a continuous medium, allowing connections to standard continuum frameworks (Bondi--Sachs null infinity, Penrose compactification, and QFT in curved spacetime, including Hawking and Unruh effects). Within this optics--like picture, outward, white--hole--like \emph{dispersion} (light as spectral flow) contrasts with \emph{localized compactification} (gravity) as complementary limits of phase/tension dynamics, with gravitational waves appearing as angularly resolved ripples. The approach complements the ``same--origin'' program of Srichan, Danvirutai, and Cheok, who argue for a unified geometric provenance of quantum and relativistic laws at the Planck scale. We highlight points of agreement and divergence, and propose analog tests (membrane and interferometric experiments) that illustrate how the polar continuum perspective can interface with both pixelated and continuum models of spacetime.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}
+Two mature formalisms describe nature: GR as geometry of a Lorentzian manifold $(\M,\g_{\mu\nu})$ and QFT as dynamics of quantum fields, extended to curved backgrounds in QFTCS \citep{BirrellDavies1982,ParkerToms2009,Carroll2003}. Placing them on a \emph{shared polar chart}---time as radius $r=ct$ from an origin event and directions as angles on $S^2$---makes causal structure and null propagation explicit, resonating with classic null-infinity methods (Bondi--Sachs, Penrose compactification) \citep{Bondi1962,Sachs1962,Penrose1964,NullInfinity,AsympFlat}. Planck units provide natural scales \citep{PlanckUnits}.
+
+This article reviews that polar framing, relates it to standard tools (Bondi news, BMS symmetries; conformal diagrams), and surveys QFT phenomena (Hawking, Unruh) that are naturally radial/angulary decomposed. We also engage with the ``same–origin'' proposal \citep{SrichanGJES2025} that quantum and relativistic dynamics may share a geometric stem at Planck scales, comparing their curvature–first route to our causality/optics–first emphasis tied to null asymptotics.
+
+\paragraph{Scope and stance.}
+We do \emph{not} replace GR/QFT; we reorganize them: (i) GR waves $\to$ angularly resolved null radiation at $\Iplus$; (ii) QFT modes $\to$ frequency–angle sectors on expanding light–cones; (iii) Planck scales $\to$ natural radial/angle units; (iv) white–hole–like \emph{dispersion} vs.\ local \emph{compactification} gives an intuition for light vs.\ gravitating clumps, akin to ripples on a pond: outward circular waves vs.\ locally focused curvature.\footnote{White holes are speculative; for quantum–gravity bounce/``Planck star'' models see \citet{deLorenzo2016}.} Statements are anchored in standard literature.
+
+\paragraph{Pixel $\to$ continuum bridge (our contribution).}
+Many recent proposals at the Planck scale adopt a ``pixelated'' (discrete) view of spacetime. 
+Our polar chart can act as a smoothing map that turns such Planck pixels into a continuous medium: 
+radial shells $r=ct$ encode causal depth while angular coordinates $(\theta,\phi)$ encode directions, 
+so that discrete Planck data are averaged on $S^2$ and across thin radial layers to produce smooth 
+fields amenable to standard GR/QFT tools (Bondi--Sachs, Penrose compactification, QFTCS). 
+In Sec.~\ref{sec:pixel-to-continuum} we formalize this coarse--graining and show its compatibility with the 
+Dirac-in-polar formulation in Sec.~\ref{sec:dirac}.
+
+\section{Polar Coordinates for Causality and Asymptotics}
+\subsection{Radial time and angular directions}
+Let $r=ct\ge 0$ encode time as radius from an initial event, and $(\theta,\phi)\in S^2$ encode spatial directions. Near null propagation, retarded time $u=t-r/c$ with angular coordinates reproduces the structure used in Bondi--Sachs analyses of gravitational radiation \citep{Bondi1962,Sachs1962,BMS}. Penrose's conformal compactification attaches $\Iplus/\Iminus$ as finite boundaries where null rays terminate, making global causal structure manifest \citep{Penrose1964,NullInfinity,AsympFlat}.
+
+\subsection{Relation to Bondi--Sachs and BMS symmetry}
+In asymptotically flat spacetimes, the \emph{news function} on $S^2$ at $\Iplus$ quantifies radiative content; the asymptotic symmetry is the BMS group (supertranslations, etc.) \citep{Bondi1962,Sachs1962,BMS}. Our polar chart is compatible: spheres of constant $r$ (or $u$) carry the angular data, while the $r$-flow organizes null evolution to $\Iplus$.
+
+\subsection{Penrose compactification and conformal diagrams}
+Penrose's conformal rescaling maps infinity to a finite boundary, enabling global diagrams and precise limits of null curves \citep{Penrose1964,NullInfinity}. In the polar view, $r\!\to\!\infty$ corresponds to approaching a regular boundary where angular sectors encode the ``perspectives'' of outgoing radiation.
+
+\section{Quantum Fields on the Polar Stage}
+\subsection{QFT in curved spacetime}
+QFTCS treats quantum fields on a fixed curved $(\M,\g)$ background, predicting Hawking radiation and the Unruh effect \citep{BirrellDavies1982,ParkerToms2009,Hawking1975,Unruh1976}. Both are naturally described along null/radial directions: horizon mode–mixing (Hawking) and Rindler wedges (Unruh).
+
+\subsection{Gravitational waves as angular ripples}
+Direct detections (e.g., GW150914) confirm outgoing quadrupolar radiation naturally expanded in spin–weighted spherical harmonics on $S^2$ at $\Iplus$ \citep{Abbott2016GW}. This is precisely the content organized by Bondi--Sachs spheres \citep{Bondi1962,Sachs1962}.
+
+% ======================================================
+\section{Dirac Fields in Polar Coordinates}\label{sec:dirac}
+% ======================================================
+We collect the minimal machinery for Dirac spinors on the polar chart, both to fix notation and to make the $r$--angular decomposition explicit.
+
+\subsection{Curved–space Dirac equation via tetrads}
+Let $\{e^a{}_\mu\}$ be a tetrad with inverse $E^\mu{}_a$ so that $\g_{\mu\nu}=e^a{}_\mu e^b{}_\nu \eta_{ab}$ and $\gamma^\mu:=E^\mu{}_a\gamma^a$, where $\{\gamma^a,\gamma^b\}=2\eta^{ab}$. With the spin connection $\Gamma_\mu:=\tfrac{1}{8}\omega_{\mu ab}[\gamma^a,\gamma^b]$ and $\omega_{\mu ab}=e_{a\nu}\nabla_\mu e_b{}^\nu$, the Dirac equation reads
+\begin{equation}
+\label{eq:curved-Dirac}
+\boxed{\quad i\gamma^\mu\!\left(\partial_\mu+\Gamma_\mu\right)\psi - m\psi = 0\,, \quad}
+\end{equation}
+see \citet{Alcubierre2025,StoneTorsionNotes} for compact derivations.
+
+\subsection{Flat Minkowski in spherical polars (``polar optics'')}
+For intuition, take flat spacetime in spherical coordinates:
+\[
+ds^2=-c^2dt^2+dr^2+r^2(d\theta^2+\sin^2\!\theta\,d\phi^2)\,.
+\]
+Choose the diagonal tetrad $e^a{}_\mu=\mathrm{diag}(1,\,1,\,r,\,r\sin\theta)$ with inverse $E^\mu{}_a=\mathrm{diag}(1,\,1,\,\tfrac{1}{r},\,\tfrac{1}{r\sin\theta})$. The nonzero spin-connection components give the familiar $1/r$ and $\cot\theta$ terms. In the local (hatted) frame,
+\begin{equation}
+\label{eq:Dirac-spherical}
+\boxed{\;
+i\gamma^{\hat t}\partial_t\psi
++i\gamma^{\hat r}\!\left(\partial_r+\frac{1}{r}\right)\psi
++i\gamma^{\hat \theta}\!\left(\frac{1}{r}\partial_\theta+\frac{1}{2r}\cot\theta\right)\psi
++i\gamma^{\hat \phi}\!\left(\frac{1}{r\sin\theta}\partial_\phi\right)\psi
+- m\psi=0\;,
+}
+\end{equation}
+cf.\ \citet{Villalba1994,Alcubierre2025}. Equation~\eqref{eq:Dirac-spherical} makes the $r$--radial transport and $S^2$ angular structure explicit; separation of variables proceeds via spinor spherical harmonics.
+
+\paragraph{Curved backgrounds.}
+For curved $(\M,\g)$ one inserts the appropriate tetrad for, e.g., a Bondi--Sachs or spherically symmetric metric; the structure \eqref{eq:curved-Dirac} is unchanged, but $\Gamma_\mu$ encodes curvature. In asymptotically flat regions, the polar chart aligns with null infinity so that $r$–asymptotics match the Bondi expansion, making comparisons to radiative observables direct.
+
+% ======================================================
+\section{Dispersion vs.\ Compactification: Light, Gravity, and ``White-Hole--Like'' Flow}
+% ======================================================
+\subsection{Outward dispersion (light as spectral gate)}
+In the polar view, light broadly ``disperses'' energy spectrally to large $r$ (outgoing modes to $\Iplus$). The ``white–hole'' metaphor captures purely outward flux; while classical white holes are not observed, quantum–gravity bounce scenarios explore effective outlets of trapped energy \citep{deLorenzo2016}. We use this as intuition, not assertion.
+
+\subsection{Local compactification (gravity) and curvature}
+Conversely, mass–energy localizes and curves spacetime (Einstein equations). In the optics analogy, phase gradients/tension focus trajectories (geodesic convergence). Bondi mass loss to $\Iplus$ and the BMS structure encode how compact sources radiate and relax \citep{Bondi1962,Sachs1962,BMS}.
+
+% ======================================================
+\section{Planck Units and the Polar Chart}
+% ======================================================
+Planck time $t_P=\sqrt{\hbar G/c^5}$ and Planck length $\ell_P=\sqrt{\hbar G/c^3}$ provide natural rulers \citep{PlanckUnits}. Using $r=ct$ renders causal layers as spherical shells; using angular resolution down to $\ell_P$ heuristically tags extreme ultraviolet cutoffs. While such cutoffs are heuristic (no established Planck-scale QFT), they motivate discretizations for numerical/analog models.
+
+% ======================================================
+\section{From Planck ``Pixels'' to a Continuous Polar Medium}
+\label{sec:pixel-to-continuum}
+% ======================================================
+
+\subsection{Setup: discrete samples on spherical shells}
+At a fixed radial time $r=ct$ consider a finite set of Planck-scale samples 
+$\{(\theta_j,\phi_j),\,w_j\}_{j=1}^{N(r)}$ on $S^2$, representing ``pixels'' (discrete events/fluxes) 
+with weights $w_j$ (e.g.\ energy or field amplitude). Define the discrete measure
+\[
+\mu_r := \sum_{j=1}^{N(r)} w_j \,\delta_{\Omega_j}\,,
+\qquad \Omega_j=(\theta_j,\phi_j)\in S^2.
+\]
+Over a thin causal layer $[r-\Delta r,r+\Delta r]$ we allow a radially discretized family 
+$\{\mu_{r_k}\}_{k}$.
+
+\subsection{Angular smoothing on $S^2$ and radial averaging}
+Let $K_\epsilon(\Omega,\Omega')$ be a smooth, positive, rotationally symmetric mollifier on $S^2$ 
+of width $\epsilon$ (e.g.\ a heat kernel $e^{-\epsilon \ell(\ell+1)}$ in harmonic space). 
+Define the angularly smoothed field on the sphere of radius $r$ by
+\begin{equation}
+\label{eq:angular-smooth}
+F_\epsilon(r,\Omega) 
+:= \int_{S^2} K_\epsilon(\Omega,\Omega')\, \mathrm{d}\mu_r(\Omega')
+= \sum_{j=1}^{N(r)} w_j \,K_\epsilon(\Omega,\Omega_j).
+\end{equation}
+Next, define a thin radial average with a normalized window $\rho_\delta$ supported in $[-\delta,\delta]$:
+\begin{equation}
+\label{eq:radial-average}
+\bar F_{\epsilon,\delta}(r,\Omega)
+:= \int_{-\delta}^{+\delta} \rho_\delta(s)\, F_\epsilon(r+s,\Omega)\, \mathrm{d}s.
+\end{equation}
+
+\begin{definition}[Pixel\,$\to$\,continuum polar map]
+\label{def:polar-map}
+The \emph{polar coarse--graining} of a Planck-pixel model is the field
+$\bar F_{\epsilon,\delta}(r,\Omega)$ on $(r,\Omega)\in [0,\infty)\times S^2$ defined by 
+\eqref{eq:angular-smooth}--\eqref{eq:radial-average}, with angular width $\epsilon$ 
+and radial width $\delta$ chosen at or above the numerical/experimental resolution.
+\end{definition}
+
+\paragraph{Heuristic consistency.}
+If the pixel density per solid angle grows faster than the angular bandwidth, then for any fixed 
+multipole cutoff $\ell_{\max}(\epsilon)\sim \epsilon^{-1}$ we obtain convergence of spherical-harmonic 
+projections:
+\[
+\int_{S^2}\! \bar F_{\epsilon,\delta}(r,\Omega)\, Y_{\ell m}^*(\Omega)\, \mathrm{d}\Omega
+\;\xrightarrow[\epsilon,\delta\downarrow 0]{}\;
+\int_{S^2}\! F(r,\Omega)\, Y_{\ell m}^*(\Omega)\, \mathrm{d}\Omega
+\quad \text{for all } \ell\le \ell_{\max}(\epsilon).
+\]
+Thus, the pixel model admits a well-defined continuum limit at any finite angular/radial resolution.
+
+\subsection{Compatibility with GR/QFT structure}
+\begin{itemize}[leftmargin=1.2em]
+\item \textbf{Bondi--Sachs/BMS:} At large $r$ (approaching $\Iplus$), the angular field 
+$\bar F_{\epsilon,\delta}(r,\Omega)$ provides the data living on the $S^2$ cross-sections used for 
+news/flux calculations; coarse--graining simply fixes an effective $\ell_{\max}$.
+\item \textbf{QFT in curved spacetime:} Mode decompositions along null/radial characteristics 
+remain valid; the smoothing selects an angular/radial bandwidth without altering the underlying 
+quantization scheme at scales above $(\epsilon,\delta)$.
+\item \textbf{Dirac in polar form (Sec.~\ref{sec:dirac}):} The spin connection terms 
+($1/r$, $\cot\theta$) in Eq.~\eqref{eq:Dirac-spherical} act on the smoothed field exactly as on a 
+continuum field; no change to the operator structure is required.
+\end{itemize}
+
+\subsection{Interpretation and use}
+In proposals where spacetime is ``pixelated'' at the Planck scale, 
+Def.~\ref{def:polar-map} supplies a concrete, geometry-compatible route to a 
+\emph{continuous} description on the same null/polar stage we use throughout this review. 
+Operationally, $(\epsilon,\delta)$ capture the experiment/simulation resolution; 
+$\ell_{\max}\!\sim\! \epsilon^{-1}$ plays the role of an angular UV cutoff consistent with 
+asymptotic analyses at $\Iplus$ and with gravitational-wave spherical-harmonic expansions.
+
+% ======================================================
+\section{Relation to ``Same Origin'' Claims}\label{sec:same-origin}
+% ======================================================
+Srichan, Danvirutai, and Cheok propose that quantum and relativistic laws share a single geometric provenance at Planck scales, with mappings to Dirac equations under curvature reductions \citep{SrichanGJES2025}. An earlier Astroparticle Physics version was \emph{retracted}; we therefore cite the subsequent Global Journal of Engineering Sciences article.\footnote{Retraction notice: \citet{SrichanRetraction2025}.} Our framing agrees on a unified geometric stage but advances a null/polar organization interoperable with Bondi--Sachs/Penrose asymptotics and standard QFTCS. Where their approach is curvature–first, ours is causality/optics–first and immediately comparable to BMS charges, Hawking/Unruh derivations, and GW observations.
+
+% ======================================================
+\section{Synthesis, Tests, and Caveats}
+% ======================================================
+\subsection{Why this polar organization is useful}
+\begin{itemize}[leftmargin=1.2em]
+\item \emph{Matches} GR’s null infinity and BMS structure ($S^2$ at $\Iplus$) \citep{Bondi1962,Sachs1962,BMS,NullInfinity}.
+\item \emph{Aligns} with QFTCS derivations along null/radial modes (Hawking/Unruh) \citep{BirrellDavies1982,Hawking1975,Unruh1976,ParkerToms2009}.
+\item \emph{Visualizes} gravitational waves as angular ripples confirmed by LIGO/Virgo \citep{Abbott2016GW}.
+\item \emph{Interfaces} with Penrose compactification for global limits \citep{Penrose1964,NullInfinity}.
+\end{itemize}
+
+\subsection{Analog/bench-top tests}
+Membrane/optical analogs can emulate null/radial propagation with angular sectoring:
+\begin{enumerate}[leftmargin=1.2em]
+\item \textbf{Angular interferometry:} angle–dependent phase plates with sectoral readout (simulating BMS–like direction dependence).
+\item \textbf{Membrane ``news'':} drive a circular membrane; read angular mode power vs.\ radius as a proxy for news flux.
+\item \textbf{One–way outlets:} engineered scatterers producing outward–only leakage (white–hole–like flow \citep{deLorenzo2016}).
+\end{enumerate}
+
+\paragraph{Caveats.}
+White holes remain speculative; BMS extensions beyond asymptotic flatness require care; Planck–scale cutoffs are heuristic; full quantum gravity is open.
+
+\section*{Acknowledgments}
+Thanks to colleagues for discussions on Bondi--Sachs, QFTCS, and interferometric analogs.
+
+\bibliographystyle{plainnat}
+\begin{thebibliography}{99}
+
+\bibitem{BirrellDavies1982}
+N.\,D. Birrell and P.\,C.\,W. Davies,
+\newblock \emph{Quantum Fields in Curved Space}.
+\newblock Cambridge University Press, 1982. DOI:10.1017/CBO9780511622632. 
+
+\bibitem{ParkerToms2009}
+L.\,E. Parker and D.\,J. Toms,
+\newblock \emph{Quantum Field Theory in Curved Spacetime}.
+\newblock Cambridge University Press, 2009. DOI:10.1017/CBO9780511813924.
+
+\bibitem{Carroll2003}
+S.\,M. Carroll,
+\newblock \emph{Spacetime and Geometry}.
+\newblock Addison–Wesley, 2003 (draft notes online).
+
+\bibitem{Bondi1962}
+H. Bondi, M.\,G.\,J. van der Burg, and A.\,W.\,K. Metzner,
+\newblock Gravitational waves in general relativity VII: Waves from axisymmetric isolated systems.
+\newblock \emph{Proc. R. Soc. A} \textbf{269}, 21–52 (1962). DOI:10.1098/rspa.1962.0161.
+
+\bibitem{Sachs1962}
+R.\,K. Sachs,
+\newblock Asymptotic symmetries in gravitational theory.
+\newblock \emph{Phys. Rev.} \textbf{128}, 2851–2864 (1962). DOI:10.1103/PhysRev.128.2851.
+
+\bibitem{BMS}
+A. Ashtekar, \emph{Asymptotic Quantization}, Bibliopolis (1987); and modern reviews on the BMS group.
+
+\bibitem{Penrose1964}
+R. Penrose,
+\newblock Conformal treatment of infinity.
+\newblock In \emph{Relativity, Groups and Topology} (1964); see modern summaries on null infinity.
+
+\bibitem{NullInfinity}
+E.g.\ reviews on null infinity and conformal compactification (Penrose, Hawking–Ellis, Carroll).
+
+\bibitem{AsympFlat}
+Reviews on asymptotically flat spacetimes and their symmetries.
+
+\bibitem{Hawking1975}
+S.\,W. Hawking,
+\newblock Particle creation by black holes.
+\newblock \emph{Commun. Math. Phys.} \textbf{43}, 199–220 (1975). DOI:10.1007/BF02345020.
+
+\bibitem{Unruh1976}
+W.\,G. Unruh,
+\newblock Notes on black-hole evaporation.
+\newblock \emph{Phys. Rev. D} \textbf{14}, 870–892 (1976). DOI:10.1103/PhysRevD.14.870.
+
+\bibitem{Abbott2016GW}
+B.\,P. Abbott \emph{et al.} (LIGO Scientific Collaboration and Virgo),
+\newblock Observation of gravitational waves from a binary black hole merger.
+\newblock \emph{Phys. Rev. Lett.} \textbf{116}, 061102 (2016). DOI:10.1103/PhysRevLett.116.061102.
+
+\bibitem{deLorenzo2016}
+T. De Lorenzo, C. Pacilio, C. Rovelli, and S. Speziale,
+\newblock On the effective metric of a Planck star.
+\newblock \emph{Phys. Rev. D} \textbf{93}, 124018 (2016). DOI:10.1103/PhysRevD.93.124018.
+
+\bibitem{PlanckUnits}
+CODATA recommended values for fundamental constants (for $t_P$ and $\ell_P$ definitions).
+
+\bibitem{Villalba1994}
+V.\,M. Villalba,
+\newblock The angular momentum operator in the Dirac equation.
+\newblock arXiv:hep-th/9405033 (1994).
+
+\bibitem{Alcubierre2025}
+M. Alcubierre,
+\newblock The Dirac equation in General Relativity and the 3+1 formalism.
+\newblock \emph{Gen. Relativ. Gravit.} (2025); arXiv:2503.03918.
+
+\bibitem{StoneTorsionNotes}
+M. Stone,
+\newblock \emph{Torsion, Cartan connections, and the Dirac equation} (lecture notes).
+
+\bibitem{SrichanRetraction2025}
+C. Srichan, P. Danvirutai, A.\,D. Cheok \emph{et al.},
+\newblock Retraction notice to ``On the same origin of quantum physics and general relativity from Riemannian geometry and Planck scale formalism''.
+\newblock \emph{Astropart. Phys.} (2025).
+
+\bibitem{SrichanGJES2025}
+A.\,D. Cheok, C. Srichan, P. Danvirutai,
+\newblock On the Same Origin of Quantum Physics and General Relativity from Riemannian Geometry and Planck Scale Formalism.
+\newblock \emph{Global Journal of Engineering Sciences} \textbf{12}(2), 000781 (2025).
+
+\end{thebibliography}
+
+\end{document}
